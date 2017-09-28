@@ -1,0 +1,331 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\title{}
+\author{Rachel Morris}
+\date{\today}
+
+\usepackage{rachwidgets}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{dirtree}
+\usepackage{boxedminipage}
+
+\setcounter{chapter}{6}
+\setcounter{section}{1}
+\newcommand{\laChapter}{6.2 Introduction\ }
+
+\newcommand{\laClass}{CS 211\ }
+\newcommand{\laSemester}{Fall 2017\ }
+\newcounter{question}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{CS 211 Exercise}
+\chead{Fall 2017}
+\rhead{Ch \laChapter}
+\rfoot{\thepage\ of \pageref{LastPage}}
+\lfoot{\scriptsize Compiled by Rachel Morris, last updated \today}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+
+    %\toggletrue{answerkey}
+    \togglefalse{answerkey}
+
+    %------------------------------------------------------------------%
+    \section{The Sum Rule}
+
+        \begin{intro}{Disjoint events}
+            Two events are said to be \textbf{disjoint} (or \textit{mutually exclusive}
+            if they cannot occur simultaneously.
+            \footnote{From Discrete Math by Ensley and Crawley, page 448}
+        \end{intro}
+        
+        
+        % -------------------------------------------------------------%
+        % - QUESTION --------------------------------------------------%
+        % -------------------------------------------------------------%
+        \stepcounter{question}
+        \begin{question}{\thequestion}{3}
+        	% Practice problem 1
+        	For each of the experiments given below, decide if the
+				events described are disjoint:
+				
+				\begin{itemize}
+					\item[a.]	When tossing a coin four times, let $E_1$ be the
+					event that there are exactly three heads and $E_2$ be the event
+					that there are exactly two heads. ~\\
+					\solution{ When tossing a coin four times, no outcome can
+					consist of ``exactly two heads'' and also ``exactly three heads'';
+					hence, these two events are disjoint.}{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
+					
+					\item[b.]	When choosing four cards, let $E_1$ be the event that
+					the cards have the same value and $E_2$ be the event that the cards
+					have the same suit. ~\\
+					\solution{When choosing four cards, if the four cards all have
+					the same value, then they cannot all have the same suit; hence, these
+					two events are disjoint.}{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
+					
+					\item[c.] When choosing a committee of three people from a
+					club with 8 men and 12 women, let $E_1$ be the event that the committee
+					has a woman and let $E_2$ be the event that the committee has a man. ~\\
+					\solution{When choosing a committee of three people
+					from a club with 8 men and 12 women, there are many ways in which
+					the committee can include a woman and a man,
+					so these events are not disjoint.}{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
+				\end{itemize}
+        \end{question}
+        
+        \newpage
+        \begin{intro}{The Sum Rule, Theorem 1}
+            If $E_1$ and $E_2$ are disjoint events in a given experiment,
+            then the probability that $E_1$ or $E_2$ occurs is the sum of
+            $Prob(E_1)$ and $Prob(E_2)$. That is,
+            
+            $$Prob(E_1 or E_2) = Prob(E_1) + Prob(E_2)$$
+            
+            for disjoint events.            
+            \footnote{From Discrete Math by Ensley and Crawley, page 449}
+        \end{intro}
+
+        
+        % -------------------------------------------------------------%
+        % - QUESTION --------------------------------------------------%
+        % -------------------------------------------------------------%
+        \stepcounter{question}
+        \begin{question}{\thequestion}{3}
+            % Exercise 2
+            A card is drawn from an ordinary deck of 52 cards. Show how
+            to use the basic sum rule to find the probability that
+            the card is...
+
+            \begin{itemize}
+                \item[a.] An ace or a jack.
+                    \begin{hint}{Hint}
+                        $E_{1}$ is the set of outcomes where you get an Ace... \\
+                        \{ Ace-Heart, Ace-Diamond, Ace-Spade, Ace-Club \} 
+                        and the probability of getting an Ace, $Prob(E_{1})$
+                        is 4 outcomes out of 52, or $\frac{1}{13}$.
+                    \end{hint}
+                    \solution{
+                        $$Prob(E_{1} or E_{2}) = Prob(E_{1}) + Prob(E_{2}) = \frac{1}{13} + \frac{1}{13} = \frac{2}{13}$$
+                    }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
+                
+                \item[b.] A diamond or a black jack, queen, or king card. ~\\
+                    \solution{
+                    $E_{1}$ is the outcomes where you get a diamond,
+                    and $E_{2}$ is the outcomes where you get a black Jack, King, or Queen.
+                    These sets are disjoint, so...
+                    $$Prob(E_{1} or E_{2}) = Prob(E_{1}) + Prob(E_{2}) = \frac{1}{4} + \frac{6}{52} = \frac{19}{52}$$
+                    }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
+                
+                \item[c.] An even number value or a red jack, queen, or king card. ~\\
+                    \solution{
+                    $E_{1}$ is the outcomes where the card has an even numbered value,
+                    and $E_{2}$ is the set of outcomes with a red Jack, King, or Queen.
+                    These sets are disjoint, so...
+                    $$Prob(E_{1} or E_{2}) = Prob(E_{1} + Prob(E_{2}) = \frac{5}{13} + \frac{6}{52} = \frac{1}{2}$$
+                    }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
+            \end{itemize}
+        \end{question}
+
+        \newpage
+        \begin{intro}{The General Sum Rule, Theorem 2}
+            If $E_1$ and $E_2$ are any events in a given experiment,
+            then the probability that $E_1$ or $E_2$ occurs is given by
+            $$ Prob(E_1 or E_2) = Prob(E_1) + Prob(E_2) - Prob(E_1 and E_2) $$
+            
+            If $E_1$ and $E_2$ are disjoint, then $E_1 \cap E_2 = \emptyset$,
+            so $Prob(E_1 and E_2) = 0$.       
+            \footnote{From Discrete Math by Ensley and Crawley, page 450}
+        \end{intro}
+        
+        % -------------------------------------------------------------%
+        % - QUESTION --------------------------------------------------%
+        % -------------------------------------------------------------%
+        \stepcounter{question}
+        \begin{question}{\thequestion}{1}
+            % Exercise 7
+            What is the probability that when a pair of dice are rolled,
+            either (at least) one die shows a 5 or the dice sum to 8?
+            \begin{hint}{Hint}
+                This set is \textbf{not disjoint}, since you can have
+                \{5, 3\} show up on the dice. Make sure to figure out
+                the amount of overlap!
+            \end{hint}
+
+            \solution{$\frac{11}{36} + \frac{5}{36} - \frac{2}{36} = \frac{7}{18}$}{~\\~\\}
+        \end{question}
+
+    \newpage
+    %------------------------------------------------------------------%
+    \section{The Product Rule}
+
+        \begin{intro}{Independent events}
+            Two events are said to be \textbf{independent} if the occurrence
+            of one event is not influenced by the occurred (or nonoccurrence)
+            of the other event.
+            \footnote{From Discrete Math by Ensley and Crawley, page 451}
+        \end{intro}
+
+        
+        % -------------------------------------------------------------%
+        % - QUESTION --------------------------------------------------%
+        % -------------------------------------------------------------%
+        \stepcounter{question}
+        \begin{question}{\thequestion}{2}
+            % Practice Problem 3
+            For each of the following experiments given below,
+            decide if the events described are independent:
+
+            \begin{itemize}
+                \item[a.] When rolling a 6-sided die four times, let $E_{1}$
+                    be the event that the first two rolls sum to 7 and let $E_{2}$
+                    be the event that the last two rolls sum to 10. ~\\
+                    \solution{The events are independent. The first two rolls
+                    have no influence on the last two rolls.}{ { ~\\ \raisebox{0pt}[4cm][0pt]{  } } }
+
+                \item[b.] When choosing a committee of three dogs from a club of
+                    8 corgis and 12 labradors, let $E_{1}$ be the event that
+                    the committee has a labrador and let $E_{2}$ be the
+                    event that the committee has a corgi. ~\\
+                    \solution{The events are not independent. The probability
+                    of the committee having a corgi ($E_{2}$) is different
+                    when $E_{1}$ occurs than it is when $E_{1}$ does not occur.
+                    Specifically, if $E_{1}$ does not occur, then $E_{2}$ happens
+                    for sure (i.e., its probability is 1), and if $E_{1}$ does occur,
+                    then $E_{2}$ is not guaranteed to happen (i.e., probability is
+                    less than 1).
+                    }{ ~\\ }
+                
+            \end{itemize}
+        \end{question}
+
+        
+        \newpage{}
+        \begin{intro}{The Product Rule, Theorem 3}
+            If $E_{1}$ and $E_{2}$ are independent events in a given
+            experiment, then the probability that both $E_{1}$ and $E_{2}$
+            occur is the product of $Prob(E_{1}$ and $Prob(E_{2}$. That is,
+            $$ Prob(E_{1} and E_{2}) = Prob(E_{1}) \cdot Prob(E_{2}) $$
+            for independent events.
+            \footnote{From Discrete Math by Ensley and Crawley, page 452}
+        \end{intro}
+
+        
+        % -------------------------------------------------------------%
+        % - QUESTION --------------------------------------------------%
+        % -------------------------------------------------------------%
+        \stepcounter{question}
+        \begin{question}{\thequestion}{2}
+            % Example 6
+            Suppose I have a ``loaded" die for which the probability of a 6
+            appearing is $\frac{1}{2}$, while the probability of each of the other faces
+            appearing is $\frac{1}{10}$. What is the probability of getting a 5
+            and then a 6 on two tosses of the loaded die?
+
+            ~\\
+            First identify $E_{1}$ and $E_{2}$. These events are independent,
+            so you can use the Product Rule to find $Prob(E_{1} and E_{2})$.
+
+            \solution{
+            The events $E_{1}$, ``getting a 5 on the first toss",
+            and $E_{2}$, ``getting a 6 on the second toss", are independent,
+            so by the product rule,
+            $$Prob(E_{1} and E_{2}) = Prob(E_{1}) \cdot Prob(E_{2}) = \frac{1}{10} \cdot \frac{1}{2}
+            = \frac{1}{20}$$
+            }{ { ~\\ \raisebox{0pt}[6cm][0pt]{  } } }
+        \end{question}
+        
+        \begin{intro}{The probability of $E_{1}$ given $E_{2}$}
+            Given events $E_{1}$ and $E_{2}$ for some experiment, we
+            define the probability of $E_{1}$ given $E_{2}$, denoted by
+            $Prob(E_{1} | E_{2})$, as the probability that $E_{1}$ happens
+            given that $E_{2}$ occurs. Note that if $E_{1}$ and $E_{2}$
+            are independent, then $Prob( E_{1} | E_{2}) = Prob(E_{1})$.
+            \footnote{From Discrete Math by Ensley and Crawley, page 452}
+        \end{intro}
+        
+        \newpage
+
+        \begin{intro}{The General Product Rule, Theorem 4}
+            If $E_{1}$ and $E_{2}$ are any events in a given experiment, then
+            the probability that both $E_{1}$ and $E_{2}$ occur is given by
+
+            $$Prob(E_{1} and E_{2}) = Prob(E_{2}) \cdot Prob(E_{1} | E_{2}) $$
+            $$ = Prob(E_{1}) \cdot Prob(E_{2} | E_{1}) $$
+
+            Note that if $E_{1}$ and $E_{2}$ are independent, then this says
+            the same thing as Theorem 3.
+            \footnote{From Discrete Math by Ensley and Crawley, page 453}
+        \end{intro}
+        
+        % -------------------------------------------------------------%
+        % - QUESTION --------------------------------------------------%
+        % -------------------------------------------------------------%
+        \stepcounter{question}
+        \begin{question}{\thequestion}{1}
+            % Example 8
+            Two marbles are chosen from a bag containing three red, five white, and eight green marbles,
+            so there are 16 total marbles.
+            What is the probability that both are red?
+
+            ~\\
+            Here, the event $R_{1}$ is ``the first marble is red",
+            and the event $R_{2}$ is ``the second marble is red".
+
+            ~\\
+            What is $Prob(R_{1})$?
+            { ~\\ \raisebox{0pt}[1cm][0pt]{  } }
+
+            ~\\
+            Since $R_{2}$ depends on $R_{1}$ occurring, after $R_{1}$
+            occurs, there are 15 marbles left. One red marble
+            has been selected, so there are 2 red marbles left.
+
+            ~\\
+            What is $Prob(R_{2} | R_{1})$?
+            { ~\\ \raisebox{0pt}[1cm][0pt]{  } }
+
+            ~\\
+            With this information, what is $Prob(R_{1} and R_{2})$?
+                
+            \solution{
+                $Prob(R_{1}) = \frac{3}{16}$, $Prob(R_{2}) = \frac{2}{15}$. \\
+                $Prob(R_{1} and R_{2}) = Prob(R_{1}) \cdot Prob(R_{2} | R_{1})$
+                }{}
+ 
+        \end{question}
+
+        \newpage
+        % -------------------------------------------------------------%
+        % - QUESTION --------------------------------------------------%
+        % -------------------------------------------------------------%
+        \stepcounter{question}
+        \begin{question}{\thequestion}{1}
+            % Example 8
+            Two marbles are chosen from a bag containing three red, five white, and eight green marbles,
+            so there are 16 total marbles.
+            What is the probability that one is white and one is green?
+
+            ~\\
+            Let's say we have the events
+            $W_{1}$ (White first), $W_{2}$ (White second), $G_{1}$ (Green first), and
+            $G_{2}$ (Green second), so we can get our result in two ways: with
+            $(W_{1}, G_{2})$ \textbf{OR} with$(G_{1}, W_{2})$, so you can calculate
+            the result as
+
+            $$Prob(W_{1} and G_{2}) + Prob(G_{1} and W_{2})$$
+                
+            \solution{
+                $W_{1}$ will be white as the first, and $G_{2}$ will be green as the second.
+
+                $Prob(W_{1} and G_{1} + Prob(G_{1} and W_{2}) = \\
+                    Prob(W_{1}) \cdot Prob(G_{2} | W_{1}) + Prob(G_{1}) \cdot Prob(W_{2}|G_{1}) \\
+                    = \frac{5}{16} \cdot \frac{8}{15} + \frac{8}{16} \cdot \frac{5}{15} = \frac{1}{3}$
+                }{{ ~\\ \raisebox{0pt}[4cm][0pt]{  } }}
+        \end{question}
+
+\end{document}
