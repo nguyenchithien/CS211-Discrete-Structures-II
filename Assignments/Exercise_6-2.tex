@@ -150,11 +150,43 @@
             % Exercise 7
             What is the probability that when a pair of dice are rolled,
             either (at least) one die shows a 5 or the dice sum to 8?
-            \begin{hint}{Hint}
-                This set is \textbf{not disjoint}, since you can have
-                \{5, 3\} show up on the dice. Make sure to figure out
-                the amount of overlap!
-            \end{hint}
+            
+            \textbf{What is the sample size?} \tab $S = $ \solution{36}{ \fitb }
+            
+            \begin{center}
+            	\begin{tabular}{c c c c c c}
+            		(1,1) & (1,2) & (1,3) & (1,4) & (1,5) & (1,6) \\
+						(2,1) & (2,2) & (2,3) & (2,4) & (2,5) & (2,6) \\
+            		(3,1) & (3,2) & (3,3) & (3,4) & (3,5) & (3,6) \\
+						(4,1) & (4,2) & (4,3) & (4,4) & (4,5) & (4,6) \\
+            		(5,1) & (5,2) & (5,3) & (5,4) & (5,5) & (5,6) \\
+						(6,1) & (6,2) & (6,3) & (6,4) & (6,5) & (6,6)
+            	\end{tabular}
+            \end{center}
+            
+            
+            \textbf{How many outcomes $n(E_1)$ are there where you get either 5 for the first die, 5 for the second die, or 5 for both dice? Write out the set of $E_1$.}
+            ~\\
+            \solution{
+            	$E_1 = \{ (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6),
+            		(6, 5), (4, 5), (3, 5), (2, 5), (1, 5) \}
+            		\\ n(E_1) = 11$
+            }{~\\}
+            
+				\textbf{How many outcomes $n(E_2)$ are there where the two dice sum to 8? Write out the set of $E_2$.} ~\\
+				\solution{
+					$E_2 = \{ (2, 6), (6, 2), (3, 5), (5, 3), (4, 4) \} \\
+					n(E_2) = 5$
+				}
+				{~\\}
+				
+				\textbf{What is the amount of overlap $n(E_1 \tab[0.5cm]AND\tab[0.5cm] E_2)$? Write out this set.} ~\\
+				\solution{
+					$n(E_1 \tab[0.5cm]AND\tab[0.5cm] E_2) = 2$
+				}{~\\}
+				
+				\textbf{Use the General Sum Rule to find the probability that you will get either
+					at least one die showing a 5, OR the dice sum to 8.}
 
             \solution{$\frac{11}{36} + \frac{5}{36} - \frac{2}{36} = \frac{7}{18}$}{~\\~\\}
         \end{question}
@@ -278,7 +310,7 @@
 
             ~\\
             What is $Prob(R_{1})$?
-            { ~\\ \raisebox{0pt}[1cm][0pt]{  } }
+            \solution{ $\frac{3}{16}$ }{ ~\\ \raisebox{0pt}[1cm][0pt]{  } }
 
             ~\\
             Since $R_{2}$ depends on $R_{1}$ occurring, after $R_{1}$
@@ -287,7 +319,7 @@
 
             ~\\
             What is $Prob(R_{2} | R_{1})$?
-            { ~\\ \raisebox{0pt}[1cm][0pt]{  } }
+            \solution{ $\frac{2}{15}$ }{ ~\\ \raisebox{0pt}[1cm][0pt]{  } }
 
             ~\\
             With this information, what is $Prob(R_{1} and R_{2})$?
