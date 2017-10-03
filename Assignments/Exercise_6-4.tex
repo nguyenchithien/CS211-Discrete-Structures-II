@@ -1,0 +1,114 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\title{}
+\author{Rachel Morris}
+\date{\today}
+
+\usepackage{rachwidgets}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{dirtree}
+\usepackage{boxedminipage}
+
+\setcounter{chapter}{6}
+\setcounter{section}{3}
+\newcommand{\laChapter}{6.4 Expected value\ }
+
+\newcommand{\laClass}{CS 211\ }
+\newcommand{\laSemester}{Fall 2017\ }
+\newcounter{question}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{CS 211 Exercise}
+\chead{Fall 2017}
+\rhead{Ch \laChapter}
+\rfoot{\thepage\ of \pageref{LastPage}}
+\lfoot{\scriptsize Compiled by Rachel Morris, last updated \today}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+
+    %\toggletrue{answerkey}
+    \togglefalse{answerkey}
+
+    %------------------------------------------------------------------%
+    \section{Expected value in games of chance}
+
+        \begin{intro}{Definition}
+			For a given probability experiment, let $X$ be a random
+			variable whose possible values come from the set of numbers
+			$ x_{1}, ..., x_{n} $. Then the \textbf{expected value of $X$},
+			denoted by $E[X]$, is the sum
+			
+			$$ (x_{1}) \cdot Prob(X = x_{1}) + (x_{2}) \cdot Prob(X = x_{2}) + ... + (x_{n}) \cdot Prob(X = x_{n}) $$
+			
+			This is sometimes called the \textit{average value} of the random variable,
+			thinking of the average of the values $X$ takes on over many repetitions of the experiment.
+            \footnote{From Discrete Math by Ensley and Crawley, page 460}
+            
+            \paragraph{Example 2}
+            Suppose I have a ``loaded" die for which the probability of
+            a 6 appearing is $\frac{1}{2}$, while the probability of each
+            of the other faces appearing is $\frac{1}{10}$.
+            What is the expected value on one roll? Compare to the expected
+            value of a fair die.
+            
+            ~\\
+            For the loaded die:
+            
+            $$E[X] = (1)(\frac{1}{10}) + (2)(\frac{1}{10}) + (3)(\frac{1}{10})
+					+ (4)(\frac{1}{10}) + (5)(\frac{1}{10}) + (6)(\frac{1}{2})$$
+			
+			$$ = \frac{1}{10}(15) + \frac{1}{2}(6) = 4.5$$
+            
+            ~\\
+            For the fair die:
+            
+            $$E[X] = (1)(\frac{1}{6}) + (2)(\frac{1}{6}) + (3)(\frac{1}{6})
+					+ (4)(\frac{1}{6}) + (5)(\frac{1}{6}) + (6)(\frac{1}{6})$$
+					
+			$$ = \frac{1}{6}(21) = 3.5$$
+        \end{intro}
+        
+        \newpage
+        % -------------------------------------------------------------%
+        % - QUESTION --------------------------------------------------%
+        % -------------------------------------------------------------%
+        \stepcounter{question}
+        \begin{question}{\thequestion}{3}
+            % Example 3
+
+            Suppose you pay \$2 each time to play the following game: Two
+            dice are rolled, and you win \$5 for each 6 that comes up.
+            Do you expect to win more than you pay if you play many, many times?
+            
+            Let $X$ represent the amount of money you win in one play
+            of the game. So, you can win either \$0, \$5, or \$10, so the
+            values are $\{0, 5, 10\}$.
+
+			~\\ What is $Prob(X = 0)$?
+				\solution{ $\frac{5}{6} \cdot \frac{5}{6} = \frac{25}{36}$ }{ ~\\ }
+			
+			~\\ What is $Prob(X = 5)$?
+				\solution{ $C(2,1)(\frac{1}{6}) \cdot \frac{5}{6} = \frac{10}{36}$ }{ ~\\ }
+			
+			~\\ What is $Prob(X = 10)$?
+				\solution{ $\frac{1}{6} \cdot \frac{1}{6} = \frac{1}{36}$ }{ ~\\ }
+
+			~\\ Then, $E[X] = 0 \cdot Prob(X = 0) + 5 \cdot Prob(X = 5) + 10 \cdot (X = 10)$
+			
+			\solution{ 
+				$= 0 \cdot \frac{25}{36} + 5 \cdot \frac{10}{36} + 10 \cdot \frac{1}{36}  $
+				\tab
+				 $ = \frac{60}{36} $
+				 \tab
+				 $ \approx 1.67 $
+			}{}
+        \end{question}
+
+        
+
+\end{document}
