@@ -47,7 +47,7 @@
 			
 			This is sometimes called the \textit{average value} of the random variable,
 			thinking of the average of the values $X$ takes on over many repetitions of the experiment.
-            \footnote{From Discrete Math by Ensley and Crawley, page 460}
+            \footnote{From Discrete Math by Ensley and Crawley, page 467}
             
             \paragraph{Example 2}
             Suppose I have a ``loaded" die for which the probability of
@@ -108,7 +108,65 @@
 				 $ \approx 1.67 $
 			}{}
         \end{question}
-
         
+        \hrulefill
+        
+        % -------------------------------------------------------------%
+        % - QUESTION --------------------------------------------------%
+        % -------------------------------------------------------------%
+        \stepcounter{question}
+        \begin{question}{\thequestion}{3}
+	        % Practice Problem 2
+	        Suppose that the payoff for the game (in question 1) is \$5
+	        for rolling one 6, and \$25 for rolling two 6's. Now is it worth \$2 to play?
+	        
+	        \solution{
+				~\\
+				$E[X] = 0 \cdot Prob(X = 0) + 5 \cdot Prob(X = 5) + 25 \cdot Prob(X = 25)$
+				
+				~\\
+				$= 0 \cdot \frac{25}{36} + 5 \cdot \frac{10}{36} + 25 \cdot \frac{1}{36}$
+				
+				~\\
+				$= \frac{75}{36} \approx \$2.08${}
+				
+				~\\
+				You will win about 8 cents each time you play, over the long term.
+	        }{}
+		\end{question}
+
+		\newpage
+		
+		\subsection{Expectation in Bernoulli trials}
+        
+        \begin{intro}{Theorem 1}
+	        Suppose an experiment consists of the independent repetition
+	        of a trial $n$ times, and the probability of that trial's
+	        individual success is $p$ each time it is performed.
+	        If $X$ denotes the number of successful trials in this experiment,
+	        then $E[X] = n \cdot p$.
+            \footnote{From Discrete Math by Ensley and Crawley, page 469}
+            
+            \paragraph{Practice Problem 3}
+            Use the definition of expected value to show that the average
+            number of results of heads in an experiment
+            consisting of tossing a coin three times is 1.5
+            
+            So, our $X$ will be the number of successful trials (heads tossed).
+            The coin is tossed three times, so $X$ takes on the values from 
+            the set $\{0, 1, 2, 3\}$. By the definition of the expected value,
+            
+            ~\\
+            $E[X] = 0 \cdot Prob(X = 0) + 1 \cdot Prob(X = 1) + 2 \cdot Prob(X = 2)
+            + 3 \cdot Prob(X = 3)$ \\
+            $= 0 \cdot C(3,0) \cdot (1/2)^{3} + 1 \cdot C(3,1) \cdot (1/2)^{3}
+            + 2 \cdot C(3,2) \cdot (1/2)^{3} + 3 \cdot C(3,3) \cdot (1/2)^{3}$ \\
+            $ = (0 + 3 + 6 + 3) \cdot (1/8) = 1.5$
+            
+            ~\\
+            And using the theorem, $n = 3$, $p = 1/2$...
+            
+            $E[X] = 3 \cdot (1/2) = (3/2) = 1.5$
+		\end{intro}
 
 \end{document}
