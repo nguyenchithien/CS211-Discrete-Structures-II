@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cstdlib> // random
 #include <ctime>
-#include <string>
 using namespace std;
 
 int RunTrial( int min, int max, int stopAtFirst, int trialCount )
