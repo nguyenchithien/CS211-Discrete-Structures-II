@@ -37,6 +37,7 @@
     %------------------------------------------------------------------%
     \section{Probability in games of chance}
 
+    \notonkey{
         \begin{intro}{Theorem 1}
             Given a simple experiment, called a \textbf{Bernoulli trial},
             and an event that occurs with a probability $p$, if the trial is repeated
@@ -63,8 +64,10 @@
             \end{center}
 
         \end{intro}
+        }{}
         
-        \newpage
+        \notonkey{ \newpage }{ \hrulefill }
+        
         % -------------------------------------------------------------%
         % - QUESTION --------------------------------------------------%
         % -------------------------------------------------------------%
@@ -75,9 +78,11 @@
             What is the probability of getting exactly 3 heads
             on 10 tosses of a fair coin?
 
+        \notonkey{
             \begin{center}
                 \includegraphics[width=10cm]{images/6-3-coins.png}
             \end{center}
+        }{}
 
             ~\\~\\ \tab
             $n$, the amount of trial repeats: \solution{ 10 }{ \fitb }
@@ -95,8 +100,8 @@
             }{}
         \end{question}
 
+        \notonkey{ \newpage }{ \hrulefill }
         
-        \newpage
         % -------------------------------------------------------------%
         % - QUESTION --------------------------------------------------%
         % -------------------------------------------------------------%
@@ -106,15 +111,19 @@
             What is the probability that in seven rolls of a six-sided die,
             the result of 1 appears \textit{at least} five times?
 
+        \notonkey{
             \begin{center}
                 \includegraphics[width=12cm]{images/6-3-dice.png}
             \end{center}
+        }{}
 
+        \notonkey{
             \begin{hint}{Hint}
                 For this one, we will need to use the \textbf{rule of sums}
                 to combine several outcomes: Getting 5 1's, 6 1's, OR 7 1's.
             \end{hint}
-
+        }{}
+        
             \begin{tabular}{ | c | p{4cm} | c | c | c | }
                 \hline
                 & & repeats $n$ & successes $k$ & probability $p$
@@ -174,8 +183,8 @@
             }{ ~\\~\\ }
         \end{question}
 
-
-        \newpage
+        \notonkey{ \newpage }{ \hrulefill }
+        
         % -------------------------------------------------------------%
         % - QUESTION --------------------------------------------------%
         % -------------------------------------------------------------%
