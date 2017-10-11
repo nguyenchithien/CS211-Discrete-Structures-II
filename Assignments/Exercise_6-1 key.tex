@@ -31,8 +31,8 @@
 
 \begin{document}
 
-    %\toggletrue{answerkey}
-    \togglefalse{answerkey}
+    \toggletrue{answerkey}
+    %\togglefalse{answerkey}
 
     \section*{Review of structures}
 
@@ -43,14 +43,14 @@
                 \subparagraph{Repetitions allowed:}
                     An item from our input set $\{1, ..., n\}$
                     can be re-used multiple times for each selection.
-
+                    
                 \subparagraph{Order matters:}
                     There is a difference between choosing item $A$ then $B$,
                     and choosing item $B$ then $A$. ~\\
-
+                
                 \begin{hint}{Example}
                     You are filling in your name in the high-score list,
-                    and there are 3 slots to fill in your name. You can
+                    and there are 3 slots to fill in your name. You can 
                     repeat letters, and the order you enter them matters
                     (``RJM" is different from ``MRJ"). Assuming 26 letters,
                     the result is $26^{3}$.
@@ -61,8 +61,8 @@
             \paragraph{Unordered lists of length $r$ with items from $\{1, ..., n\}$}
                 \subparagraph{Repetitions allowed:}
                     An item from our input set $\{1, ..., n\}$
-                    can be re-used multiple times for each selection.
-
+                    can be re-used multiple times for each selection.                    
+                
                 \subparagraph{Order doesn't matter:}
                     Any grouping of selections from the set are considered
                     the same, such as \{a, b, c\} and \{b, c, a\}.
@@ -73,24 +73,24 @@
                     is $C(r + n - 1, r)$.
                 \end{hint}
         \end{introNOHEAD}
-
-        \newpage
-
+        
+        \newpage        
+        
         \begin{introNOHEAD}{}
             \paragraph{Permutations of length $r$ with items from $\{1, ..., n\}$}
                 \subparagraph{No repetitions:}
                     Once one item is selected from the set $\{1, ..., n\}$,
                     it is no longer an option for subsequent items.
-
+                    
                     \begin{hint}{Example}
                         Pulling cards from a deck... First you have 52 options,
                         then 51 options, then 50 options...
                     \end{hint}
-
+                    
                 \subparagraph{Order matters:}
                     The order that you select something matters, so
                     in a way, different ``slots" represent different things.
-
+                    
                     \begin{hint}{Example}
                         Electing President, VP, and Secretary
                     \end{hint}
@@ -106,7 +106,7 @@
                     If any two items are selected, the order doesn't matter.
                     Combinations deal with sets, and with sets, \{a, b\} and
                     \{b, a\} are considered equivalent.
-
+                
                 \begin{hint}{Example}
                     If there are 5 different dinners, and we
                     need to feed 3 people, then there are $C(5,3)$ possible
@@ -153,7 +153,7 @@
                 \end{tabular}
             \end{center}
         \end{intro}
-
+        
         % -------------------------------------------------------------%
         % - QUESTION --------------------------------------------------%
         % -------------------------------------------------------------%
@@ -161,7 +161,7 @@
         \begin{question}{\thequestion}{1}
             % 5.2 Exercise 12a
             How many arrangements are there of the letters in the word MATCH?
-
+            
             \begin{itemize}
                 \item[]     Are repetitions allowed?    \solution{ no }{ \fitb }
                 \item[]     Does order matter?          \solution{ yes }{ \fitb }
@@ -171,9 +171,9 @@
                 \item[]     Solution: \solution{$P(5,5) = 120$}{\fitb[4cm]}
             \end{itemize}
         \end{question}
-
+        
         \hrulefill
-
+        
         % -------------------------------------------------------------%
         % - QUESTION --------------------------------------------------%
         % -------------------------------------------------------------%
@@ -182,7 +182,7 @@
             % 5.3 Exercise 26 a
             There are five red, three green, and eight blue marbles in a box.
             In how many ways can a sample of four be selected?
-
+            
             \begin{itemize}
                 \item[]     Are repetitions allowed?    \solution{ yes }{ \fitb }
                 \item[]     Does order matter?          \solution{ no }{ \fitb }
@@ -192,9 +192,9 @@
                 \item[]     Solution: \solution{$C(16,4) = 1820$}{\fitb[4cm]}
             \end{itemize}
         \end{question}
-
+        
         \hrulefill
-
+        
         % -------------------------------------------------------------%
         % - QUESTION --------------------------------------------------%
         % -------------------------------------------------------------%
@@ -207,7 +207,7 @@
             First for yourself, second for your sister,
             and third for your brother.
             It is OK if several people have the same muffin type.
-
+            
             \begin{itemize}
                 \item[]     Are repetitions allowed?    \solution{ yes }{ \fitb }
                 \item[]     Does order matter?          \solution{ yes }{ \fitb }
@@ -217,9 +217,9 @@
                 \item[]     Solution: \solution{$4^{3}$}{\fitb[4cm]}
             \end{itemize}
         \end{question}
-
+        
         \hrulefill
-
+        
         % -------------------------------------------------------------%
         % - QUESTION --------------------------------------------------%
         % -------------------------------------------------------------%
@@ -227,8 +227,8 @@
         \begin{question}{\thequestion}{1}
             % Chapter 5.4 Exercise 2 b
             How many bags of 20 pieces of candy can one buy
-            from a store that sells four types of candy?
-
+            from a store that sells four types of candy?           
+            
             \begin{itemize}
                 \item[]     Are repetitions allowed?    \solution{ yes }{ \fitb }
                 \item[]     Does order matter?          \solution{ no }{ \fitb }
@@ -242,7 +242,7 @@
 
 
     \newpage
-
+    
     \section{Introduction}
     %------------------------------------------------------------------%
     \subsection{Experiments, Outcomes, and Events}
@@ -350,11 +350,11 @@
                         kind of formula are we using to choose 2 items
                         from a deck of 52?
                     \end{hint}
-
+                    
                     $n(S) = $ \solution{ $P(52,2)$.}{ \fitb[3cm] }
 
                 \item[b.] Describe the event $E$ in terms of your representation.
-
+                
                     \begin{hint}{Hint}
                         We're interested in the event where both our selections
                         have the same value. This can be broken down as: \\
@@ -362,11 +362,11 @@
                         2. Choose a card with the same value (3 possible) \\
                         3. Combine with ``AND" (The Rule of Product)
                     \end{hint}
-
+                    
                     $n(E) = $ \solution{ $(52)(3)$ }{}
 
                 \item[c.] Compute $Prob(E) = \frac{n(E)}{n(S)}$.
-
+                    
                     $Prob(E) = \frac{n(E)}{n(S)} =$
                     \solution{ $ \frac{(52)(3)}{(52)(51)} $ }{}
             \end{enumerate}
@@ -384,32 +384,32 @@
             times, and the event $E$ that the last two tosses have the same result. \\
             ( \fitb[0.5cm] \fitb[0.5cm] \fitb[0.5cm] Heads Heads ) OR
             ( \fitb[0.5cm] \fitb[0.5cm] \fitb[0.5cm] Tails Tails )
-
+            
             \begin{enumerate}
                 \item[a.] Describe the set $S$ of all outcomes, represented
                 so they are equally likely
                 \solution{ Ordered lists of length 5 with entries from $\{H, T\}$}{ ~\\ }
-
+                
                 \item[b.] Describe the event $E$ in terms of your representation. \\
                 $n(S) = $ \solution{ $2^{5} = 32$ }{ \fitb } \tab
                 $n(E) = $ \solution{ $2^{3} \cdot 1 \cdot 1$ + $2^{3} \cdot 1 \cdot 1$ = $16$ }{ \fitb }
-
+                
                 \item[c.] $Prob(E) = \frac{n(E)}{n(S)} = $
                     \solution{ $\frac{16}{32} = 0.5$ }{ }
             \end{enumerate}
         \end{question}
 
     \newpage
-
+    
     \subsection{The complement of the Event}
-
+    
         \begin{intro}{Proposition 1}
             Given an event $E$,
             $$ Prob(E) + Prob(\bar{E}) = 1 $$
             Where $\bar{E}$ is the complement of the event $E$.
         \end{intro}
 
-
+        
         % -------------------------------------------------------------%
         % - QUESTION --------------------------------------------------%
         % -------------------------------------------------------------%
@@ -417,24 +417,24 @@
         \begin{question}{\thequestion}{3}
             What is the probability that for a six-sided die rolled
             three times the same result comes up more than once?
-
+            
             \begin{enumerate}
                 \item[a.] What is the sample space $S$?
                     \solution{ \{1, 2, 3, 4, 5, 6\} }{ ~\\ }
-
+                
                 \item[b.] What is the event $E$ (in English)? ~\\
                     The set of outcomes that... \solution{ use the same \# more than once. }{ ~\\ }
-
+                    
                 \item[c.] What is the complement of $\bar{E}$ (in English)? ~\\
                     The set of outcomes that... \solution{ are all different numbers. }{ ~\\ }
-
+                
                 \item[d.] What \textit{structure type} is $\bar{E}$? What is $n$ and $r$? ~\\
                     \solution{ Permutation, $n = 6$, $r = 3$ }{ ~\\ }
-
+                
                 \item[e.] Calculate $Prob(\bar{E})$ ~\\
                     $Prob(\bar{E}) = n(\bar{E}) / n(S) =$
                     \solution{ $\frac{P(6,3)}{6^{3}} = \frac{5}{9} = 0.\bar{5}$ }{}
-
+                
                 \item[f.] Calculate the probability for the Event $Prob(E)$ using the proposition. ~\\
                     \solution{ $1 - Prob(\bar{E}) = 1 - 0.55 \approx 0.44$ }{ ~\\ }
             \end{enumerate}
