@@ -34,9 +34,46 @@
     %\toggletrue{answerkey}
     \togglefalse{answerkey}
 
+
+    \notonkey{
+    %- Team Info ------------------------------------------------------%
+
+    \paragraph{Team name:}
+
+    ~\\~\\
+    Please write down all people in your team. ~\\
+
+    % table %
+    \begin{tabular}{ p{6cm} p{6cm} }
+        1. & 2. \\ \\
+        3. & 4.
+    \end{tabular}
+    % table %
+    ~\\
+
+    \hrulefill
+    \subsection*{Grading}
+
+    \begin{center}
+
+        \begin{tabular}{ | l | l | l | }
+            \hline
+            \textbf{ Question } & \textbf{ Score } & \textbf{ Max } 
+            \\ \hline
+            1 &  & 2     \\ \hline
+            2 &  & 2     \\ \hline
+            & &  \\ \hline
+            Total & & 4
+            \\ \hline
+        \end{tabular}
+    \end{center}
+    }{}
+
+\notonkey{ \newpage }{ \hrulefill }
+
     \notonkey{
     %------------------------------------------------------------------%
-    \section{Review}
+    \section*{Review}
 
         \begin{intro}{Complement}
             Given an event $E$,
