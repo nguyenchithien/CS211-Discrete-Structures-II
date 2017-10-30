@@ -13,13 +13,8 @@
 \usepackage{tcolorbox}
 \usepackage{subcaption}
 \usepackage{wasysym}
-\usepackage{multirow}
-\usepackage{dirtree}
+\usepackage{tikz}
 \usepackage{lipsum} % for dummy text only
-\usepackage{fancyhdr}
-\usepackage{lastpage}
-\usepackage{dirtree}
-\usepackage{boxedminipage}
 
 \definecolor{commentz}{rgb}{0,0.02,0.6}
 \definecolor{keywordz}{rgb}{0.69,0.18, 0.36}
@@ -27,8 +22,8 @@
 \definecolor{textz}{rgb}{0.54, 0.27, 0.07}
 \definecolor{hintboxz}{rgb}{0.9, 1.0, 0.9}
 \definecolor{errorboxz}{rgb}{1.0, 0.9, 0.9}
-\definecolor{previewbg}{rgb}{0.9, 0.9, 0.9}
-\definecolor{previewfg}{rgb}{0, 0, 0}
+\definecolor{previewbg}{rgb}{0.1, 0.1, 0.1}
+\definecolor{previewfg}{rgb}{1, 1, 1}
 \definecolor{textbg}{rgb}{1, 1, 1}
 \definecolor{textfg}{rgb}{0, 0, 0}
 
@@ -43,19 +38,19 @@
 \toggletrue{answerkey}
 %\togglefalse{answerkey}
 
-% Solution text %
-\newcommand\solution[2] {\iftoggle{answerkey}{\begin{answer}#1\end{answer}}{#2}}
-% \solution{SOLUTION}{ nevermind }
-
-\newcommand\notonkey[2] {\iftoggle{answerkey}{ #2 }{ #1 }}
-
 %\iftoggle{answerkey}{ \begin{answer} ANSWER \end{answer} }{ { ~\\ \raisebox{0pt}[4cm][0pt]{  } } }
 %\iftoggle{answerkey}{ \begin{answer} ANSWER \end{answer} }{}
+%\newcommand\vspace[1][1cm]{ ~\\ \raisebox{0pt}[#1][0pt]{  } }
 
+\newcommand\venndiagram{ \begin{tikzpicture}
+                \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0) node[anchor=south west] {U};
+                \draw (1.5, 2.5) circle (1cm) node[anchor=south east] {A};
+                \draw (2.5, 2.5) circle (1cm) node[anchor=south west] {B};
+                \draw (2, 1.5) circle (1cm) node[below] {C};
+            \end{tikzpicture} }
 
 % SHOWS ANSWERS IN RED, CHANGE TO WHITE FOR EXAM
 \newenvironment{answer}[0] { \color{red} } { \color{black} }
-
 
 
 % Side wrap: %
@@ -78,7 +73,8 @@
 
 % Intro box %
 \newenvironment{intro}[1]{  \begin{mdframed}[backgroundcolor=intro]\noindent \textbf{ #1 } \\ } { \end{mdframed} }
-\newenvironment{introNOHEAD}[0]{\begin{mdframed}[backgroundcolor=intro]\noindent } { \end{mdframed} }
+
+\newenvironment{introNOHEAD}[1]{  \begin{mdframed}[backgroundcolor=intro] } { \end{mdframed} }
 
 % Hint box %
 \newenvironment{hint}[1]{   \begin{mdframed}[backgroundcolor=hint]\noindent \textbf{ #1 } \\ } { \end{mdframed} }
@@ -86,9 +82,9 @@
 % Error box %
 \newenvironment{error}[1]{  \begin{mdframed}[backgroundcolor=error]\noindent \textbf{ #1 } \\ } { \end{mdframed} }
 
-% Answer box %
-\newenvironment{answerbox}[0]{ \begin{mdframed}\noindent } { \end{mdframed} }
-
+% Solution text %
+\newcommand\solution[2] {\iftoggle{answerkey}{\begin{answer}#1\end{answer}}{#2}}
+% \solution{SOLUTION}{ nevermind }
 
 % EXAM QUESTION FORMAT
 \newenvironment{examquestion}[4] {\textbf{\footnotesize{#4\%}} Question #1: #2 (#3) \hfill \grader \\ ~ \\ }{ }
@@ -116,6 +112,10 @@
 
 \newenvironment{questionNOGRADE}[1] {\paragraph{Question #1} ~\\}{}
 
+% ANSWERSHEET
+\newenvironment{answersheetquestion}[3] {\textbf{\footnotesize{#3\%}} Question #1: #2 \hfill \grader ~\\ }{ }
+
+
 % Example
 %\begin{question}{1}{2}
 %    Do a thing
@@ -124,8 +124,6 @@
 %        \framebox{ $ a_{n} = 2n + 2 $ } \par{}
 %    \end{answer}
 %\end{question}
-
-% UNGRADED QUESTION FORMAT
 
 % Fill in the blank region
 \newcommand\fitb[1][1cm]{ $\rule{#1}{0.15mm}$ }
@@ -136,7 +134,7 @@
     showspaces=false,
     showstringspaces=false,
     tabsize=4,
-    basicstyle=\ttfamily\small\color{textz}, 
+    basicstyle=\ttfamily\small\color{textz},
     commentstyle=\ttfamily\color{commentz},
     keywordstyle=\ttfamily\color{keywordz},
     backgroundcolor=\color{backgroundz},
@@ -154,7 +152,7 @@
     showspaces=false,
     showstringspaces=false,
     tabsize=4,
-    basicstyle=\ttfamily\small\color{textz}, 
+    basicstyle=\ttfamily\small\color{textz},
     commentstyle=\ttfamily\color{commentz},
     keywordstyle=\ttfamily\color{keywordz},
     backgroundcolor=\color{backgroundz},
@@ -171,7 +169,7 @@
     showspaces=false,
     showstringspaces=false,
     tabsize=4,
-    basicstyle=\ttfamily\small\color{previewfg}, 
+    basicstyle=\ttfamily\scriptsize\color{previewfg},
     backgroundcolor=\color{previewbg},
     breakatwhitespace=false,
     frame=single,
@@ -185,7 +183,7 @@
     showspaces=false,
     showstringspaces=false,
     tabsize=4,
-    basicstyle=\ttfamily\footnotesize\color{textfg}, 
+    basicstyle=\ttfamily\footnotesize\color{textfg},
     backgroundcolor=\color{textbg},
     breakatwhitespace=false,
     frame=single,
@@ -209,12 +207,3 @@
     %\caption{A figure with two subfigures}
     %\label{fig:test}
 %\end{figure}
-
-% Directory tree %
-%\begin{framed}
-%\dirtree{%
-%.1 PROJECT.
-%.2 assetsManager{.}py.
-%.3 audio.
-%}
-%\end{framed}
