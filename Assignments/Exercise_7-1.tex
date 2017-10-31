@@ -34,6 +34,42 @@
     %\toggletrue{answerkey}
     \togglefalse{answerkey}
 
+
+    \notonkey{
+    %- Team Info ------------------------------------------------------%
+
+    \paragraph{Team name:}
+
+    ~\\~\\
+    Please write down all people in your team. ~\\
+
+    % table %
+    \begin{tabular}{ p{6cm} p{6cm} }
+        1. & 2. \\ \\
+        3. & 4.
+    \end{tabular}
+    % table %
+    ~\\
+
+    \hrulefill
+    \subsection*{Grading}
+
+    \begin{center}
+
+        \begin{tabular}{ | l | l | l | }
+            \hline
+            \textbf{ Question } & \textbf{ Score } & \textbf{ Max } 
+            \\ \hline
+            1 &  & 4     \\ \hline
+            2 &  & 4     \\ \hline
+            3 &  & 2     \\ \hline
+            & &  \\ \hline
+            Total & & 10
+            \\ \hline
+        \end{tabular}
+    \end{center}
+    }{}
+
     \section{Graph Theory}
 
     \subsection{Terminology}
@@ -72,22 +108,44 @@
                     \begin{tikzpicture}
                         \filldraw (-2,0) circle (2pt);
                         \filldraw (2,0) circle (2pt);
+                        \filldraw (-2,2) circle (2pt);
+                        \filldraw (2,2) circle (2pt);
                         \draw (-2,0)   to[bend left=-20] (2, 0);
                         \draw (-2,0)   to[bend left=20] (2, 0);
-                        \node [fill=none] at (0,0.6) {Parallel edges};
-                        \node [fill=none] at (-3,0.6) {Loop};
-                        \draw (-2.3,0) circle (10pt);
+                        \draw (2,0) -- (2,2) -- (-2,2) -- (-2, 0);
+                        
+                        \node [fill=none] at (0,-1.0) {Parallel edges};
+                        \node [fill=none] at (-3,2.6) {Loop};
+                        \draw (-2.3,2.2) circle (10pt);
                     \end{tikzpicture}
                 \end{center}
-
-                \item   \textbf{Walk:}
-                \item   \textbf{Trail:}
-                \item   \textbf{Cycle:}
             \end{itemize}
 
         \end{intro}
 
+		\newpage
+					
+        \begin{intro}{\ }
+            \begin{itemize}
+                \item   \textbf{Walk:}	 A series of alternating
+                		nodes and edges, traversing between adjacent nodes.
+                    \begin{itemize}
+                        \item   \textbf{Closed walk:} When the beginning
+	                        and ending node of a walk are the same.
+						\item  \textbf{Length of a walk:} The amount
+							of edges in the walk.
+						\item \textbf{Trivial walk:} A walk of length 0.
+                    \end{itemize}
+                    
+                \item   \textbf{Trail:}	A walk with no repeated edges.
+                \item   \textbf{Path:} A walk with no repeated vertices.
+                \item   \textbf{Circuit:} A closed trail.
+                \item   \textbf{Trivial circuit:} A circuit with one vertex and no edges.
+                \item   \textbf{Eulerian:} A trail or circuit where every edge is traversed.
+                \item   \textbf{Cycle:} A nontrivial circuit where the only repeated node is the first/last one.
+            \end{itemize}
 
+        \end{intro}
 
 
 \end{document}
