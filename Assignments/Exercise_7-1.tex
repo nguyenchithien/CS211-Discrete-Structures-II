@@ -221,8 +221,9 @@
             \filldraw (2,-3) circle (2pt) node[right] {Lee's Summit};
             \filldraw (0,-4) circle (2pt) node[below] {Grandview};
 
-            \draw (0,0) -- (-2,-2) to[bend left=20] (-4,-4) -- (0,-4) to[bend left=-20] (2,-3) to (2,-.5) to[bend left=-20] (0,0);
-            \draw (0,0) -- (0,-4);
+            \draw (0,0) -- (-2,-2) to[bend left=20] (-4,-4) -- (0,-4) to[bend left=-20] (2,-3) to[bend left=-20] (2,-.5) to[bend left=-20] (0,0);
+            \draw (0,0) to[bend left=20] (0,-4);
+            \draw (0,0) to[bend left=-20] (0,-4);
             \draw (-4,-4) to[bend left=20] (-2,-2);
         \end{tikzpicture}
     \end{center}
@@ -235,7 +236,9 @@
         \item[c.]   Come up with a \textbf{cycle}, a circuit where the only repeated node is the first/last one..
             \solution{ Example: KC $\to$ Independence $\to$ Lee's Summit $\to$ Grandview $\to$ KC }{ \vspace{1cm} }
         \item[d.]   Identify: Did you come up with any \textbf{Eulerian Trails}? \\ If not, create one.
-            \solution{ Example: Yes, (c.) }{ \vspace{1cm} }
+            \solution{ Example:
+                Olathe $\to$ Overland Park $\to$ Olathe $\to$ Grandview $\to$ KC $\to$ Grandview $\to$ Lee's Summit $to$ Independence $\to$ KC $\to$ Overland Park
+            }{ \vspace{2cm} }
         \item[e.]   Identify: Are there any \textbf{parallel edges}?
             \solution{ Yes: Olathe $\to$ Overland Park }{ \vspace{1cm} }
     \end{enumerate}
