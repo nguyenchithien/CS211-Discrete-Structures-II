@@ -33,51 +33,61 @@
 
     %\toggletrue{answerkey}
     \togglefalse{answerkey}
-    
+
     \section{Graph Theory}
 
-    \subsection{The Seven Bridges of K{\"o}nigsberg}
+    \subsection{Terminology}
 
-    \begin{quote}
-    ``Euler was a Swiss mathematician, physicist, astronomer, logician and engineer who made important and influential discoveries in many branches of mathematics like infinitesimal calculus and graph theory"
+        Since we're introducing a new concept, Graph Theory,
+        we need to go over the various terms so that we
+        can communicate about these graphs properly.
 
-    \footnotesize From Wikipedia, https://en.wikipedia.org/wiki/Euler
-    \end{quote}
+        \begin{intro}{\ }
+            \begin{itemize}
+                \item   \textbf{Graph:} A graph is a type of diagram that contains \textit{vertices} (aka nodes) and \textit{edges}.
 
-    \begin{center}
-        \includegraphics[width=13cm]{images/islands.png}
-    \end{center}
+                \begin{center}
+                    \begin{tikzpicture}
+                        \filldraw (-2,0) circle (2pt) node[align=left, below] {Node};
+                        \filldraw (2,0) circle (2pt) node[align=left, below] {Node};
+                        \draw (-2,0)   to (2,0);
+                        \node [fill=none] at (0,0.5) {Edge};
+                    \end{tikzpicture}
+                \end{center}
 
-    Euler had tried to come up with a solution for whether you could walk over seven bridges in K{\"o}nigsberg, as drawn above,
-    exactly once each. To do so, he came up with a graph to model the problem with.
+                \item   \textbf{Node:} A vertex of the graph, drawn as a dot.
+                    \begin{itemize}
+                        \item   \textbf{Adjacent nodes:} Two nodes that are connected by an edge.
+                    \end{itemize}
 
-    \begin{center}
-        \begin{tikzpicture}
-            \filldraw (-2,-2) circle (2pt) node[align=left, below] {A};
-            \filldraw (2,-2) circle (2pt) node[align=left, below] {B};
-            \filldraw (2,2) circle (2pt) node[align=left, above] {D};
-            \filldraw (-2,2) circle (2pt) node[align=left, above] {C};
+                \item   \textbf{Edge:} A line that connects two nodes together.
+                    \begin{itemize}
+                        \item   \textbf{Parallel edges:} Two edges that have
+                            the same two endpoints.
+                        \item   \textbf{Loop:} An edge that begins and ends at
+                            the same node, creating a loop.
+                    \end{itemize}
 
-            \draw (-2,-2)   to (2,2);
-            \draw (-2,2)    to (2,2);
-            \draw (2,2)     to (2,-2);
-            \draw (-2,-2)   to[bend left] (-2,2);
-            \draw (-2,-2)   to[bend right] (-2,2);
-            \draw (-2,-2)   to[bend left=-20] (2, -2);
-            \draw (-2,-2)   to[bend left=20] (2, -2);
-            
-            \node [fill=none] at (-3, 0) {2};
-            \node [fill=none] at (-2, 0) {3};
-            \node [fill=none] at (0, 2.5) {1};
-            \node [fill=none] at (0, 0.5) {4};
-            \node [fill=none] at (2.5, 0) {5};
-            \node [fill=none] at (0, -1.2) {6};
-            \node [fill=none] at (0, -3) {7};
-        \end{tikzpicture}
-    \end{center}
+                \begin{center}
+                    \begin{tikzpicture}
+                        \filldraw (-2,0) circle (2pt);
+                        \filldraw (2,0) circle (2pt);
+                        \draw (-2,0)   to[bend left=-20] (2, 0);
+                        \draw (-2,0)   to[bend left=20] (2, 0);
+                        \node [fill=none] at (0,0.6) {Parallel edges};
+                        \node [fill=none] at (-3,0.6) {Loop};
+                        \draw (-2.3,0) circle (10pt);
+                    \end{tikzpicture}
+                \end{center}
 
-    
-    
-    
+                \item   \textbf{Walk:}
+                \item   \textbf{Trail:}
+                \item   \textbf{Cycle:}
+            \end{itemize}
+
+        \end{intro}
+
+
+
 
 \end{document}
