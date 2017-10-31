@@ -13,8 +13,10 @@
 \usepackage{tcolorbox}
 \usepackage{subcaption}
 \usepackage{wasysym}
-\usepackage{tikz}
+\usepackage{tikz} % draw stuff
 \usepackage{lipsum} % for dummy text only
+\usepackage{circuitikz} % draw circuits
+\usepackage{colortbl} % cell bg colors
 
 \definecolor{commentz}{rgb}{0,0.02,0.6}
 \definecolor{keywordz}{rgb}{0.69,0.18, 0.36}
@@ -71,6 +73,8 @@
 \newcommand\smtab[1][0.5cm]{\hspace*{#1}}
 \newcommand\ttab[1][0.1cm]{\hspace*{#1}}
 
+\newcommand\notonkey[2] {\iftoggle{answerkey}{ #2 }{ #1 }}
+
 % Intro box %
 \newenvironment{intro}[1]{  \begin{mdframed}[backgroundcolor=intro]\noindent \textbf{ #1 } \\ } { \end{mdframed} }
 
@@ -85,6 +89,8 @@
 % Solution text %
 \newcommand\solution[2] {\iftoggle{answerkey}{\begin{answer}#1\end{answer}}{#2}}
 % \solution{SOLUTION}{ nevermind }
+
+\newenvironment{answerbox}[0]{ \begin{mdframed}\noindent } { \end{mdframed} }
 
 % EXAM QUESTION FORMAT
 \newenvironment{examquestion}[4] {\textbf{\footnotesize{#4\%}} Question #1: #2 (#3) \hfill \grader \\ ~ \\ }{ }
