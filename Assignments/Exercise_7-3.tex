@@ -174,13 +174,13 @@
             \draw[->] (0.5, 2) -- (2.2, 1.5);
         \end{tikzpicture}
         \\
-        Onto? \solution{ yes }{} &
-        Onto? \solution{ yes }{} &
-        Onto? \solution{ no }{}
-        \\ \\
-        One-to-one? \solution{ yes }{} &
-        One-to-one? \solution{ o }{} &
-        One-to-one? \solution{ no }{}
+        Onto? \solution{ yes, every domain element has an input }{} &
+        Onto? \solution{ yes, every domain element has an input }{} &
+        Onto? \solution{ no, the bottom domain element doesn't have an input }{}
+        \\ \notonkey{ \\ }{}
+        One-to-one? \solution{ yes, every domain element has max 1 input }{} &
+        One-to-one? \solution{ yes, every domain element has max 1 input }{} &
+        One-to-one? \solution{ no, one element has 2 inputs }{}
     \end{tabular}
     
 \end{question}
@@ -262,6 +262,20 @@
             \draw (2,2) -- (0,2);
             \draw (0,2) -- (0,0);
         \end{tikzpicture}
+        \solution{
+            Example:
+            \begin{tikzpicture}
+                \filldraw (3,1) circle (1pt) node[left] {$a_{1}$};
+                \filldraw (2,0) circle (1pt) node[right] {$a_{2}$};
+                \filldraw (2,2) circle (1pt) node[right] {$a_{3}$};
+                \filldraw (1,1) circle (1pt) node[left] {$a_{4}$};
+
+                \draw (3,1) -- (2,0);
+                \draw (2,0) -- (2,2);
+                \draw (2,2) -- (1,1);
+                \draw (1,1) -- (3,1);
+            \end{tikzpicture}
+        }{}
 
         \item[b.]
         \begin{tikzpicture}
@@ -271,7 +285,21 @@
 
             \draw (0,0) -- (2,0) -- (1,2) -- (0,0);
         \end{tikzpicture}
+        \solution{
+            Example:
+            \begin{tikzpicture}
+                \filldraw (0,0) circle (1pt) node[left] {$b_{1}$};
+                \filldraw (0,2) circle (1pt) node[right] {$b_{2}$};
+                \filldraw (1,2) circle (1pt) node[right] {$b_{3}$};
+
+                \draw (0,0) -- (0,2) -- (1,2) -- (0,0);
+            \end{tikzpicture}
+        }{}
     \end{itemize}
+
+    \solution{
+        Multiple solutions...
+    }{}
     
 \end{question}
 
@@ -337,36 +365,52 @@
     \begin{itemize}
         \item[a.]   Write out all edges for both graphs.
 
-            \begin{tabular}{l | c c c c c c}
-                & Example
-                \\
-                Edges in graph $G$
-                    & \{2, 5\}
-                    & \solution{ \{ 2, 3 \} }{}
-                    & \solution{ \{ 3, 4 \} }{}
-                    & \solution{ \{ 4, 5 \} }{}
-                    & \solution{ \{ 2, 5 \} }{}
-                    & \solution{ \{ 5, 6 \} }{}
-                \\ \\
-                Edges in graph $H$
-                    & \{d, c\}
-                    & \solution{ \{ y, x \} }{}
-                    & \solution{ \{ x, w \} }{}
-                    & \solution{ \{ w, v \} }{}
-                    & \solution{ \{ y, v \} }{}
-                    & \solution{ \{ v, u \} }{}
-                \\ \\
-            \end{tabular}
+            $G$: \{2, 5\}
+                     \solution{ \{ 2, 3 \} }{}
+                     \solution{ \{ 3, 4 \} }{}
+                     \solution{ \{ 4, 5 \} }{}
+                     \solution{ \{ 2, 5 \} }{}
+                     \solution{ \{ 5, 6 \} }{}
+
+            $H$: \{d, c\}
+                     \solution{ \{ y, x \} }{}
+                     \solution{ \{ x, w \} }{}
+                     \solution{ \{ w, v \} }{}
+                     \solution{ \{ y, v \} }{}
+                     \solution{ \{ v, u \} }{}
 
         \item[b.]   For each edge from $G$, write out what edge in $H$ corresponds to it.
-            \tab Example: \{2,5\} $\to$ \{d, c\}
+            \tab Example: \{2,5\} $\to$ \{d, c\} \\
+            
             \solution{
+                Let's split up $G$ into two subgraphs to see it more clearly...
+                
+                \begin{tikzpicture}
+                    \filldraw (0,0) circle (1pt) node[left] {3};
+                    \filldraw (0,2) circle (1pt) node[left] {1};
+                    \filldraw (1,1) circle (1pt) node[above] {5};
+                    \filldraw (2,1) circle (1pt) node[above] {2};
+                    \draw (0,0) -- (1,1) -- (0,2);
+                    \draw (0,2) to[bend right=60] (0,0);
+                    \draw (1,1) -- (2,1);
+                \end{tikzpicture}  \tab 
+                \begin{tikzpicture}                    
+                    \filldraw (-1,1) circle (1pt) node[above] {5};
+                    \filldraw (0,1) circle (1pt) node[above] {2};
+                    \filldraw (1,0) circle (1pt) node[right] {4};
+                    \filldraw (1,2) circle (1pt) node[right] {6};
+
+                    \draw (1,2) -- (0,1) -- (1,0);
+                    \draw (1,0) to[bend right=60] (1,2);
+                    \draw (0,1) -- (-1,1);
+                \end{tikzpicture}
+            
                 $\{1,3\} \to \{b, a\}$ \tab
                 $\{1,5\} \to \{b, c\}$ \tab
-                $\{2,4\} \to \{d, e\}$ \tab
+                $\{2,4\} \to \{d, e\}$ \\
                 $\{2,5\} \to \{d, c\}$ \tab
                 $\{2,6\} \to \{d, f\}$ \tab
-                $\{3,5\} \to \{a, c\}$ \tab
+                $\{3,5\} \to \{a, c\}$ \\
                 $\{4,6\} \to \{e, f\}$
             }{}
     \end{itemize}
@@ -479,7 +523,12 @@
             \begin{tabular}{ p{1cm} |p{1cm} |p{1cm} |p{1cm} |p{1cm} }
                 a & b & c & d & e
                 \\ \hline
-                & & & & \\
+                  \solution{ 2 }{} % a
+                &   \solution{ 2 }{} % b
+                &   \solution{ 3 }{} % c 
+                &   \solution{ 2 }{} % d
+                &   \solution{ 3 }{} % e
+                \\
                 & & & & \\
             \end{tabular}
     \end{itemize}
@@ -568,8 +617,8 @@
         \draw (0,0) -- (1,0.5) -- (0,1) -- (1,1.5) -- (0,2) -- (1,0.5);
         \draw (0,0) -- (1,1.5);
     \end{tikzpicture}
-
     \solution{
+        Example:
         \begin{tikzpicture}
             \filldraw (0,0) circle (1pt) node[left]         {a};
             \filldraw (0.5,1) circle (1pt) node[left]         {b};
@@ -718,7 +767,7 @@
             \solution{
                 a, b, e, a  \tab    a, e, d, a  \tab d, e, c, d \tab b, c, e, b
                 \\
-                a, b, c, d, a
+                a, b, c, d, a (unbounded)
             }{}
     \end{itemize}
     
