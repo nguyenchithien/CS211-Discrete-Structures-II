@@ -31,7 +31,7 @@
 
 \begin{document}
 
-    %\toggletrue{answerkey}
+    %}\toggletrue{answerkey}
     \togglefalse{answerkey}
 
     \notonkey{
@@ -62,7 +62,7 @@
 % - QUESTION --------------------------------------------------%
 % -------------------------------------------------------------%
 \stepcounter{question}
-\begin{question}{\thequestion}{11}
+\begin{question}{\thequestion}{5}
     \footnote{From Jim Van Horn's POGIL Activity 16}
     
     \begin{tikzpicture}
@@ -117,24 +117,24 @@
     \begin{itemize}
         \item[a.]   How many vertices does each graph have? ~\\~\\
         \begin{tabular}{p{3cm} p{3cm} p{3cm} p{3cm}}
-            $G_{1}$     \solution{}{ \fitb }
-            & $G_{2}$   \solution{}{ \fitb }
-            & $G_{3}$   \solution{}{ \fitb }
-            & $G_{4}$   \solution{}{ \fitb }
+            $G_{1}$     \solution{ 6 }{ \fitb }
+            & $G_{2}$   \solution{ 6 }{ \fitb }
+            & $G_{3}$   \solution{ 6 }{ \fitb }
+            & $G_{4}$   \solution{ 6 }{ \fitb }
         \end{tabular}
 
         \item[b.]   How many edges does each graph have? ~\\~\\
         \begin{tabular}{p{3cm} p{3cm} p{3cm} p{3cm}}
-            $G_{1}$     \solution{}{ \fitb }
-            & $G_{2}$   \solution{}{ \fitb }
-            & $G_{3}$   \solution{}{ \fitb }
-            & $G_{4}$   \solution{}{ \fitb }
+            $G_{1}$     \solution{ 5 }{ \fitb }
+            & $G_{2}$   \solution{ 5 }{ \fitb }
+            & $G_{3}$   \solution{ 6 }{ \fitb }
+            & $G_{4}$   \solution{ 4 }{ \fitb }
         \end{tabular} \vspace{0.2cm}
         \item[c.] Which graph is NOT a connected graph?
-            \solution{}{}
+            \solution{ $G_{4}$ }{}
         \item[d.] Which of the graphs has at least one cycle?
-            \solution{}{}
-        \item[e.] Which of the graphs is a tree?
+            \solution{ $G_{3}$ }{}
+        \item[e.] Which of the graphs is a tree? \solution{ $G_{1}$ and $G_{2}$. }{}
             \begin{hint}{\ }
                 A simple connected graph with no cycles is a \textbf{tree}.
             \end{hint}
@@ -148,7 +148,7 @@
 % - QUESTION --------------------------------------------------%
 % -------------------------------------------------------------%
 \stepcounter{question}
-\begin{question}{\thequestion}{8}
+\begin{question}{\thequestion}{2}
     \footnote{From Jim Van Horn's POGIL Activity 16}
     
     \begin{center}
@@ -171,20 +171,20 @@
         \item[a.]   What is the degree of each of the vertices in $G_{1}$?
         ~\\~\\~\\
         \begin{tabular}{p{4cm} p{4cm} p{4cm}}
-            $deg(a)$    \solution{}{ \fitb }
-            & $deg(b)$  \solution{}{ \fitb }
-            & $deg(c)$  \solution{}{ \fitb }
+            $deg(a)$    \solution{ 1 }{ \fitb }
+            & $deg(b)$  \solution{ 2 }{ \fitb }
+            & $deg(c)$  \solution{ 4 }{ \fitb }
             \\ \\ \\
-            $deg(d)$    \solution{}{ \fitb }
-            & $deg(e)$  \solution{}{ \fitb }
-            & $deg(f)$  \solution{}{ \fitb }
+            $deg(d)$    \solution{ 1 }{ \fitb }
+            & $deg(e)$  \solution{ 1 }{ \fitb }
+            & $deg(f)$  \solution{ 1 }{ \fitb }
         \end{tabular} \notonkey{ \vspace{1cm} }{}
 
-        \item[b.]   List the leaves for $G_{1}$.
+        \item[b.]   List the leaves for $G_{1}$. \solution{ a, d, e, f }{}
             \begin{hint}{\ }
                 Vertices of degree 1 in a tree are called \textbf{leaves} of the tree.
             \end{hint}
-            \solution{}{ \vspace{1cm} }
+            
     \end{itemize}
     
 \end{question}
@@ -220,15 +220,17 @@
     \end{tikzpicture}
     \end{center}
 
+    \solution{Multiple solutions}{}
+
     \begin{itemize}
         \item[a.]   How many edges are in your new tree?
-            \solution{}{ \vspace{1cm} }
+            \solution{ 5 }{ \vspace{1cm} }
             
         \item[b.]   How many leaves on your new tree?
-            \solution{}{ \vspace{1cm} }
+            \solution{ 3 }{ \vspace{1cm} }
             
         \item[c.]   If you removed one edge, would the graph still be connected?
-            \solution{}{ \vspace{1cm} }
+            \solution{ no }{ \vspace{1cm} }
     \end{itemize}
     
 \end{question}
@@ -284,16 +286,16 @@
             Vertices: 1, 2, 5, \tab
             Edges: \{1, 2\} and \{2, 5\}.  \\ \\
             Is this a \textbf{subgraph}?                        \solution{ Yes }{ \vspace{0.5cm} } \\
-            Are all the vertices of $G_{1}$ also nodes of $G$?  \solution{  }{ \vspace{0.5cm} }  \\
-            Are all the edges of $G_{1}$ also edges of $G$?     \solution{  }{ \vspace{0.5cm} }
+            Are all the vertices of $G_{1}$ also nodes of $G$?  \solution{ Yes }{ \vspace{0.5cm} }  \\
+            Are all the edges of $G_{1}$ also edges of $G$?     \solution{ Yes }{ \vspace{0.5cm} }
             
             
         \item[b.]   Draw a graph $G_{2}$ above using vertices and edges from $G$...\\
             Vertices: 1, 3, 4, \tab
             Edges: \{1, 3\} and \{3, 4\} \\ \\
             Is this a \textbf{subgraph}?                        \solution{ No }{ \vspace{0.5cm} } \\
-            Are all the vertices of $G_{2}$ also nodes of $G$?  \solution{  }{ \vspace{0.5cm} }  \\
-            Are all the edges of $G_{2}$ also edges of $G$?     \solution{  }{ \vspace{0.5cm} }
+            Are all the vertices of $G_{2}$ also nodes of $G$?  \solution{ Yes }{ \vspace{0.5cm} }  \\
+            Are all the edges of $G_{2}$ also edges of $G$?     \solution{ No }{ \vspace{0.5cm} }
             
     \end{itemize}
     
@@ -397,6 +399,8 @@
             \draw (0,0) -- (-1,1) -- (0,3) -- (3.5,3) -- (3,0) -- (1.5,0) -- (0,0) -- (0,3) -- (1.5,0) -- (3.5,3);
         \end{tikzpicture}
     \end{center}
+
+    \solution{Multiple solutions}{}
     
 \end{question}
 
@@ -463,6 +467,88 @@
     \end{center}
     
     Use Prim's algorithm to find a minimal spanning tree for the graph.
+
+    \solution{
+        Multiple solutions depending on which node you start at, but for example...
+
+        \begin{tabular}{p{3cm} p{3cm} p{3cm} p{3cm} }
+            1. & 2. & 3. & 4.
+            \\
+            \begin{tikzpicture}
+                \filldraw(-1,1) circle (1pt) node [above] {a};
+            \end{tikzpicture}
+            &
+            \begin{tikzpicture}
+                \filldraw(-1,1) circle (1pt) node [above] {a};
+                \filldraw(1,1) circle (1pt) node [above] {b};
+                \draw (-1,1) -- node[pos=0.5,above] {2} (1,1);
+            \end{tikzpicture}
+            &
+            \begin{tikzpicture}
+                \filldraw(-1,1) circle (1pt) node [above] {a};
+                \filldraw(1,1) circle (1pt) node [above] {b};
+                \filldraw (0,   0)  circle (1pt)    node[above]     {d};
+                \draw (-1,1) -- node[pos=0.5,above] {2} (1,1);
+                \draw (1,1) -- node[pos=0.5,above] {3} (0,0);
+            \end{tikzpicture}
+            &
+            \begin{tikzpicture}
+                \filldraw(-1,1) circle (1pt) node [above] {a};
+                \filldraw(1,1) circle (1pt) node [above] {b};
+                \filldraw (0,   0)  circle (1pt)    node[above]     {d};
+                \filldraw (2,   0)  circle (1pt)    node[right]     {e};
+                \draw (-1,1) -- node[pos=0.5,above] {2} (1,1);
+                \draw (1,1) -- node[pos=0.5,above] {3} (0,0);
+                \draw (0,0) -- node[pos=0.5,above] {6} (2,0);
+            \end{tikzpicture}
+        \end{tabular}
+        
+        \begin{tabular}{p{6cm}  p{6cm} }
+            5. & 6.
+            \\
+            \begin{tikzpicture}
+                \filldraw(-1,1) circle (1pt) node [above] {a};
+                \filldraw(1,1) circle (1pt) node [above] {b};
+                \filldraw (0,   0)  circle (1pt)    node[above]     {d};
+                \filldraw (-1,  -1) circle (1pt)    node[above]     {f};
+                \filldraw (2,   0)  circle (1pt)    node[right]     {e};
+                \draw (-1,1) -- node[pos=0.5,above] {2} (1,1);
+                \draw (1,1) -- node[pos=0.5,above] {3} (0,0);
+                \draw (0,0) -- node[pos=0.5,above] {7} (-1,-1);
+                \draw (0,0) -- node[pos=0.5,above] {6} (2,0);
+            \end{tikzpicture}
+            &
+            \begin{tikzpicture}
+                \filldraw(-1,1) circle (1pt) node [above] {a};
+                \filldraw(1,1) circle (1pt) node [above] {b};
+                \filldraw (0,   0)  circle (1pt)    node[above]     {d};
+                \filldraw (-1,  -1) circle (1pt)    node[above]     {f};
+                \filldraw (-2,  0)  circle (1pt)    node[left]      {c};
+                \filldraw (2,   0)  circle (1pt)    node[right]     {e};
+                \filldraw (1,   -1) circle (1pt)    node[above]     {g};
+                \draw (-1,1) -- node[pos=0.5,above] {2} (1,1);
+                \draw (1,1) -- node[pos=0.5,above] {3} (0,0);
+                \draw (0,0) -- node[pos=0.5,above] {7} (-1,-1);
+                \draw (0,0) -- node[pos=0.5,above] {6} (2,0);
+                \draw (-1,-1) -- node[pos=0.5,below] {3} (-2,0);
+                \draw (-1,-1) -- node[pos=0.5,below] {5} (1,-1);
+            \end{tikzpicture}
+            \\ \\ 7. \\
+            \begin{tikzpicture}
+                \filldraw(-1,1) circle (1pt) node [above] {a};
+                \filldraw(1,1) circle (1pt) node [above] {b};
+                \filldraw (0,   0)  circle (1pt)    node[above]     {d};
+                \filldraw (-1,  -1) circle (1pt)    node[above]     {f};
+                \filldraw (-2,  0)  circle (1pt)    node[left]      {c};
+                \filldraw (2,   0)  circle (1pt)    node[right]     {e};
+                \draw (-1,1) -- node[pos=0.5,above] {2} (1,1);
+                \draw (1,1) -- node[pos=0.5,above] {3} (0,0);
+                \draw (0,0) -- node[pos=0.5,above] {7} (-1,-1);
+                \draw (0,0) -- node[pos=0.5,above] {6} (2,0);
+                \draw (-1,-1) -- node[pos=0.5,below] {3} (-2,0);
+            \end{tikzpicture}
+        \end{tabular}
+    }{}
     
 \end{question}
 
