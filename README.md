@@ -2,11 +2,13 @@
 
 Johnson County Community College
 
+[Week-by-week](#Week-by-week) | [Instructor information](#instructor-information)
+
 ----------------------------------------------------------------------------------
 
-## Week-by-week
+# Week-by-week
 
-### Chapter 5
+## Chapter 5
 
 | Week  | Days   | Chapter 	|  Lectures          | Exercises  | Homework |
 | ------| ------ | ------- 	| ------------------ | ---------- | -------- |
@@ -21,7 +23,7 @@ Johnson County Community College
 | 5     | Feb 13 | Exam Review		|  |  |  |
 |		| Feb 15 | Exam		|  |  |  |
 
-### Chapter 6
+## Chapter 6
 
 | Week  | Days   | Chapter 	|  Lectures          | Exercises  | Homework |
 | ------| ------ | ------- 	| ------------------ | ---------- | -------- |
@@ -37,7 +39,7 @@ Johnson County Community College
 |		| Mar 22 | Exam		|  |  |  |
 
 
-### Chapter 7
+## Chapter 7
 
 | Week  | Days   | Chapter 	|  Lectures          | Exercises  | Homework |
 | ------| ------ | ------- 	| ------------------ | ---------- | -------- |
@@ -66,3 +68,42 @@ Johnson County Community College
 * Make lecture videos for all topics
 * Write projects for chapter 5, 6, 7
 * Write extra credit for chapter 5, 6, 7
+
+---------------------------------------------------------------------------------
+
+# Instructor information
+
+* **Name:** Rachel (Morris) Singh
+* **Email:** ``rmorri38@jccc.edu``
+* **Cell:** (913) 999-8271
+
+## Schedule / office hours, Spring 2018:
+
+|         | Monday   | Tuesday 	|  Wednesday          | Thursday  | Friday |
+| ------  | ------ | ------- 	| ------------------ | ---------- | -------- |
+| 8:00 am | ... | ... | ... | ... | ... |
+| 8:30 am | ... | ... | ... | ... | ... |
+| 9:00 am | ... | ... | ... | ... | ... |
+| 9:30 am | ... | ... | ... | ... | ... |
+| 10:00 am | ... | ... | ... | ... | ... |
+| 10:30 am | ... | ... | ... | ... | ... |
+| 11:00 am | ... | ... | ... | ... | ... |
+| 11:30 am | ... | ... | ... | ... | ... |
+| 12:00 pm | ... | ... | ... | ... | ... |
+| 12:30 pm | ... | ... | ... | ... | ... |
+| 1:00 pm | ... | ... | ... | ... | ... |
+| 1:30 pm | ... | ... | ... | ... | ... |
+| 2:00 pm | ... | ... | ... | ... | ... |
+| 2:30 pm | ... | ... | ... | ... | ... |
+| 3:00 pm | ... | ... | ... | ... | ... |
+| 3:30 pm | ... | ... | ... | ... | ... |
+| 4:00 pm | ... | ... | ... | ... | ... |
+| 4:30 pm | ... | ... | ... | ... | ... |
+| 5:00 pm | ... | ... | ... | ... | ... |
+| 5:30 pm | ... | ... | ... | ... | ... |
+| 6:00 pm | ... | ... | ... | ... | ... |
+| 6:30 pm | ... | ... | ... | ... | ... |
+| 7:00 pm | ... | ... | ... | ... | ... |
+| 7:30 pm | ... | ... | ... | ... | ... |
+| 8:00 pm | ... | ... | ... | ... | ... |
+| 8:30 pm | ... | ... | ... | ... | ... |
