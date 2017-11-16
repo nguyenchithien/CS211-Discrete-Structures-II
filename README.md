@@ -10,13 +10,13 @@ Johnson County Community College
 
 #### Lecture
 
-* [5.1](Lectures/Lecture_5-1.pdf)
-* [5.2](Lectures/Lecture_5-2.pdf)
+* 5.1 Lecture: [Video](#), [Slides](Lectures/Lecture_5-1.pdf)
+* 5.2 Lecture: [Video](#), [Slides](Lectures/Lecture_5-2.pdf)
 
 #### In-class exercises
 
-* [5.1](Assignments/Exercise_5-1.pdf)
-* [5.2](Assignments/Exercise_5-2.pdf)
+* 5.1 Exercise: [Assignment](Assignments/Exercise_5-1.pdf), [Key](#)
+* 5.2 Exercise: [Assignment](Assignments/Exercise_5-2.pdf), [Key](#)
 
 #### Homework
 
