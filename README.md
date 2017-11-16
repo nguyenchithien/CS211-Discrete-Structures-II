@@ -8,6 +8,18 @@ Johnson County Community College
 
 ### Week 1
 
+| Week    | Tuesday           | Thursday  |
+| ------- |-------------| -----|
+| 1      | Lecture | Lecture |
+|        | Exercise | Exercise | 
+|        | Homework | Homework |
+| 2      | Lecture | Lecture |
+|        | Exercise | Exercise | 
+|        | Homework | Homework |
+| 3      | Lecture | Lecture |
+|        | Exercise | Exercise | 
+|        | Homework | Homework |
+
 #### Lecture
 
 * 5.1 Lecture: [Video](#), [Slides](Lectures/Lecture_5-1.pdf)
