@@ -9,7 +9,7 @@ Johnson County Community College
 ### Week 1
 
 | Week   | Lectures           | Exercises  | Exercise Keys | Homework |
-| ------ | ------------------ | ----- | -- | ------------- | -------- |
+| ------ | ------------------ | ---------- | ------------- | -------- |
 | 1      | Lecture | Exercises | Exercise Keys | Homework |
 |        | Lecture | Exercise | Exercise Keys | Homework |
 
