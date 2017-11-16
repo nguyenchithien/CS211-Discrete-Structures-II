@@ -33,8 +33,8 @@ Johnson County Community College
 |		| Mar 8  | 6.6		| [Video](#), [Slides](Lectures/Lecture_6-6.pdf) | [Assignment](Assignments/Exercise_6-6.pdf), [Key](#) | TBD |
 | 9     | Mar 13 | Project		|  |  |  |
 |		| Mar 15 | 				|  |  |  |
-| 10    | Mar 20 | am Review		|  |  |  |
-|		| Mar 22 | am		|  |  |  |
+| 10    | Mar 20 | Exam Review		|  |  |  |
+|		| Mar 22 | Exam		|  |  |  |
 
 
 ### Chapter 7
@@ -50,8 +50,8 @@ Johnson County Community College
 | 14    | Apr 12 | 7.7		| [Video](#), [Slides](Lectures/Lecture_7-7.pdf) | [Assignment](Assignments/Exercise_7-7.pdf), [Key](#) | TBD |
 |		| Apr 17 | Project		|  |  |  |
 | 15    | Apr 19 | 				|  |  |  |
-|		| Apr 24 | am Review		|  |  |  |
-| 16    | Apr 26 | am		|  |  |  |
+|		| Apr 24 | Exam Review		|  |  |  |
+| 16    | Apr 26 | Exam		|  |  |  |
 |		| May 1  | Final Review		|  |  |  |
-| 17    | 		 | Final am | | |
+| 17    | 		 | Final Exam | | |
 
