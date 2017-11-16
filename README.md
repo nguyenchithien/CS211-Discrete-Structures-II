@@ -8,15 +8,15 @@ Johnson County Community College
 
 ### Week 1
 
-| Week   | Lectures           | Exercises  | Exercise Keys | Homework |
-| ------ | ------------------ | ---------- | ------------- | -------- |
-| 1      | Lecture | Exercises | Exercise Keys | Homework |
-|        | Lecture | Exercise | Exercise Keys | Homework |
+| Week   | Days   | Chapter |  Lectures           | Exercises  | Exercise Keys | Homework |
+| ------ | ------ | ------- | ------------------ | ---------- | ------------- | -------- |
+| 1      | Jan 16 | 5.1     | [Video](#), [Slides](Lectures/Lecture_5-1.pdf) | Exercises | Exercise Keys | Homework |
+|        | Jan 18 | 5.2     | [Video](#), [Slides](Lectures/Lecture_5-2.pdf) | Exercise | Exercise Keys | Homework |
 
 #### Lecture
 
-* 5.1 Lecture: [Video](#), [Slides](Lectures/Lecture_5-1.pdf)
-* 5.2 Lecture: [Video](#), [Slides](Lectures/Lecture_5-2.pdf)
+* 5.1 Lecture: 
+* 5.2 Lecture: 
 
 #### In-class exercises
 
