@@ -1,0 +1,34 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\title{}
+\author{Rachel Morris}
+\date{\today}
+
+\usepackage{rachwidgets}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{dirtree}
+\usepackage{boxedminipage}
+
+\newcommand{\laClass}{CS 211\ }
+\newcommand{\laSemester}{Fall 2017\ }
+\newcommand{\laChName}{Excursion: Binary Trees\ }
+\newcounter{question}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\laClass Exercise, \laSemester}
+\chead{}
+\rhead{Ch \laChapter}
+\rfoot{\thepage\ of \pageref{LastPage}}
+\lfoot{\scriptsize Compiled by Rachel Morris, last updated \today}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+
+	NOT YET WRITTEN
+
+\end{document}
