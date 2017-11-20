@@ -34,8 +34,8 @@ Johnson County Community College
 |       | Mar 1  | 6.4      | [Video](#), [Slides](Lectures/Lecture_6-4.pdf) | [Assignment](Assignments/Exercises/Exercise_6-4.pdf), [Key](#) | 6.4: 1, 3, 6 |
 | 8     | Mar 6  | 6.5      | [Video](#), [Slides](Lectures/Lecture_6-5.pdf) | [Assignment](Assignments/Exercises/Exercise_6-5.pdf), [Key](#) | 6.5: TBD |
 |       | Mar 8  | 6.6      | [Video](#), [Slides](Lectures/Lecture_6-6.pdf) | [Assignment](Assignments/Exercises/Exercise_6-6.pdf), [Key](#) | 6.6: TBD |
-| 9     | Mar 13 | Project      |  |  |  |
-|       | Mar 15 |              |  |  |  |
+| 9     | Mar 13 | SPRING BREAK, Project      |  |  |  |
+|       | Mar 15 | SPRING BREAK             |  |  |  |
 | 10    | Mar 20 | Exam Review      |  |  |  |
 |       | Mar 22 | Exam     |  |  |  |
 
