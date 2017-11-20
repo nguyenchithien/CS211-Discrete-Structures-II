@@ -23,6 +23,7 @@ Johnson County Community College
 | 5     | Feb 13 | Exam Review |  |  |  |
 |       | Feb 15 | Exam     |  |  |  |
 
+
 ## Chapter 6
 
 | Week  | Days   | Chapter  |  Lectures          | Exercises  | Homework |
@@ -43,19 +44,19 @@ Johnson County Community College
 
 | Week  | Days   | Chapter  |  Lectures          | Exercises  | Homework |
 | ------| ------ | -------  | ------------------ | ---------- | -------- |
-| 11    | Jan 27 | 7.1      | [Video](#), [Slides](Lectures/Lecture_7-1.pdf) | [Assignment](Assignments/Exercises/Exercise_7-1.pdf), [Key](#) | 7.1: 1 (a, c, d), 4 (a, c) |
-|       | Mar 29 | 7.2      | [Video](#), [Slides](Lectures/Lecture_7-2.pdf) | [Assignment](Assignments/Exercises/Exercise_7-2.pdf), [Key](#) | 7.2: TBD |
-| 12    | Apr 30 | 7.3      | [Video](#), [Slides](Lectures/Lecture_7-3.pdf) | [Assignment](Assignments/Exercises/Exercise_7-3.pdf), [Key](#) | 7.3: TBD |
-|       | Apr 3  | 7.4      | [Video](#), [Slides](Lectures/Lecture_7-4.pdf) | [Assignment](Assignments/Exercises/Exercise_7-4.pdf), [Key](#) | 7.4: 1 (a, b, c, d, e) |
-| 13    | Apr 5  | 7.5      | [Video](#), [Slides](Lectures/Lecture_7-5.pdf) | [Assignment](Assignments/Exercises/Exercise_7-5.pdf), [Key](#) | 7.5: 1 |
-|       | Apr 10 | 7.6      | [Video](#), [Slides](Lectures/Lecture_7-6.pdf) | [Assignment](Assignments/Exercises/Exercise_7-6.pdf), [Key](#) | 7.6: TBD |
-| 14    | Apr 12 | 7.7      | [Video](#), [Slides](Lectures/Lecture_7-7.pdf) | [Assignment](Assignments/Exercises/Exercise_7-7.pdf), [Key](#) | 7.7: TBD |
-|       | Apr 17 | Project      |  |  |  |
-| 15    | Apr 19 |              |  |  |  |
-|       | Apr 24 | Exam Review      |  |  |  |
-| 16    | Apr 26 | Exam     |  |  |  |
-|       | May 1  | Final Review     |  |  |  |
-| 17    |        | Final Exam | | |
+| 11    | Mar 29 | 7.1      | [Video](#), [Slides](Lectures/Lecture_7-1.pdf) | [Assignment](Assignments/Exercises/Exercise_7-1.pdf), [Key](#) | 7.1: 1 (a, c, d), 4 (a, c) |
+|       | Apr 30 | 7.2      | [Video](#), [Slides](Lectures/Lecture_7-2.pdf) | [Assignment](Assignments/Exercises/Exercise_7-2.pdf), [Key](#) | 7.2: TBD |
+| 12    | Apr 3  | 7.3      | [Video](#), [Slides](Lectures/Lecture_7-3.pdf) | [Assignment](Assignments/Exercises/Exercise_7-3.pdf), [Key](#) | 7.3: TBD |
+|       | Apr 5  | 7.4      | [Video](#), [Slides](Lectures/Lecture_7-4.pdf) | [Assignment](Assignments/Exercises/Exercise_7-4.pdf), [Key](#) | 7.4: 1 (a, b, c, d, e) |
+| 13    | Apr 10 | 7.5      | [Video](#), [Slides](Lectures/Lecture_7-5.pdf) | [Assignment](Assignments/Exercises/Exercise_7-5.pdf), [Key](#) | 7.5: 1 |
+|       | Apr 12 | 7.6      | [Video](#), [Slides](Lectures/Lecture_7-6.pdf) | [Assignment](Assignments/Exercises/Exercise_7-6.pdf), [Key](#) | 7.6: TBD |
+| 14    | Apr 17 | 7.7      | [Video](#), [Slides](Lectures/Lecture_7-7.pdf) | [Assignment](Assignments/Exercises/Exercise_7-7.pdf), [Key](#) | 7.7: TBD |
+|       | Apr 19 | Project             |  |  |  |
+| 15    | Apr 24 |         |  |  |  |
+|       | Apr 26 | Exam Review     |  |  |  |
+| 16    | May 1  | Exam     |  |  |  |
+|       | May 3  | Final Review     |  |  |  |
+| 17    | May 12-17  | FINALS WEEK | | |
 
 
 
