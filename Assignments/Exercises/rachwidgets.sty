@@ -17,17 +17,18 @@
 \usepackage{lipsum} % for dummy text only
 \usepackage{circuitikz} % draw circuits
 \usepackage{colortbl} % cell bg colors
-
+\usepackage{pgfplots} % 2d plots
+\usepackage{dirtree}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{dirtree}
+\usepackage{boxedminipage}
 \definecolor{commentz}{rgb}{0,0.02,0.6}
 \definecolor{keywordz}{rgb}{0.69,0.18, 0.36}
 \definecolor{backgroundz}{rgb}{1.0, 0.95, 0.77}
 \definecolor{textz}{rgb}{0.54, 0.27, 0.07}
 \definecolor{hintboxz}{rgb}{0.9, 1.0, 0.9}
 \definecolor{errorboxz}{rgb}{1.0, 0.9, 0.9}
-\definecolor{previewbg}{rgb}{0.1, 0.1, 0.1}
-\definecolor{previewfg}{rgb}{1, 1, 1}
-\definecolor{textbg}{rgb}{1, 1, 1}
-\definecolor{textfg}{rgb}{0, 0, 0}
 
 \definecolor{intro}{rgb}{0.9, 0.9, 1.0}
 \definecolor{error}{rgb}{1.0, 0.9, 0.9}
@@ -56,7 +57,8 @@
 
 
 % Side wrap: %
-% \begin{wrapfigure}{r}{0.4\textwidth} \end{wrapfigure}
+% \begin{wrapfigure}{r}{0.4\textwidth} \begin{mdframed}[backgroundcolor=intro]
+% \end{mdframed} \end{wrapfigure}
 
 % Write example code: %
 %\begin{lstlisting}[style=code]
@@ -132,6 +134,13 @@
 
 % Fill in the blank region
 \newcommand\fitb[1][1cm]{ $\rule{#1}{0.15mm}$ }
+
+
+
+\definecolor{previewbg}{rgb}{0.9, 0.9, 0.9}
+\definecolor{previewfg}{rgb}{0, 0, 0}
+\definecolor{textbg}{rgb}{1, 1, 1}
+\definecolor{textfg}{rgb}{0, 0, 0}
 
 % Code example frame %
 \lstdefinestyle{code}{
