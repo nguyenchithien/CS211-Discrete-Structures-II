@@ -5,14 +5,14 @@
 \newcommand{\laType}        {Exercise}
 \newcommand{\laPoints}      {5}
 \newcommand{\laTitle}       {Basic Rules for Counting}
-\newcommand{\laDate}        {Jan 16, 2018}
+\newcommand{\laDate}        {Jan 18, 2018}
 \setcounter{chapter}{5}
 \setcounter{section}{1}
 \addtocounter{section}{-1}
 \newcounter{question}
 
 \toggletrue{answerkey}
-%\togglefalse{answerkey}
+\togglefalse{answerkey}
 
 \input{BASE-HEADER}
 
@@ -23,14 +23,218 @@
 
     \section{\laTitle}
 
-    \subsection{Topic}
 
-    \begin{intro}{TOPIC}
-        LOREMIPSUM
+    \subsection{Permutations}
+
+    \begin{intro}{Permutation formula}
+        A permutation is a type of structure that describes counting when
+        \textbf{order matters} and \textbf{repetitions are not allowed}.
+
+        ~\\  A permutation is written as $P(n, r)$ where $n$ is the amount of
+        items we have to choose from, and $r$ is the amount of items we
+        are selecting. The formula for this is:
+
+        $$ P(n, r) = \frac{n!}{(n-r)!} $$
+
+        ~\\ Where $n!$ is $n$-factorial. Also note that $0! = 1$.
+    \end{intro}
+    
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Calculate the following by hand using the formula:
+
+        \begin{enumerate}
+            \item[a.]   $P(5, 2)$
+            \item[b.]   $P(5, 5)$
+            \item[c.]   $P(5, 1)$
+        \end{enumerate}
+    \end{questionNOGRADE}
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Use \texttt{www.wolframalpha.com} or a graphing calculator to compute the following:
+
+        \begin{enumerate}
+            \item[a.]   $P(26, 3)$
+            \item[b.]   $P(52, 6)$
+            \item[c.]   $P(26, 2) + P(10, 2)$
+        \end{enumerate}
+    \end{questionNOGRADE}
+
+    \newpage
+    
+    \subsection{The Rule of Sums}
+
+    \begin{intro}{The Rule of Sums}
+        \begin{quote}
+            In combinatorics, the rule of sum or addition principle is a basic counting principle.
+            Stated simply,
+            \textbf{it is the idea that if we have A ways of doing something and B ways of doing
+            another thing and we can not do both at the same time, then there are A + B ways to choose one of the actions.}
+            \footnote{From https://en.wikipedia.org/wiki/Rule\_of\_sum}
+        \end{quote}
     \end{intro}
 
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Uttam wants to read a new book series. He can either pick up
+        the whole series of ``Native Tongue", which is \textit{3 books},
+        or the whole series
+        of ``Seed to Harvest", which is \textit{4 books}.
+        How many ways can Uttam select books, if he is choosing 2 Native Tongue books, OR
+        2 Seed to Harvest books, but not both?
+    \end{questionNOGRADE}
+
+    \hrulefill
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Jennifer is trying to set up their class schedule so it won't
+        interfere with work. They can fit in the following:
+        \begin{itemize}
+            \item Morning classes: 3 per week
+            \item Night classes: 3 per week
+            \item Weekend classes: 4 per week
+        \end{itemize}
+        Jennifer can only take all morning, all night, or all weekend classes -
+        they cannot mix them.
+        If there are 12 classes to choose from, how many combinations of classes can Jennifer have?       
+    \end{questionNOGRADE}
+        
+        \begin{hint}{\ }
+            When questions are phrased as ``can choose \textbf{either ... OR ...}",
+            this usually points to \textbf{adding} the size of both sets.
+        \end{hint}
+
+    \newpage
+    
+    \begin{intro}{The rule of sums with overlap}
+        If the list to count can be split into two pieces of size $z$
+        and $y$, and the pieces have $z$ objects in common, then the original
+        list has $x + y - z$ entries. In terms of sets, we can write this as
+        $n(A \cup B) = n(A) + n(B) - n(A \cap B)$ for all sets $A$ and $B$.
+    \footnote{From Discrete Math Mathematical Reasoning and Proofs with Puzzles, Patterns and Games, by Ensley and Crawley}
+    \end{intro}
+
+    \subsection{The Rule of Complements}
+    
+    \begin{intro}{The rule of complements}
+        \begin{quote}
+        If there are $x$ objects, and $y$ of those objects have a particular property,
+        then the number of those objects that do \textbf{not} have that particular
+        property is $x - y$.
+        \footnote{From Discrete Mathematics, Ensley and Crawley, page 390}
+        \end{quote}
+    \end{intro}
+    
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Assume you are rolling two dice.
+
+        \begin{enumerate}
+            \item[a.]   List out all possible results, assuming order does matter.
+            \begin{center}
+                \Large 
+                \begin{tabular}{ c | p{1cm} p{1cm} p{1cm} p{1cm} p{1cm} p{1cm} }
+                    & 1 & 2 & 3 & 4 & 5 & 6
+                    \\ \hline
+                    1 \\ 2 \\ 3 \\ 4 \\ 5 \\ 6 
+                \end{tabular}
+            \end{center}
+
+            \item[b.]   How many total outcomes are there?
+
+            \item[c.]   How many results have 6 show up at least once?
+
+            \item[d.]   Use the rule of complements to solve how many
+                        outcomes there are where 6 does not show up.
+        \end{enumerate}
+    \end{questionNOGRADE}
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+            Ryan has 107 games in his Steam library.
+            Of those, 32 have the category ``action",
+            14 have the category ``RPG",
+            and 8 are categorized as both ``action" AND ``RPG", so they end up getting double-counted.
+
+        \begin{enumerate}
+            \item[a.] How many games are action or RPG? \\(Use the rule of sums with overlap)
+            \item[b.] How many games are NOT action or RPG? \\(Use the rule of complements)
+        \end{enumerate}        
+    \end{questionNOGRADE}
+
+    \hrulefill
+
+    \subsection{The Rule of Products}
+
+    \begin{intro}{The rule of products}
+        \begin{quote}
+        In combinatorics, the rule of product or multiplication principle is a
+        basic counting principle (a.k.a. the fundamental principle of counting).
+        Stated simply,
+        \textbf{it is the idea that if there are $a$ ways of doing something and $b$
+        ways of doing another thing, then there are $a \cdot b$ ways of performing both actions.}
+        \footnote{From https://en.wikipedia.org/wiki/Rule\_of\_product}
+        \end{quote}
+    \end{intro}
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        On an old arcade machine, the highscore entries allow for
+        3 letters for a player to sign their name. Many only offer capital letters,
+        so only 26 options, and each letter can be used more than once.
+        
+        \begin{enumerate}
+            \item[a.]   How many options are there for the first letter?
+            \item[b.]   How many options are there for the second letter?
+            \item[c.]   How many options are there for the third letter?
+            \item[d.]   If you're choosing a first letter \textbf{and} a second letter \textbf{and} a third letter,
+                        how many possible combinations are there?
+        \end{enumerate}
+    \end{questionNOGRADE}
+    
 }{
 % KEY ------------------------------------ %
+    \begin{itemize}
+        \item[1a.]  20
+        \item[1b.]  120
+        \item[1c.]  5
+        \item[2a.]  15,600
+        \item[2b.]  14,658,134,400
+        \item[2c.]  740
+        \item[3.]   $P(3,2) + P(4,2) = 6 + 12 = 18$
+        \item[4.]   $P(12,3) + P(12,3) + P(6,4) = 1,320 + 1,320 + 360 = 3,000$
+        
+        \item[5a.]  
+                    \begin{tabular}{ c | c c c c c c}
+                        & 1 & 2 & 3 & 4 & 5 & 6
+                        \\ \hline
+                        1 & 1-1 & 1-2 & 1-3 & 1-4 & 1-5 & 1-6
+                        \\
+                        2 & 2-1 & 2-2 & 2-3 & 2-4 & 2-5 & 2-6
+                        \\
+                        3 & 3-1 & 3-2 & 3-3 & 3-4 & 3-5 & 3-6
+                        \\
+                        4 & 4-1 & 4-2 & 4-3 & 4-4 & 4-5 & 4-6
+                        \\
+                        5 & 5-1 & 5-2 & 5-3 & 5-4 & 5-5 & 5-6
+                        \\
+                        6 & 6-1 & 6-2 & 6-3 & 6-4 & 6-5 & 6-6
+                    \end{tabular}
+        \item[5b.]  36
+        \item[5c.]  11: (1,6), (2,6), (3,6), (4,6), (5,6), (6,6), (6,5), (6,4), (6,3), (6,2), (6,1)
+        \item[5d.]  36 - 11 = 25
+        
+        \item[6a.]  32 + 14 - 8 = 38
+        \item[6b.]  107 - 38 = 69
+        
+        \item[7a.]  26
+        \item[7b.]  26
+        \item[7c.]  26
+        \item[7b.]  $26 \cdot 26 \cdot 26 = 17,576$
+    \end{itemize}
 }
 
 \input{BASE-FOOT}
