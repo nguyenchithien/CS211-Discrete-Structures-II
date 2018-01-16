@@ -1,0 +1,180 @@
+\input{BASE-HEAD}
+\newcommand{\laClass}       {CS 211}
+\newcommand{\laSemester}    {Spring 2018}
+\newcommand{\laChapter}     {5.4}
+\newcommand{\laType}        {Exercise}
+\newcommand{\laPoints}      {5}
+\newcommand{\laTitle}       {Binary Sequences}
+\newcommand{\laDate}        {Jan 25, 2018}
+\setcounter{chapter}{5}
+\setcounter{section}{4}
+\addtocounter{section}{-1}
+\newcounter{question}
+
+\toggletrue{answerkey}
+\togglefalse{answerkey}
+
+\input{BASE-HEADER}
+
+\input{INSTRUCTIONS-EXERCISE}
+
+\notonkey{
+% ASSIGNMENT ------------------------------------ %
+
+    \section{\laTitle}
+    
+    \subsection{Binary sequences}
+
+    \begin{intro}{Binary sequence theorem}
+        \begin{quote}
+			The number of binary sequences with $r$ 1's and $n-r$ 0's is $C(n,r)$ or $C(n, n-r)$.
+			\footnote{From Discrete Mathematics, Ensley and Crawley, page 409}
+        \end{quote}
+        
+        This can be used for straightforward problems, like ``how many binary sequences are there
+        with $x$ 1's and $y$ 0's?'', but we can also use it for more practical applications...!
+    \end{intro}
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        How many binary sequences are there with three 1's and two 0's?
+        
+        \begin{enumerate}
+	        \item[a.]	How many 1's? $r = $
+	        \item[b.]	How many 0's? $n-r = $
+	        \item[c.]	What is the value of $r$?
+	        \item[d.]	How many binary sequences are there? $C(n,r) = $
+		\end{enumerate}
+    \end{questionNOGRADE}
+    
+    \hrulefill
+       
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+	    Using the Binary Sequence theorem and the Sum Rule, find the number
+	    of binary sequences that have an odd number of 1's.
+	\end{questionNOGRADE}
+	
+	\newpage
+	
+	\begin{intro}{Other uses of Binary Sequences}
+		We can also use this theorem for strings that have more than just 0's and 1's...
+		
+		\paragraph{Example 2 from the book:} How many ordered lists of 10 letters, chosen from $\{m, a, t\}$, 
+		have exactly three $m$'s?
+		
+		If we think in terms of spots to fill for each letter, we can diagram it like this:
+		
+		\begin{center}
+			\begin{tabular}{c c c c c c c c c c}
+				\fitb[0.5cm] & \fitb[0.5cm] & \fitb[0.5cm] & \fitb[0.5cm] & \fitb[0.5cm] & \fitb[0.5cm] & \fitb[0.5cm] & \fitb[0.5cm] & \fitb[0.5cm] & \fitb[0.5cm]
+				\\
+				1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10
+			\end{tabular}
+		\end{center}
+		
+		~\\ Since we have a restriction on the $m$'s, these should be filled in first. Selecting three $m$'s gives us
+		$C(10,3) = 120$ combinations.
+		
+		~\\ Then, since there are no restrictions on the rest of the letters, we can select the final 7.
+		However, we don't have 3 to choose from anymore; we wanted \textbf{exactly} 3 $m$'s and we have
+		already filled those. So, instead of selecting from 3 options, we only have two: $\{a, t\}$.
+		
+		~\\ Since for each of the remaining, we have two options each, it will be calculated as $2 \cdot 2 \cdot 2 \cdot ...$
+		seven times. These remaining 2's are an \textbf{ordered list}: Order matters, and we can have duplicates ($a$ or $t$).
+		
+		~\\ Our final result will be $C(10,3) \cdot 2^{7}$.
+	\end{intro}
+	
+    \begin{intro}{Formulas for each structure type}
+	
+		\begin{center}
+			\begin{tabular}{l | c | c | c }
+				\textbf{}
+					& \textbf{Repeats}
+					& \textbf{Order}
+					& \textbf{}
+				\\
+				\textbf{Type}
+					& \textbf{allowed?}
+					& \textbf{matters?}
+					& \textbf{Formula}
+				\\ \hline
+				Ordered list of length $r$
+					& yes
+					& yes
+					& $n^{r}$
+
+				\\ \hline
+				Unordered list of length $r$
+					& yes
+					& no
+					& $C(r + n - 1, r)$
+				\\ \hline
+				Permutations of length $r$
+					& no
+					& yes
+					& $P(n,r) = \frac{n!}{(n-r)!}$
+				\\ \hline
+				Sets of length $r$
+					& no
+					& no
+					& $C(n,r) = \frac{n!}{r!(n-r)!}$
+			\end{tabular}
+		\end{center}
+        
+    \end{intro}
+	
+	\newpage
+	
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+	    How many distinguishable arrangements are there of the letters in the word ``BANANA''?
+	    
+	    \begin{enumerate}
+		    \item[a.]	How many B's?		\tab How many A's?		\tab How many N's?
+		    \item[b.]	How many ways are there to select a position for B?
+						\textit{(Specify the formula and the final answer)}
+			\item[c.]	How many ways are there to place the A's?
+						\textit{(Hint: B has been placed, so there are 5 available spaces and 3 A's to place.)}
+			\item[d.]	How many ways are there to place the N's?
+						\textit{(Hint: How many spaces are left? How many N's to place?}
+			\item[e.]	Which Rule do you use to find the final answer? What is the final answer?
+		\end{enumerate}
+	\end{questionNOGRADE}
+	
+	\hrulefill
+	
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+	    How many distinguishable arrangements are there of the word \\ ``PENNSYLVANIA''?
+	    \textit{(Hint: You need the total amount of letters, and a count for each letter in the word!)}
+	\end{questionNOGRADE}
+	
+}{
+% KEY ------------------------------------ %
+    \begin{itemize}
+        \item[1a.]	$r = 3$
+        \item[1b.]	$n-r = 2$
+        \item[1c.]	$n-3 = 2$ \tab $n = 2 + 3$ \tab $n = 5$
+        \item[1d.]	$C(n,r) = C(5,3) = 10$
+        
+        \item[2.]	Length 5 means 1x, 3x, or 5x ones.
+					\\ one 1, four 0:	$r = 1$, $n-r = 4$, $n-1=4, n=5$, $C(5,1) = 5$
+					\\ three 1, two 0:	$r = 3$, $n-r = 2$, $n-3=2, n=5$, $C(5,3) = 10$
+					\\ five 1, zero 0:	$r = 5$, $n-r = 0$, $n-5=0, n=5$, $C(5,5) = 1$
+					\\ $5 + 10 + 1 = 16$
+		
+		\item[3a.]	1x B, 3x A, 2x N.
+		\item[3b.]	There are $C(6,1) = 6$ ways to place the B.
+		\item[3c.]	There are $C(5,3) = 10$ ways to place the A's.
+		\item[3d.]	There are $C(2,2) = 1$ ways to place the N's.
+		\item[3e.]	Use the Rule of Products: $6 \cdot 10 \cdot 1 = 60$.
+		
+		\item[4.]	P: $C(12,1)$, E: $C(11,1)$, N: $C(10,3)$, S: $C(7,1)$, Y: $C(6,1)$, L: $C(5,1)$, V: $C(4,1)$, I: $C(3,1)$, A: $C(2,2)$ \\
+					= $12 \cdot 11 \cdot 120 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 1$ \\
+					= 39,916,800
+    \end{itemize}
+}
+
+\input{BASE-FOOT}
