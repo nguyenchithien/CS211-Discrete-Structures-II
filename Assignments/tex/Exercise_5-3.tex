@@ -1,0 +1,184 @@
+\input{BASE-HEAD}
+\newcommand{\laClass}       {CS 211}
+\newcommand{\laSemester}    {Spring 2018}
+\newcommand{\laChapter}     {5.3}
+\newcommand{\laType}        {Exercise}
+\newcommand{\laPoints}      {5}
+\newcommand{\laTitle}       {Combinations}
+\newcommand{\laDate}        {Jan 23, 2018}
+\setcounter{chapter}{5}
+\setcounter{section}{1}
+\addtocounter{section}{-1}
+\newcounter{question}
+
+\toggletrue{answerkey}
+\togglefalse{answerkey}
+
+\input{BASE-HEADER}
+
+\input{INSTRUCTIONS-EXERCISE}
+
+\notonkey{
+% ASSIGNMENT ------------------------------------ %
+
+    \section{\laTitle}
+
+    \subsection{Review}
+
+    \begin{intro}{Permutation formula}
+        A permutation is written as $P(n, r)$ where $n$ is the amount of
+        items we have to choose from, and $r$ is the amount of items we
+        are selecting. The formula for this is:
+
+        $$ P(n, r) = \frac{n!}{(n-r)!} $$
+
+        \paragraph{The Rule of Sums}
+        
+        \begin{quote}
+            If we have A ways of doing something and B ways of doing
+            another thing and we can not do both at the same time, then there are A + B ways to choose one of the actions.
+            \footnote{From https://en.wikipedia.org/wiki/Rule\_of\_sum}
+        \end{quote}
+
+        \paragraph{The Rule of Complements}
+        
+        \begin{quote}
+            If there are $x$ objects, and $y$ of those objects have a particular property,
+            then the number of those objects that do \textbf{not} have that particular
+            property is $x - y$.
+            \footnote{From Discrete Mathematics, Ensley and Crawley, page 390}
+        \end{quote}
+
+        \paragraph{The Rule of Products}
+        
+        \begin{quote}
+            If there are $a$ ways of doing something and $b$
+            ways of doing another thing, then there are $a \cdot b$ ways of performing both actions.
+            \footnote{From https://en.wikipedia.org/wiki/Rule\_of\_product}
+        \end{quote}
+        
+    \end{intro}
+    
+    \subsection{Combinations and Permutations}
+
+    \begin{intro}{Combinations}
+        In mathematics, a combination is selection of items from a collection,
+        such that (unlike permutations) the order of selection does not matter.
+        (...) The number of $r$-combinations from a given set of $n$ elements
+        is often denoted in elementary combinatorics texts by $C(n,r)$.
+        \footnote{From https://en.wikipedia.org/wiki/Combinations}
+
+        For a combination of length $r$ from a set of $n$ elements:
+        $$C(n,r) = \frac{n!}{(n-r)! \cdot r!}$$
+
+        (Note that the book uses $r$ and Wikipedia uses $k$.)
+    \end{intro}
+    
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        How many ways can you rearrange the letters in the word ``DOG''?
+    \end{questionNOGRADE}
+    
+    \hrulefill
+    
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        In how many ways can 10 children line up for lunch?
+        \textit{Hint: Is this a combination problem or a permutation problem?
+        Does order matter?}
+    \end{questionNOGRADE}
+
+    \hrulefill
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        In a class of 20 students, there are 7 IT majors and 13 CS majors.
+        If 4 board positions had to be filled for the computer club,
+        how many ways would there be to fill the positions with the given constraints?
+
+        \begin{enumerate}
+            \item[a.]   No constraints - any student can be on the board.
+            \item[b.]   There must be exactly 2 IT students and 2 CS students on the board.
+            \item[c.]   There must be \textit{at least} 2 IT students on the board.
+        \end{enumerate}
+    \end{questionNOGRADE}
+
+    \newpage
+    
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Suppose we are going to receive a shipment of 50 games on floppy disk for our vintage game store.
+        Each box of 50 generally has 3 defective floppies.
+        For the shipment, we are going to select 5 games to feature in a display.
+
+        \begin{enumerate}
+            \item[a.]   How many total good floppies are there?
+            \item[b.]   How many total bad floppies are there?
+            \item[c.]   How many ways could we choose 5 games to feature?
+            
+            \item[d.]   How many ways contain \textit{no} defective floppies?
+            
+            \item[e.]   Using the Rule of Products, determine how many ways that contain all 3 defective floppies?
+                    
+            \item[f.]   Using the Rule of Sums and the Rule of Products, determine
+                        how many ways contain \textit{at least one} defective floppy.
+
+            \item[g.]   Using the Rule of Complements, determine
+                        how many ways contain \textit{at least one} defective floppy.
+                        The answer for (f) and (g) should match.
+        \end{enumerate}
+        
+    \end{questionNOGRADE}
+
+    \hrulefill
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        There's a bargain bin that has 5 PC games, 3 Playstation games, and 8 Xbox games.
+
+        \begin{enumerate}
+            \item[a.]   How many total games are there?
+            
+            \item[b.]   If you're grabbing 4 games to buy, you don't care about the order
+                        that you pull the games out. How many ways can 4 games be selected?
+
+            \item[c.]   How many ways can you select 4 games that are all for the same console?
+                        \textit{(Hint: This means the Playstation games don't get counted.
+                        Also, which Rule are you going to use to solve this?)}
+
+            \item[d.]   How many selections of 4 games are there, where you have 2 for one platform,
+                        and 2 for another platform?
+                        \textit{(Hint: What Rules apply here?)}
+        \end{enumerate}
+    \end{questionNOGRADE}
+    
+}{
+% KEY ------------------------------------ %
+    \begin{itemize}
+        \item[1.]   $P(3,3) = 6$
+        
+        \item[2.]   $P(10, 10) = 3628800$
+        
+        \item[3a.]  $C(20,4) = 4,845$
+        \item[3b.]  $C(7,2) \cdot C(13,2) = 1,638$
+        \item[3c.]  Two IT students, two CS students: $C(7,2) \cdot C(13,2) = 1,638$ \\
+                    Three IT students, one CS student: $C(7,3) \cdot C(13,1) = 455$ \\
+                    Four IT students, zero CS students: $C(7, 4) = 35$
+
+        \item[4a.]  There are 47 good floppies
+        \item[4b.]  There are 3 bad floppies
+        \item[4c.]  $C(50,5) = 2,118,760$
+        \item[4d.]  $C(47,5) = 1,533,939$
+        \item[4e.]  $C(3,3) \cdot C(47,2) = 1,081$
+        \item[4f.]  $C(3,1) \cdot C(47,4) \tab + C(3,2) \cdot C(47,3) \tab + C(3,3) \cdot C(47,2) \tab = 584,821$ \\
+        \item[4g.]  $C(50,5) - C(3,0) \cdot C(47,5) = 584,821$
+
+        \item[5a.]  There are 16 total games.
+        \item[5b.]  $C(16,4) = 1,820$
+        \item[5c.]  $C(5,4) + C(8,4) = 75$
+        \item[5d.]  $C(5,2) \cdot C(3,2) + C(5,2) \cdot C(8,2) + C(3,2) \cdot C(8,2) = 394$
+    \end{itemize}
+}
+
+\input{BASE-FOOT}
