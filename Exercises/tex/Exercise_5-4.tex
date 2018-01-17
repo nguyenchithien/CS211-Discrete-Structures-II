@@ -12,7 +12,7 @@
 \newcounter{question}
 
 \toggletrue{answerkey}
-\togglefalse{answerkey}
+%\togglefalse{answerkey}
 
 \input{BASE-HEADER}
 
@@ -22,6 +22,34 @@
 % ASSIGNMENT ------------------------------------ %
 
     \section{\laTitle}
+
+    \subsection{Thinking algorithmically...}
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+	    How many distinguishable arrangements are there of the letters in the word ``BANANA''?
+	    
+	    \begin{enumerate}
+		    \item[a.]	How many B's?		\tab How many A's?		\tab How many N's?
+		    \item[b.]	How many ways are there to select a position for B?
+						\textit{(Specify the formula and the final answer)}
+			\item[c.]	How many ways are there to place the A's?
+						\textit{(Hint: B has been placed, so there are 5 available spaces and 3 A's to place.)}
+			\item[d.]	How many ways are there to place the N's?
+						\textit{(Hint: How many spaces are left? How many N's to place?}
+			\item[e.]	Which Rule do you use to find the final answer? What is the final answer?
+		\end{enumerate}
+	\end{questionNOGRADE}
+	
+	\hrulefill
+	
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+	    How many distinguishable arrangements are there of the word \\ ``PENNSYLVANIA''?
+	    \textit{(Hint: You need the total amount of letters, and a count for each letter in the word!)}
+	\end{questionNOGRADE}
+
+    \newpage
     
     \subsection{Binary sequences}
 
@@ -124,34 +152,6 @@
 		\end{center}
         
     \end{intro}
-	
-	\newpage
-	
-    \stepcounter{question}
-    \begin{questionNOGRADE}{\thequestion}
-	    How many distinguishable arrangements are there of the letters in the word ``BANANA''?
-	    
-	    \begin{enumerate}
-		    \item[a.]	How many B's?		\tab How many A's?		\tab How many N's?
-		    \item[b.]	How many ways are there to select a position for B?
-						\textit{(Specify the formula and the final answer)}
-			\item[c.]	How many ways are there to place the A's?
-						\textit{(Hint: B has been placed, so there are 5 available spaces and 3 A's to place.)}
-			\item[d.]	How many ways are there to place the N's?
-						\textit{(Hint: How many spaces are left? How many N's to place?}
-			\item[e.]	Which Rule do you use to find the final answer? What is the final answer?
-		\end{enumerate}
-	\end{questionNOGRADE}
-	
-	\hrulefill
-	
-    \stepcounter{question}
-    \begin{questionNOGRADE}{\thequestion}
-	    How many distinguishable arrangements are there of the word \\ ``PENNSYLVANIA''?
-	    \textit{(Hint: You need the total amount of letters, and a count for each letter in the word!)}
-	\end{questionNOGRADE}
-
-    \hrulefill
 
     We can also use what we've learned on application problems, where we need to
     group up items together.
@@ -244,26 +244,27 @@
 }{
 % KEY ------------------------------------ %
     \begin{itemize}
-        \item[1a.]	$r = 3$
-        \item[1b.]	$n-r = 2$
-        \item[1c.]	$n-3 = 2$ \tab $n = 2 + 3$ \tab $n = 5$
-        \item[1d.]	$C(n,r) = C(5,3) = 10$
+		\item[1a.]	1x B, 3x A, 2x N.
+		\item[1b.]	There are $C(6,1) = 6$ ways to place the B.
+		\item[1c.]	There are $C(5,3) = 10$ ways to place the A's.
+		\item[1d.]	There are $C(2,2) = 1$ ways to place the N's.
+		\item[1e.]	Use the Rule of Products: $6 \cdot 10 \cdot 1 = 60$.
+		
+		\item[2.]	P: $C(12,1)$, E: $C(11,1)$, N: $C(10,3)$, S: $C(7,1)$, Y: $C(6,1)$, L: $C(5,1)$, V: $C(4,1)$, I: $C(3,1)$, A: $C(2,2)$ \\
+					= $12 \cdot 11 \cdot 120 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 1$ \\
+					= 39,916,800
+                    
+        \item[3a.]	$r = 3$
+        \item[3b.]	$n-r = 2$
+        \item[3c.]	$n-3 = 2$ \tab $n = 2 + 3$ \tab $n = 5$
+        \item[3d.]	$C(n,r) = C(5,3) = 10$
         
-        \item[2.]	Length 5 means 1x, 3x, or 5x ones.
+        \item[4.]	Length 5 means 1x, 3x, or 5x ones.
 					\\ one 1, four 0:	$r = 1$, $n-r = 4$, $n-1=4, n=5$, $C(5,1) = 5$
 					\\ three 1, two 0:	$r = 3$, $n-r = 2$, $n-3=2, n=5$, $C(5,3) = 10$
 					\\ five 1, zero 0:	$r = 5$, $n-r = 0$, $n-5=0, n=5$, $C(5,5) = 1$
 					\\ $5 + 10 + 1 = 16$
 		
-		\item[3a.]	1x B, 3x A, 2x N.
-		\item[3b.]	There are $C(6,1) = 6$ ways to place the B.
-		\item[3c.]	There are $C(5,3) = 10$ ways to place the A's.
-		\item[3d.]	There are $C(2,2) = 1$ ways to place the N's.
-		\item[3e.]	Use the Rule of Products: $6 \cdot 10 \cdot 1 = 60$.
-		
-		\item[4.]	P: $C(12,1)$, E: $C(11,1)$, N: $C(10,3)$, S: $C(7,1)$, Y: $C(6,1)$, L: $C(5,1)$, V: $C(4,1)$, I: $C(3,1)$, A: $C(2,2)$ \\
-					= $12 \cdot 11 \cdot 120 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 1$ \\
-					= 39,916,800
 
         \item[5a.]  0100010000
         \item[5b.]  0000100001
