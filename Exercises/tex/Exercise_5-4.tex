@@ -150,7 +150,97 @@
 	    How many distinguishable arrangements are there of the word \\ ``PENNSYLVANIA''?
 	    \textit{(Hint: You need the total amount of letters, and a count for each letter in the word!)}
 	\end{questionNOGRADE}
-	
+
+    \hrulefill
+
+    We can also use what we've learned on application problems, where we need to
+    group up items together.
+
+    \newpage
+
+    \begin{intro}{Modeling problems with binary sequences}
+        Let's say you have a box that can store 8 donuts.
+        If you're going to put multiple flavors in the box, you will
+        use a separator to keep them apart.
+
+        \begin{center}
+            \begin{tabular}{c c}
+                Same donuts & 
+                Different donuts
+                \\ \\
+                \centering
+                \includegraphics[width=6cm]{images/donutbox1.png}
+                &
+                \includegraphics[width=6cm]{images/donutbox2.png}
+            \end{tabular}
+        \end{center}
+
+        In this case, we don't care what kind of donuts are in the box;
+        we will represent them with zeroes. The splitters, we will represent as 1.
+        With this information, we will model our box of donuts as a binary string.
+
+        \begin{center}
+            \includegraphics[height=4cm]{images/donutbox3.png}
+        \end{center}
+    \end{intro}
+    
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        For the following donut combinations, draw the donut box, the donuts, and the separators.
+        Also list out the binary sequence that represents the box.
+        Assume that the box must always have 2 separators. If a separator isn't being used, it can
+        go at either end of the box.
+
+        \begin{enumerate}
+            \item[a.]   One Chocolate, Three Strawberry, and Four Glazed
+            \item[b.]   Four Chocolate and Four Glazed
+            \item[c.]   Eight Glazed
+        \end{enumerate}
+    \end{questionNOGRADE}
+
+    \newpage
+
+    \begin{intro}{Theorem}
+        Let natural numbers $n$ and $r$ be given.
+        \footnote{Theorem 3 from Discrete Mathematics, Ensley and Crawley, page 413}
+
+        \begin{enumerate}
+            \item   The number of solutions to the equation $x_{1} + ... + x_{n} = r$
+            using nonnegative integers is $C(r + n - 1, r)$.
+            \item   The number of unordered lists of length $r$ taken from a set of size $n$,
+            which repetitions allowed, is $C(r + n - 1, r)$.
+            \item   The number of bags of $r$ pieces of fruit that can be bought at a store with $n$
+            types of fruit available is $C(r + n - 1, r)$.
+        \end{enumerate}
+    \end{intro}
+    
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        At Darrell's Donuts, Darrell sells 5 different types of donuts.
+        He only sells 12-donut boxes. How many different combinations
+        of donut boxes can you build?
+        \footnote{Based on Example 6 from Discrete Mathematics, Ensley and Crawley, page 413}
+
+        \begin{enumerate}
+            \item[a.]   How many types of donuts are there? $n =$
+            \item[b.]   How many donuts will be selected? $r = $
+            \item[c.]   How many separators should there be?
+                        \textit{(Hint: It should be one less than the donut types)}
+            \item[d.]   If donuts and separators both count as spaces in the box,
+                        how many available spaces are there total?
+            \item[e.]   What is $r + n - 1$?
+            \item[f.]   What is the Combination formula for finding out the total ways you can build your donut boxes?
+            \item[g.]   What is the final answer?
+        \end{enumerate}
+    \end{questionNOGRADE}
+
+    \hrulefill
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        At Piper's Produce, there are 3 types of fruit for sale.
+        How many ways can you fill a bag that can store 20 pieces of fruit?
+    \end{questionNOGRADE}
 }{
 % KEY ------------------------------------ %
     \begin{itemize}
@@ -174,6 +264,21 @@
 		\item[4.]	P: $C(12,1)$, E: $C(11,1)$, N: $C(10,3)$, S: $C(7,1)$, Y: $C(6,1)$, L: $C(5,1)$, V: $C(4,1)$, I: $C(3,1)$, A: $C(2,2)$ \\
 					= $12 \cdot 11 \cdot 120 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 1$ \\
 					= 39,916,800
+
+        \item[5a.]  0100010000
+        \item[5b.]  0000100001
+        \item[5c.]  0000000011
+
+        \item[6a.]  $n = 5$
+        \item[6b.]  $r = 12$
+        \item[6c.]  4 separators
+        \item[6d.]  12 donuts + 4 separators = 16
+        \item[6e.]  $r + n - 1 = 12 + 5 - 1 = 16$
+        \item[6f.]  $C(16,12)$ or $C(16,4)$.
+        \item[6g.]  $C(16,12) = 1,820$
+
+        \item[7.]   20 pieces of fruit, 2 separators: $C(22,20)$. \\
+                    $C(22,20) = 231$
     \end{itemize}
 }
 
