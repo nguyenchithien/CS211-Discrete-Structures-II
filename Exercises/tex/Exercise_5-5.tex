@@ -1,0 +1,167 @@
+\input{BASE-HEAD}
+\newcommand{\laClass}       {CS 211}
+\newcommand{\laSemester}    {Spring 2018}
+\newcommand{\laChapter}     {5.5}
+\newcommand{\laType}        {Exercise}
+\newcommand{\laPoints}      {5}
+\newcommand{\laTitle}       {Recursive Counting}
+\newcommand{\laDate}        {Jan 16, 2018}
+\setcounter{chapter}{5}
+\setcounter{section}{5}
+\addtocounter{section}{-1}
+\newcounter{question}
+
+\toggletrue{answerkey}
+\togglefalse{answerkey}
+
+\input{BASE-HEADER}
+
+\input{INSTRUCTIONS-EXERCISE}
+
+\notonkey{
+% ASSIGNMENT ------------------------------------ %
+
+    \section{\laTitle}
+
+    \begin{intro}{Remember Chapter 2.3...?}
+        \small 
+        Back in CS 210, we did proofs by using induction. With induction,
+        our goal was to show that some statement was true for the first
+        value, $a_{1}$, and then for all values going up through $a_{m-1}$.
+        Let's look at the steps for this sort of problem.
+        
+        \paragraph{Exercise 2.3, 3a from textbook}
+        Show that the sequence defined by $a_{k} = a_{k-1} + 4; a_{1} = 1$ for
+        $k \geq 2$ is equivalently described by the closed formula $a_{n} = 4n-3$.
+
+        \subparagraph{Step 1:} Check values for both formulas, for $a_{1}$:
+
+            \tab Recursive: $a_{1} = 1$ (provided)
+            \tab Closed: $a_{1} = 4(1) - 3 = 1$
+
+            They match, so we can continue.
+
+        \subparagraph{Step 2:} Rewrite the recursive formula in terms of $m$:
+            $a_{m} = a_{m-1} + 4$
+
+        \subparagraph{Step 3:} Find the equation for $a_{m-1}$ through the recursive formula:
+
+            \tab $a_{n} = 4n - 3$ \\
+            \tab $=>$ $a_{m-1} = 4(m-1) - 3$ \\
+            \tab $=>$ $a_{m-1} = 4m - 7$
+
+        \subparagraph{Step 4:} Plug $a_{m-1}$ into the recursive formula from step 2, and simplify.
+
+            \tab $a_{m} = a_{m-1} + 4$ \\
+            \tab $=>$   $a_{m} = (4m-7) + 4$ \\
+            \tab $=>$   $a_{m} = 4m - 3$
+
+        \subparagraph{PROOF:} $a_{m} = 4m-3$ and the closed formula $a_{n} = 4n-3$ match,
+            so the closed formula and recursive formula are equivalent.
+
+    \end{intro}
+
+    This section is quite small and just highlighting how we can use
+    our previous proofs with Permutations.
+
+    \newpage
+    
+    \subsection{Recursive counting}
+
+    \begin{intro}{Proving for recurrence relations}
+        Prove by induction and the recurrence relation
+        \footnote{From 5.5 Exercise 4, Discrete Mathematics by Ensley and Crawley}
+        
+        $P(n,r) = n \cdot P((n-1), (r-1))$ with $P(n,0)=1$
+            
+        \begin{center}
+            that $P(n,n) = n!$ for all $n \geq 0$.
+        \end{center}
+        
+        
+        \subparagraph{Step 1:} Check that it works for $n=1$: \\
+            $$P(1,1) = 1 \cdot P(0, 0)$$
+            $$ = \frac{0!}{0!} = \frac{1}{1} = 1;$$
+            $$ 1! = 1 $$
+            This step is OK! Moving on...
+
+        \subparagraph{Step 2:}  Plug in $n$ for $r$ in the original statement. 
+            $$P(n,n) = n \cdot P( (n-1), (n-1) )$$
+            $$= n \cdot \frac{(n-1)!}{( (n-1) - (n-1) )!}$$
+            $$= n \cdot \frac{(n-1)!}{( n - 1 - n + 1 )!}$$
+            $$= n \cdot \frac{(n-1)!}{( n - n )!}$$
+            $$= n \cdot \frac{(n-1)!}{( 0 )!}$$
+            $$= n \cdot \frac{(n-1)!}{1}$$
+            $$= n \cdot (n-1)!$$
+            $$= n!$$
+            ($n$ times $(n-1)!$ is equivalent to just having $n!$)
+            
+    \end{intro}
+
+    \begin{intro}{Review: Permutation}
+        $$P(n,r) = \frac{n!}{(n-r)!}$$
+    \end{intro}
+    
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Use the recurrence relation
+
+        $$P(n,r) = n \cdot P((n-1), (r-1))$$
+        (with $P(n,0) = 1$ for all $n \geq 0$)
+        to prove each of the following:
+        \footnote{From 5.5 Exercise 5, Discrete Mathematics by Ensley and Cralwey}
+
+        \begin{itemize}
+            \item[a.]   For all $n \geq 1$, $P(n,1) = n$
+
+            \item[b.]   For all $n \geq 2$, $P(n,2) = n \cdot (n-1)$
+
+            \item[c.]   For all $n \geq 3$, $P(n,3) = n \cdot (n-1) \cdot (n-2)$
+        \end{itemize}
+    \end{questionNOGRADE}
+
+}{
+% KEY ------------------------------------ %
+
+    \begin{enumerate}
+        \item[1a.]      First, check if $P(1,1) = 1$ works out. \\
+                        $P(1,1) = 1 \cdot P( (1-1, 1-1) )$ \\
+                        $ = 1 \cdot P( 0, 0 ) $ \tab
+                        $ = 1 \cdot \frac{0!}{0!} $ \tab
+                        $ = 1 \cdot \frac{1}{1} $ \tab
+                        $ = 1 \cdot 1 $ \\
+                        $ = 1 $ \checkmark \tab Checks out \\ 
+
+                        Next, check for $P(n, 1) = n$... \\
+                        $P(n, 1) = n \cdot P( (n-1), (1-1) )$ \\
+                        $ = n \cdot P( n-1, 1 ) $ \tab
+                        $ = n \cdot \frac{ (n-1)! }{ (n-1)! } $ \tab
+                        $ = n \cdot 1 $ \\
+                        $ = n $ \checkmark
+                        
+        \item[1b.]      $P(1,1)$ has been checked in part (a). \\
+
+                        Check for $P(n,2) = n \cdot (n-1)$... \\
+                        $P(n,2) = n \cdot P( (n-1), (2-1) )$ \\
+                        $ = n \cdot \frac{ (n-1)! }{ (n-1-1)! } $ \tab
+                        $ = n \cdot \frac{ (n-1)! }{ (n-2)! } $ \\
+                        $ = n \cdot \frac{ (n-1) \cdot (n-2)! }{ (n-2)! } $ \tab
+                        \small 
+                        Expanded $(n-1)!$ in the numerator to $(n-1) \cdot (n-2)!$
+                        \normalsize
+
+                        $ = n \cdot (n-1)$ \checkmark 
+                        
+        \item[1c.]      $P(1,1)$ has been checked in part (a). \\
+
+                        Check for $P(n,3) = n \cdot (n-1) \cdot (n-2)$... \\
+                        $P(n,3) = n \cdot P( (n-1), (3-1) )$ \\
+                        $ = n \cdot \frac{ (n-1)! }{ (n-1-2)! } $ \tab
+                        $ = n \cdot \frac{ (n-1)! }{ (n-3)! } $ \tab Expand $(n-1)$ again... \\
+                        $ = n \cdot \frac{ (n-1)(n-2)(n-3)! }{ (n-3)! } $ \\
+                        $ = n \cdot (n-1) \cdot (n-2) $ \checkmark
+    \end{enumerate}
+
+}
+
+\input{BASE-FOOT}
