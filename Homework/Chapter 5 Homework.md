@@ -14,6 +14,12 @@ Exercises 10, 12, 14, 15 (a, c), 17 (a, c), 27 (a, b)
 
 ## 5.4: Binary sequences
 
+Exercises 1 (a, c), 3 (a, c), 5 (a, c), 17
+
 ## 5.5: Recursive counting
 
+No homework
+
 ## 5.6: Solving recurrence relations
+
+No homework
