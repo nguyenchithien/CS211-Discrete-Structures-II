@@ -1,7 +1,7 @@
 \input{BASE-HEAD}
 \newcommand{\laClass}       {CS 211}
 \newcommand{\laSemester}    {Spring 2018}
-\newcommand{\laChapter}     {5.1}
+\newcommand{\laChapter}     {5.}
 \newcommand{\laType}        {Exercise}
 \newcommand{\laPoints}      {5}
 \newcommand{\laTitle}       {Solving Recurrence Relations}
@@ -23,18 +23,281 @@
 
     \section{\laTitle}
 
-    \subsection{Topic}
+    \subsection{Review: Recursive formulas}
 
-    \begin{intro}{TOPIC}
-        LOREMIPSUM
+    \begin{intro}{Remember chapter 1.2...?}
+        Back in the first week of CS 210, you were given sequences of
+        numbers... let's say
+
+        $$ 3, 5, 7, 9, 11 $$
+
+        ...and you tasked with coming up with \textbf{closed formulas}
+        and \textbf{recursive formulas} for these.
+
+        Closed formulas were based only on the value of $n$, such as...
+        $$a_{n} = 2n + 1$$
+
+        And recursive formulas were based on some starting value, $a_{1}$,
+        with each subsequent element being based off a previous element., such as...
+        $$ a_{1} = 3; \tab a_{n} = a_{n-1} + 2 $$
     \end{intro}
 
+    A full class and 4.4 chapters later, we will actually show you \textit{how} to
+    come up with a formula given a sequence of numbers...
+    No guesswork required.
+
+    \newpage
+
+    \subsection{Difference tables}
+
+    \begin{intro}{Finding formulas: Recursive}
+        Find a recursive formula for the sequence $2, 5, 8, 11, 14, ...$
+
+        ~\\     First, we will be assigning this sequence of numbers to a variable $s$,
+                where $n$ is the index (or position) in the sequence, and $s_{n}$ is
+                the element (or term) at that position.
+
+        ~\\     Previously, we had our formulas begin at $a_{1}$, but now we will
+                be starting our sequences at index $0$, like when programming.
+
+        ~\\     First let's build a table with $n$, the index, $s_{n}$, the element
+                at that index, and $\triangle_{n}$, the difference between two elements
+                ($\triangle_{n} = s_{n+1} - s_{n}$)
+
+        \begin{center}
+            \begin{tabular}{| r | c | c | c | c | c | }
+                \hline
+                \footnotesize   index & & & & & \\ 
+                $n$
+                & 0 & 1 & 2 & 3 & 4
+                \\ \hline
+                
+                \footnotesize element at $n$ & & & & & \\
+                $s_{n}$
+                & 2 & 5 & 8 & 11 & 14
+                \\ \hline
+                
+                \footnotesize different between elements & & & & & \\
+                $\triangle_{n}$
+                & 3 & 3 & 3 & 3 & 3
+                \\ \hline
+            \end{tabular}
+        \end{center}
+
+        With the table, we can see the difference between each term (2 to 5, 5 to 8, etc...) is \textbf{3}.
+        With this information, we can write any value $s_{1}$ in terms of the previous value:
+    
+        \begin{center}
+            \begin{tabular}{c l | l}
+                $s_{1}$ &   $= s_{0} + \triangle_{0}$                       & $(5 = 2 + 3)$
+                \\ \\
+                $s_{2}$ &   $= s_{1} + \triangle_{1}$                       & $(8 = 5 + 3)$
+                \\
+                &           $= s_{0} + (\triangle_{0} + \triangle_{1})$     & $(8 = 2 + 3 + 3)$
+                \\ \\
+                $s_{3}$ &   $= s_{2} + \triangle_{2}$                       & $(11 = 8 + 3)$
+                \\
+                &           $= s_{0} + (\triangle_{0} + \triangle_{1} + \triangle_{2})$ & $(11 = 2 + 3 + 3 + 3)$
+                \\
+                &           $= s_{0} + \sum_{k=0}^{2}{ \triangle_{k} }$     & $(11 = 2 + \sum_{k=0}^{2}{3})$
+            \end{tabular}
+        \end{center}
+
+        \begin{center}
+            So given the first term being \\
+            $s_{0} = 2$,
+            \\ we can say the recursive formula is \\
+            $s_{n} = s_{n-1} + \triangle_{n-1}$ \tab or \tab
+            $s_{n} = s_{n-1} + 3$
+        \end{center}
+        
+    \end{intro}
+
+    \newpage
+
+    \begin{intro}{(Continued) Finding formulas: Closed}
+        But what about the closed formula? Well with the differences
+        we can also describe any term as the \textit{first term} plus
+        the sum of the differences...
+        
+        \begin{center}
+            \begin{tabular}{c l | l}
+                $s_{1}$ &   $= s_{0} + \triangle_{0}$                       & $(5 = 2 + 3)$
+                \\ \\
+                $s_{2}$ &   $= s_{1} + \triangle_{1}$                       & $(8 = 5 + 3)$
+                \\
+                &           $= s_{0} + (\triangle_{0} + \triangle_{1})$     & $(8 = 2 + 3 + 3)$
+                \\ \\
+                $s_{3}$ &   $= s_{2} + \triangle_{2}$                       & $(11 = 8 + 3)$
+                \\
+                &           $= s_{0} + (\triangle_{0} + \triangle_{1} + \triangle_{2})$ & $(11 = 2 + 3 + 3 + 3)$
+                \\
+                &           $= s_{0} + \sum_{k=0}^{2}{ \triangle_{k} }$     & $(11 = 2 + \sum_{k=0}^{2}{3})$
+            \end{tabular}
+        \end{center}
+
+        So $s_{1} = 2 + 3$, \tab $s_{2} = 2 + 3 + 3$, \tab $s_{3} = 2 + 3 + 3 + 3$...
+        
+        which we can write as
+
+        $$ s_{n} = \sum_{k=0}^{n-1}{ (3) } + 2$$
+        \begin{center}
+            OR
+        \end{center}
+        $$ s_{n} = 3 \cdot n + 2 $$
+    \end{intro}
+
+    
     \stepcounter{question}
     \begin{questionNOGRADE}{\thequestion}
-        
+        TODO PRACTICE
     \end{questionNOGRADE}
 
+    \newpage
 
+    TODO: Explain this thing
+
+    \begin{intro}{Theorem 1: Fundamental Theorem of Sums and Differences}
+        For any sequence $\{s_{n}\}$ with first differences $\triangle_{k} = s_{k+1} - s_{k}$,
+        and any $n \geq 1$,
+
+        $$s_{n} - s_{0} = \sum_{k=0}^{n-1}{ \triangle_{k} } $$
+    \end{intro}
+
+
+    \newpage
+
+    \subsection{Complex sequences}
+
+    \begin{intro}{Complex sequences}
+        Sometimes, the difference between each term in a sequence is not the same;
+        maybe the difference is 3, then 4, then 5, and so on. In this case,
+        the difference itself also has a difference. In this case,
+        that ``difference-of-the-differences" is known as the \textit{second difference},
+        whereas the difference between the terms themselves is the \textit{first difference}.
+
+        \paragraph{Example:} Find a closed formula for the sequence 6, 11, 19, 30, 44.
+
+        As previously, we can start by writing out a table of the index $n$, the term $s_{n}$,
+        and the difference $\triangle_{n}$...
+
+        \begin{center}
+            \begin{tabular}{l | l l l l l}
+                $n$ & 0 & 1 & 2 & 3 & 4
+                \\ \hline
+                $s_{n}$ & 6 & 11 & 19 & 30 & 44
+                \\ \hline
+                $\triangle_{n}$ & 5 & 8 & 11 & 14 & ?
+            \end{tabular}
+        \end{center}
+
+        Once we've figured out $\triangle_{n}$, we can see that it isn't
+        constant each time, so we can't apply the same techniques as before.
+        Instead, let's expand the table to have a fourth row: the difference
+        of the differences. We will use a triangle again to symbolize ``difference",
+        but we will add a number to it, so $\triangle_{n}^{1}$ is the difference
+        between terms, and $\triangle_{n}^{2}$ is the difference of those
+        differences.
+        
+        \begin{center}
+            \begin{tabular}{l | l l l l l}
+                $n$ & 0 & 1 & 2 & 3 & 4
+                \\ \hline
+                $s_{n}$ & 6 & 11 & 19 & 30 & 44
+                \\ \hline
+                $\triangle_{n}^{1}$ & 5 & 8 & 11 & 14 & ?
+                \\ \hline
+                $\triangle_{n}^{2}$ & 3 & 3 & 3 & ... & ...
+            \end{tabular}
+        \end{center}
+
+        Ahh, can we maybe apply what we learned last time! Solving this will
+        actually mean that we're working recursively.
+
+        Let's look at this closer...
+
+        \begin{center}
+            \begin{tabular}{l | l l l l l}
+                $n$ & 0 & 1 & 2 & 3 & 4
+                \\ \hline
+                $s_{n}$ & 6 & 11 & 19 & 30 & 44
+                \\ \hline
+                $\triangle_{n}^{1}$ & 5 & 8 & 11 & 14 & ?
+                \\ \hline
+                $\triangle_{n}^{2}$ & 3 & 3 & 3 & ... & ...
+            \end{tabular}
+        \end{center}
+
+        $$\triangle_{n}^{k} = \triangle_{n+1}^{k-1} - \triangle_{n}^{k-1}$$
+        
+    \end{intro}
+
+    \newpage
+
+
+    \begin{intro}{(Continued) Complex sequences}
+        
+        \begin{center}
+            \begin{tabular}{c l | l}
+                $\triangle_{1}^{1}$
+                &           $= \triangle_{0}^{1} + \triangle_{0}^{2}$
+                & $(8 = 5 + 3)$
+                \\
+                $\triangle_{2}^{1}$
+                &           $= \triangle_{1}^{1} + \triangle_{1}^{2}$
+                & $(11 = 5 + 3 + 3)$
+                \\
+                &           $= \triangle_{0}^{1} + (\triangle_{0}^{2} + \triangle_{1}^{2})$
+                & $(14 = 5 + 3 + 3)$
+                \\
+                $\triangle_{3}^{1}$
+                &           $= \triangle_{2}^{1} + \triangle_{2}^{2}$
+                & $(11 = 8 + 3)$
+                \\
+                &           $= \triangle_{0}^{1} + (\triangle_{0}^{2} + \triangle_{1}^{2} + \triangle_{2}^{2})$ & $(11 = 2 + 3 + 3 + 3)$
+            \end{tabular}
+        \end{center}
+
+        So we can use the same strategy to find values of $\triangle_{n}^{1}$...
+    \end{intro}
+
+
+    \begin{intro}{Theorem 1 (Revisited)}
+        For any sequence $\{s_{n}\}$ with first differences $\triangle_{k} = s_{k+1} - s_{k}$,
+        and any $n \geq 1$,
+
+        $$s_{n} - s_{0} = \sum_{k=0}^{n-1}{ \triangle_{k} } $$
+    \end{intro}
+
+    \begin{introNOHEAD}
+        \paragraph{Definition}
+        For a given sequence of numbers $\{s_{n}\}$ beginning with $s_{0}$ and
+        an integer $k \geq 2$, we define the sequence $\{\triangle_{n}^{k}\}$
+        of $k^{th}$ differences by the rule
+
+        $$\triangle_{n}^{k} = \triangle_{n+1}^{k-1} - \triangle_{n}^{k-1}$$
+
+        for all $n \geq 0$. Hence, the first term in the sequence of $k^{th}$
+        differences is $\triangle_{0}^{k} = \triangle_{1}^{k-1} - \triangle_{0}^{k-1}$.
+        For consistency, we refer to the sequence of first differences as
+        $\{\triangle_{n}^{1}\}$ instead of $\{\triangle_{n}\}$ in this context.
+    \end{introNOHEAD}
+
+    \begin{intro}{Theorem 2:}
+        For a sequence $\{s_{n}\}$ whose $k^{th}$ differences are constant,
+        for all $n \geq 0$,
+
+        $$s_{n} = s_{0} + \sum_{i=1}^{k}{ \triangle_{0}^{i} \cdot C(n,i) }$$
+    \end{intro}
+
+    \newpage
+    
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        TODO PRACTICE
+    \end{questionNOGRADE}
+
+    
 }{
 % KEY ------------------------------------ %
 
