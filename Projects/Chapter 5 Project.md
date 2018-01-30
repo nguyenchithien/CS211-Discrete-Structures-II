@@ -7,7 +7,9 @@ Spring 2018
 For this project, you will use any programming language that you're comfortable with to implement
 simple programs that will compute Permutations, Sets, Ordered Lists, and Unordered Lists.
 
-Each of these shouhld be implemented in a function that takes *n* and *r* as input variables, and gives the result as the return value.
+Each of these should be implemented in a function that takes *n* and *r* as input variables, and gives the result as the return value.
+
+We will work on this assignment during class.
 
 ## Formulas
 
