@@ -46,6 +46,21 @@ int main()
 }
 ```
 
+**Java**
+
+```java
+import static java.lang.Math.pow;
+
+public class Program
+{
+    public static void main()
+    {
+        double result = Math.pow(2, 3);
+        System.out.println(result);
+    }
+}
+```
+
 **Python**
 
 [Example](https://www.tutorialspoint.com/python/python_basic_operators.htm)
