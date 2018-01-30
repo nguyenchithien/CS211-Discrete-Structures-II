@@ -61,6 +61,23 @@ public class Program
 }
 ```
 
+**C#**
+
+```csharp
+using System;
+
+namespace Example
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Math.Pow(2, 3));
+        }
+    }
+}
+```
+
 **Python**
 
 [Example](https://www.tutorialspoint.com/python/python_basic_operators.htm)
