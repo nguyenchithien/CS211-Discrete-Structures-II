@@ -95,6 +95,21 @@ Here are some examples:
 
 **C++**
 
+Iterative:
+
+```c++
+int Factorial(int n)
+{
+	for (int i = n - 1; i > 0; i--)
+	{
+		n *= i;
+	}
+	return n;
+}
+```
+
+Recursive:
+
 ```c++
 int Factorial( int n )
 {
