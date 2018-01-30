@@ -18,9 +18,6 @@
 
 \input{INSTRUCTIONS-EXERCISE}
 
-\notonkey{
-% ASSIGNMENT ------------------------------------ %
-
     \section{\laTitle}
 
     \begin{intro}{Remember Chapter 2.3...?}
@@ -120,48 +117,6 @@
         \end{itemize}
     \end{questionNOGRADE}
 
-}{
-% KEY ------------------------------------ %
 
-    \begin{enumerate}
-        \item[1a.]      First, check if $P(1,1) = 1$ works out. \\
-                        $P(1,1) = 1 \cdot P( (1-1, 1-1) )$ \\
-                        $ = 1 \cdot P( 0, 0 ) $ \tab
-                        $ = 1 \cdot \frac{0!}{0!} $ \tab
-                        $ = 1 \cdot \frac{1}{1} $ \tab
-                        $ = 1 \cdot 1 $ \\
-                        $ = 1 $ \checkmark \tab Checks out \\ 
-
-                        Next, check for $P(n, 1) = n$... \\
-                        $P(n, 1) = n \cdot P( (n-1), (1-1) )$ \\
-                        $ = n \cdot P( n-1, 1 ) $ \tab
-                        $ = n \cdot \frac{ (n-1)! }{ (n-1)! } $ \tab
-                        $ = n \cdot 1 $ \\
-                        $ = n $ \checkmark
-                        
-        \item[1b.]      $P(1,1)$ has been checked in part (a). \\
-
-                        Check for $P(n,2) = n \cdot (n-1)$... \\
-                        $P(n,2) = n \cdot P( (n-1), (2-1) )$ \\
-                        $ = n \cdot \frac{ (n-1)! }{ (n-1-1)! } $ \tab
-                        $ = n \cdot \frac{ (n-1)! }{ (n-2)! } $ \\
-                        $ = n \cdot \frac{ (n-1) \cdot (n-2)! }{ (n-2)! } $ \tab
-                        \small 
-                        Expanded $(n-1)!$ in the numerator to $(n-1) \cdot (n-2)!$
-                        \normalsize
-
-                        $ = n \cdot (n-1)$ \checkmark 
-                        
-        \item[1c.]      $P(1,1)$ has been checked in part (a). \\
-
-                        Check for $P(n,3) = n \cdot (n-1) \cdot (n-2)$... \\
-                        $P(n,3) = n \cdot P( (n-1), (3-1) )$ \\
-                        $ = n \cdot \frac{ (n-1)! }{ (n-1-2)! } $ \tab
-                        $ = n \cdot \frac{ (n-1)! }{ (n-3)! } $ \tab Expand $(n-1)$ again... \\
-                        $ = n \cdot \frac{ (n-1)(n-2)(n-3)! }{ (n-3)! } $ \\
-                        $ = n \cdot (n-1) \cdot (n-2) $ \checkmark
-    \end{enumerate}
-
-}
 
 \input{BASE-FOOT}
