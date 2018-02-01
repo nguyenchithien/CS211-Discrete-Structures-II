@@ -18,12 +18,11 @@
 
 \input{INSTRUCTIONS-EXERCISE}
 
-\notonkey{
 % ASSIGNMENT ------------------------------------ %
 
     \section{\laTitle}
 
-    \subsection{Review: Recursive formulas}
+    \subsection{Review: Closed \& Recursive formulas}
 
     \begin{intro}{Remember chapter 1.2...?}
         Back in the first week of CS 210, you were given sequences of
@@ -147,23 +146,38 @@
         $$ s_{n} = 3 \cdot n + 2 $$
     \end{intro}
 
-    
-    \stepcounter{question}
-    \begin{questionNOGRADE}{\thequestion}
-        TODO PRACTICE
-    \end{questionNOGRADE}
-
-    \newpage
-
-    TODO: Explain this thing
 
     \begin{intro}{Theorem 1: Fundamental Theorem of Sums and Differences}
         For any sequence $\{s_{n}\}$ with first differences $\triangle_{k} = s_{k+1} - s_{k}$,
         and any $n \geq 1$,
 
         $$s_{n} - s_{0} = \sum_{k=0}^{n-1}{ \triangle_{k} } $$
+
+            or
+        
+        $$s_{n} = \sum_{k=0}^{n-1}{ \triangle_{k} } + s_{0} $$
     \end{intro}
 
+    \newpage
+    
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Build a difference table and find the formulas for the sequence:
+        \footnote{From Jim Van Horn's POGIL exercises}
+
+        $$ 7, 12, 17, 22, 27, ... $$
+    \end{questionNOGRADE}
+
+    \vspace{6cm}
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Build a difference table and find the formulas for the sequence:
+        \footnote{From Discrete Mathematics, 5.6 exercise 1a, Ensley and Crawley}
+
+        $$ 3, 10, 17, 24, 31, ... $$
+        
+    \end{questionNOGRADE}
 
     \newpage
 
@@ -256,55 +270,84 @@
                 \\
                 &           $= \triangle_{0}^{1} + (\triangle_{0}^{2} + \triangle_{1}^{2} + \triangle_{2}^{2})$ & $(11 = 2 + 3 + 3 + 3)$
             \end{tabular}
+    
         \end{center}
 
         So we can use the same strategy to find values of $\triangle_{n}^{1}$...
-    \end{intro}
 
+        $$ \triangle_{n}^{1} = \triangle_{0}^{1} + \sum_{k=0}^{n-1} ( \triangle_{k}^{2} ) $$
 
-    \begin{intro}{Theorem 1 (Revisited)}
-        For any sequence $\{s_{n}\}$ with first differences $\triangle_{k} = s_{k+1} - s_{k}$,
-        and any $n \geq 1$,
+        $$ \triangle_{n}^{1} = 5 + \sum_{k=0}^{n-1} (3) $$
 
-        $$s_{n} - s_{0} = \sum_{k=0}^{n-1}{ \triangle_{k} } $$
-    \end{intro}
+        $$ \triangle_{n}^{1} = 3n + 5 $$
 
-    \begin{introNOHEAD}
-        \paragraph{Definition}
-        For a given sequence of numbers $\{s_{n}\}$ beginning with $s_{0}$ and
-        an integer $k \geq 2$, we define the sequence $\{\triangle_{n}^{k}\}$
-        of $k^{th}$ differences by the rule
+        \paragraph{Finding $s_{n}$} ~\\
 
-        $$\triangle_{n}^{k} = \triangle_{n+1}^{k-1} - \triangle_{n}^{k-1}$$
+        After we have an equation for the first level difference, we can then repeat
+        the Theorem to find $s_{n}$...
 
-        for all $n \geq 0$. Hence, the first term in the sequence of $k^{th}$
-        differences is $\triangle_{0}^{k} = \triangle_{1}^{k-1} - \triangle_{0}^{k-1}$.
-        For consistency, we refer to the sequence of first differences as
-        $\{\triangle_{n}^{1}\}$ instead of $\{\triangle_{n}\}$ in this context.
-    \end{introNOHEAD}
+        $$ s_{n} = s_{0} + \sum_{k=0}^{n-1} ( \triangle_{k}^{1} ) $$
 
-    \begin{intro}{Theorem 2:}
-        For a sequence $\{s_{n}\}$ whose $k^{th}$ differences are constant,
-        for all $n \geq 0$,
+        $$ s_{n} = 6 + \sum_{k=0}^{n-1} (3k + 5) $$
 
-        $$s_{n} = s_{0} + \sum_{i=1}^{k}{ \triangle_{0}^{i} \cdot C(n,i) }$$
+        And simplifying the sum...
+        
+        $$ s_{n} = 6 + \sum_{k=0}^{n-1} (5) + 3 \sum_{k=0}^{n-1} (k) $$
+
+        But how do we find the value of $\sum_{k=0}^{n-1} (k)$ ?
+        
     \end{intro}
 
     \newpage
+
+    \begin{intro}{Proposition 1 from Chapter 2.3}
+        $$ \sum_{i=1}^{n} (i) = \frac{n(n+1)}{2} $$
+
+        Or, rewritten for our use-case:
+
+        $$ \sum_{k=0}^{n-1} (k) = \frac{n(n-1)}{2} $$        
+    \end{intro}
+    
+    \begin{intro}{(Continued) Complex sequences}
+        So, continuing to simplify, we have:
+        $$ s_{n} = 6 + 5n + 3 \frac{n(n-1)}{2} $$
+        $$ s_{n} = 6 + \frac{5n \cdot 2}{2} + \frac{3n(n-1)}{2} $$
+        $$ s_{n} = \frac{10n + 3n^{2} - 3n}{2} + 6 $$
+        $$ s_{n} = \frac{3}{2} n^{2} + \frac{7}{2} n + 6 $$
+
+        And that's the final answer.
+    \end{intro}
     
     \stepcounter{question}
     \begin{questionNOGRADE}{\thequestion}
-        TODO PRACTICE
+        Build a difference table and find the \textbf{closed formula} for the sequence:
+        \footnote{From Discrete Mathematics, 5.6 exercise 1c, Ensley and Crawley}
+
+        $$ 1, 3, 8, 16, 27, 41, ... $$
+        
     \end{questionNOGRADE}
 
+
+    \newpage
+
+    \subsection{Review Theorems}
+
+    \begin{intro}{Definition of the $kth$ level difference at index $n$}
+        $$\triangle_{n}^{k} = \triangle_{n+1}^{k-1} - \triangle_{n}^{k-1}$$
+
+    \end{intro}
     
-}{
-% KEY ------------------------------------ %
+    \begin{intro}{Theorem 1 (Revisited)}
+        $$s_{n} = \sum_{k=0}^{n-1}{ \triangle_{k}^{1} } + s_{0} $$
+    \end{intro}
 
-    \begin{enumerate}
-        \item[1a.]  asdfasdf
-    \end{enumerate}
+    \begin{intro}{Theorem 2:}
+        $$s_{n} = s_{0} + \sum_{i=1}^{k}{ \triangle_{0}^{i} \cdot C(n,i) }$$
+    \end{intro}
 
-}
+    
+    \begin{intro}{Proposition 1 from Chapter 2.3}
+        $$ \sum_{k=0}^{n-1} (k) = \frac{n(n-1)}{2} $$        
+    \end{intro}
 
 \input{BASE-FOOT}
