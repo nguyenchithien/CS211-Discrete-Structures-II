@@ -24,6 +24,16 @@ For each of these *n* is the amout of choices, and *r* is the amount of items be
 
 ------
 
+# Maximum Values
+
+Depending on the language you're using, the data type of your variables, and the machine's architecture, there will be different maximum values.
+
+For example, in C++ on the computers in the lab, the largest signed integer it can store is **2,147,483,647**. Therefore, the largest factorial it can calculate is **12! = 479,001,600**. The result of **13!** is **6,227,020,800**, which is too big.
+
+**This is fine, don't worry about the limits, but keep it in mind while testing.**
+
+------
+
 # Math in programming
 
 Most languages require a library to use operations like exponents, and you will have to implement your own factorial function.
