@@ -23,15 +23,127 @@
 
     \section{\laTitle}
 
-    \subsection{Topic}
+    \subsection{Review}
 
-    \begin{intro}{TOPIC}
-        LOREMIPSUM
-    \end{intro}
+        \begin{intro}{Complement}
+            \footnotesize
+            Given an event $E$,
+            $$ Prob(E) + Prob(\bar{E}) = 1 $$
+            Where $\bar{E}$ is the complement of the event $E$.
+
+            \paragraph{Example question}
+            What is the probability that for a six-sided die rolled
+            three times the same result comes up more than once?
+
+            \begin{enumerate}
+                \item[a.] What is the sample space $S$? \\
+                    \{1, 2, 3, 4, 5, 6\}
+
+                \item[b.] What is the event $E$ (in English)? \\
+                    The set of outcomes that use the same \# more than once.
+
+                \item[c.] What is the complement of $\bar{E}$ (in English)? \\
+                    The set of outcomes that are all different numbers.
+
+                \item[d.] What \textit{structure type} is $\bar{E}$? What is $n$ and $r$? \\
+                    Permutation, $n = 6$, $r = 3$
+
+                \item[e.] Calculate $Prob(\bar{E})$ \\
+                    $Prob(\bar{E}) = n(\bar{E}) / n(S) =$
+                    $\frac{P(6,3)}{6^{3}} = \frac{5}{9} = 0.\bar{5}$
+
+                \item[f.] Calculate the probability for the Event $Prob(E)$ using the proposition. \\
+                    $1 - Prob(\bar{E}) = 1 - 0.55 \approx 0.44$
+            \end{enumerate}
+        \end{intro}
+
+        \begin{intro}{Expected (average) value}
+            \footnotesize
+            For a given probability experiment, let $X$ be a random
+            variable whose possible values come from the set of numbers
+            $ x_{1}, ..., x_{n} $. Then the \textbf{expected value of $X$},
+            denoted by $E[X]$, is the sum
+            $$ E[X] = (x_{1}) \cdot Prob(X = x_{1}) + ... + (x_{n}) \cdot Prob(X = x_{n}) $$
+        \end{intro}
+
+
+    \subsection{Recursion revisited}
+        \begin{intro}{\ }
+            \textbf{Average trials until getting first value} \\
+            A common type of problem in this section is to find the
+            average amount of trials run until you get some value for
+            the first time... For example, rolling a die until you
+            get a ``1" for the first time.
+
+            ~\\
+            Let's say there's some probability $p$ of success, and $X$
+            is the amount of trials (rolls, flips, etc.) until the first
+            value is received, and $E[X]$ is the average amount of
+            trials that will run.
+
+            ~\\
+            We start with this formula:
+            $$ E[X] = p(1) + (1 - p)(1 + E[X]) $$
+
+            The probability should be known, so by simplifying you
+            can solve for $E[X]$ to find the result.
+
+            \paragraph{Example 1}
+                Find the average number of tosses of a fair coin that it takes
+                to get a result of heads for the first time.
+
+                The probability of getting a heads is $p = (1/2)$, so we
+                can write this out as:
+
+                $$ E[X] = \frac{1}{2}(1) + (1 - \frac{1}{2})(1 + E[X]) $$
+
+                and simplify...
+
+                $$ E[X] = \frac{1}{2} + \frac{1}{2} + \frac{1}{2}(E[X]) $$
+
+                $$ E[X] - \frac{1}{2}(E[X]) = 1 $$
+
+                $$ \frac{1}{2}(E[X]) = 1 $$
+
+                $$ E[X] = 2 $$
+        \end{intro}
+
+    \newpage
 
     \stepcounter{question}
     \begin{questionNOGRADE}{\thequestion}
-        
+        What is the expected number of rolls of a six-sided die
+        that is rolled until a 1 appears? ~\\ \vspace{3cm}
+    \end{questionNOGRADE}
+
+    \hrulefill
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        A pair of dice are thrown until at least one of the die comes
+        up 1 for the first time. How many tosses,
+        on average, are required?
+
+        We are rolling two die, which comes out to:
+
+        \begin{center}
+            \footnotesize
+            \begin{tabular}{c c c c c c}
+                \textbf{(1,1)} & \textbf{(1,2)} & \textbf{(1,3)} & \textbf{(1,4)} & \textbf{(1,5)} & \textbf{(1,6)} \\
+                \textbf{(2,1)} & (2,2) & (2,3) & (2,4) & (2,5) & (2,6) \\
+                \textbf{(3,1)} & (3,2) & (3,3) & (3,4) & (3,5) & (3,6) \\
+                \textbf{(4,1)} & (4,2) & (4,3) & (4,4) & (4,5) & (4,6) \\
+                \textbf{(5,1)} & (5,2) & (5,3) & (5,4) & (5,5) & (5,6) \\
+                \textbf{(6,1)} & (6,2) & (6,3) & (6,4) & (6,5) & (6,6)
+            \end{tabular}
+        \end{center}
+
+        \begin{itemize}
+            \item[a.]   What is the sample size?    ~\\ \vspace{1cm}
+            \item[b.]   How many of these rules have at least one 1?    ~\\ \vspace{1cm}
+            \item[c.]   What is the probability of getting at least one?  ($Prob(E) = n(E) / n(S)$) ~\\ \vspace{0.5cm}
+            \item[d.]   Use the formula to find the expected value (average trials).
+        \end{itemize}
     \end{questionNOGRADE}
 
 
@@ -39,7 +151,14 @@
 % KEY ------------------------------------ %
 
     \begin{enumerate}
-        \item[1a.]  asdfasdf
+        \item   $ E[X] = \frac{1}{6}(1) + \frac{5}{6}(1 + E[X]) $ \\ $ E[X] = 6 $
+        \item
+            \begin{itemize}
+                \item[a.]   36
+                \item[b.]   11
+                \item[c.]   $\frac{11}{36}$
+                \item[d.]    $ E[X] = \frac{11}{36}(1) + \frac{25}{36}(1 + E[X]) $ \\ $ E[X] = \frac{36}{11} $
+            \end{itemize}
     \end{enumerate}
 
 }
