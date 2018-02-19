@@ -1,3 +1,10 @@
+*.pdb
+*.ilk
 *.log 
 *.dvi 
 *.aux
+
+Debug/
+*.sln
+.vs/
+*.tlog
