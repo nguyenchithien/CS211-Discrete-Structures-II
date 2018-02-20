@@ -6,7 +6,7 @@
 \newcommand{\laPoints}      {6}
 \newcommand{\laTitle}       {Sum and Product Rules for Probability}
 \newcommand{\laDate}        {Feb 22, 2018}
-\setcounter{chapter}{5}
+\setcounter{chapter}{6}
 \setcounter{section}{1}
 \addtocounter{section}{-1}
 \newcounter{question}
@@ -134,6 +134,42 @@
         \end{itemize}
 
     \end{questionNOGRADE}
+
+    \newpage
+
+    \subsection{This given that}
+
+        \begin{intro}{The probability of $E_{1}$ given $E_{2}$}
+            Given events $E_{1}$ and $E_{2}$ for some experiment, we
+            define the probability of $E_{1}$ given $E_{2}$, denoted by
+            $Prob(E_{1} | E_{2})$, as the probability that $E_{1}$ happens
+            given that $E_{2}$ occurs. Note that if $E_{1}$ and $E_{2}$
+            are independent, then $Prob( E_{1} | E_{2}) = Prob(E_{1})$.
+            \footnote{From Discrete Math by Ensley and Crawley, page 452}
+        \end{intro}
+
+        
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        You're drawing two cards from a deck, without replacement.
+        $E_{1}$ occurs first, and $E_{2}$ occurs second. Find
+        the probability of $Prob(E_{2}|E_{1})$ (Probability of the 2nd
+        event occuring, given that the 1st even has occured).
+
+        $E_{1}$ is that you draw a face card.
+
+        $E_{2}$ is that you draw an ace.
+
+        \begin{hint}{Hint}
+            You don't need to calculate $Prob(E_{1})$; the main idea is
+            how does $E_{1}$ occuring affect the state of the sample space?
+            The answer here is that there is one less card in the deck,
+            so $Prob(E_{2}|E_{1})$ is the probability of getting an ace
+            in a deck with 51 cards in it.
+        \end{hint}
+    \end{questionNOGRADE}
+
+    \newpage
 
     \subsection{The Product Rule}
         \begin{intro}{Independent events}
@@ -286,6 +322,8 @@
 
                 \item[e.]   $\frac{11}{36} + \frac{5}{36} - \frac{2}{36} = \frac{7}{18}$
             \end{itemize}
+
+        \item   $Prob(E_{2}|E_{1}) = \frac{4}{51}$
 
         \item
             \begin{itemize}
