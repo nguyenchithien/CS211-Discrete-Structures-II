@@ -6,6 +6,12 @@ Spring 2018
 
 For this project, you will write a progrma that will help you calculate **Expected Values**, using the formula from Chapter 6.4.
 
+You can use any programming language for this project.
+
+### Turn in
+
+Turn in your source file(s) and a screenshot of your program running to Canvas.
+
 ## Formula
 
 Given some trial run many times, with *X* receiving a random value from the set
