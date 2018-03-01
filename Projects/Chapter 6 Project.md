@@ -21,8 +21,7 @@ Given some trial run many times, with *X* receiving a random value from the set
          * Flipping 1 coin: *n(S) = 2*
          * Flipping 2 coins: *n(S) = 4*
          * Flipping 3 coins: *n(S) = 8*
-2. Ask the user how many outcomes there will be, *n = ?*. The variable can be an int named ```n```.
-*{ x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub> }*
+2. Ask the user how many outcomes there will be, *n = ?*. The variable can be an int named ```n```. *{ x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub> }*
 3. Create a floating point variable called ```expectedValue```, and initialize it to 0.
 4. Create a loop that will loop *n* times. In the loop...:
          1. Ask the user what the value is for *x<sub>i</sub>*. You can make this a temporary variable named ```v```.
