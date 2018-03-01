@@ -15,6 +15,22 @@ Given some trial run many times, with *X* receiving a random value from the set
 
 ## Program Requirements
 
+1. Ask the user the size of the sample set, *n(S) = ?*. The variable can be  a float named ```nS``` (Technically, this would be an int, but we don't want integer division later). Example sample set sizes:
+         * Rolling 1 die: *n(S) = 6*
+         * Rolling 2 dice: *n(S) = 36*
+         * Flipping 1 coin: *n(S) = 2*
+         * Flipping 2 coins: *n(S) = 4*
+         * Flipping 3 coins: *n(S) = 8*
+2. Ask the user how many outcomes there will be, *n = ?*. The variable can be an int named ```n```.
+*{ x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub> }*
+3. Create a floating point variable called ```expectedValue```, and initialize it to 0.
+4. Create a loop that will loop *n* times. In the loop...:
+         1. Ask the user what the value is for *x<sub>i</sub>*. You can make this a temporary variable named ```v```.
+         2. Ask the user what amount of events, *n(E<sub>i</sub>)*, results in this outcome. You can make this a temporary variable named ```nE```.
+         3. Calculate the probability of this outcome with *Prob(E<sub>i</sub>) = n(E<sub>i</sub>)/n(S)*. You can make this a temporary variable named ```p```. Calculate it with ```p = nE/nS```.
+         4. Add on to the expected value by multiplying the *value* times the *probability*. ```expectedValue = expectedValue + v * p```
+5. Once the loop has completed, display the result for the expected value, *E[X]* (```expectedValue```)
+
 ## Example Output
 
 ```
