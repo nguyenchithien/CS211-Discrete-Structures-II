@@ -35,6 +35,72 @@ Given some trial run many times, with *X* receiving a random value from the set
          
 5. Once the loop has completed, display the result for the expected value, *E[X]* (```expectedValue```)
 
+## Helper Code
+
+### Step 1, getting the size of the sample set:
+
+```c++
+float nS;
+cout << "What is n(S), the size of the sample set? ";
+cin >> nS;
+```
+
+### Step 2, getting the total amount of outcomes:
+
+```c++
+int n;
+cout << "What is the amount of outcomes? ";
+cin >> n;
+```
+
+### Step 3, create an expected value variable:
+
+```c++
+float expectedValue = 0;
+```
+
+### Step 4, create a loop:
+
+```c++
+for ( int i = 0; i < n; i++ )
+{
+}
+```
+
+### Step 4-i, ask the user for the value:
+
+```c++
+float v;
+cout << "What is the value for outcome " << i << "? ";
+cin >> v;
+```
+
+### Step 4-ii, ask the user for n(E):
+
+```c++
+float nE;
+cout << "How many events, n(E), have this outcome? ";
+cin >> nE;
+```
+
+### Step 4-iii, calculate the probability:
+
+```c++
+float p = nE / nS;
+```
+
+### Step 4-iv, update the expected value:
+
+```c++
+expectedValue = expectedValue + v * p;
+```
+
+### Step 5, display the result:
+
+```c++
+cout << "The expected value, E[X], is: " << expectedValue << endl;
+```
+
 ## Example Output
 
 ```
