@@ -55,6 +55,7 @@ You can come up with your own idea as well, as long as it relates to probability
 You can come up with your own idea as well, as long as it relates to probability.
 
 * Program a slot machine, where each picture (cherries? "bar"?) has some probability of occuring, per reel. A slot machine usually has 3 reels. What's the probability of getting 3 cherries, or 3 of any other type?
+* Genetics, some up with some plant species and certain alleles, and the probability of inheriting some traits. (See also: https://en.wikipedia.org/wiki/Gregor_Mendel#Contributions)
 
 ## Turn in
 
