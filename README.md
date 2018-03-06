@@ -2,15 +2,6 @@
 
 Johnson County Community College
 
-## Note to self: To Do list
-
-* Make exercises more concise; have students write in their notebooks in class rather than printing out the assignment sheet.
-* Write 5.4, 5.5
-* Review all exercises, rephrase as needed.
-* Write lecture slides for all topics
-* Make lecture videos for all topics
-* Write projects for chapter 5, 6, 7
-* Write extra credit for chapter 5, 6, 7
 
 ---------------------------------------------------------------------------------
 
