@@ -4,6 +4,8 @@
 
 This assignment is open-ended.
 
+**Mini-essay option:**
+
 Look into using probability in a real-world application. 
 If you can, try to analyze the outcomes and the probability of each outcome 
 (for example, buy a bag of M&Ms and determine the probability of getting each color).
@@ -13,7 +15,13 @@ for the field, or how you would go about determining the probability for events.
 Write up at least a paragraph about what you've found, and if you've done
 the experiment to determine probability, write out a table of outcomes / probabilities.
 
+**Program option:**
+
+You can also opt to program something that deals with probability in a "real world" scenario (this does also include cards and dice, since they are games of chance)
+
 ### Topic ideas
+
+You can come up with your own idea as well, as long as it relates to probability.
 
 * Gambling, lottery, lootboxes
   * What's the probability of winning the lottery? How is this probability determined? How would you determine it?
@@ -41,6 +49,12 @@ the experiment to determine probability, write out a table of outcomes / probabi
 * M&M's and assorted candies - likelyhood of getting certain colors/flavors
   * If you buy a bag of M&Ms, what's the probability of getting each color? Do the probabilities change if you buy a second bag of M&Ms?
 * Games of chance (cards, dice, choosing marbles)
+
+### Program ideas
+
+You can come up with your own idea as well, as long as it relates to probability.
+
+* Program a slot machine, where each picture (cherries? "bar"?) has some probability of occuring, per reel. A slot machine usually has 3 reels. What's the probability of getting 3 cherries, or 3 of any other type?
 
 ## Turn in
 
