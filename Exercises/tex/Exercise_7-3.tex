@@ -20,153 +20,7 @@
 
     \section{\laTitle}
 
-    \subsection{Review: Functions}
-
-    \begin{intro}{Properties of Functions}
-        \begin{wrapfigure}{r}{0.3\textwidth}
-            \begin{center}
-                \begin{tikzpicture}
-                    \draw (0, 0) rectangle (1, 2) node[above] {\footnotesize Domain};
-                    \draw (2, 0) rectangle (3, 2) node[above] {\footnotesize Codomain};
-                    \filldraw (0.5, 0.5) circle (1pt);
-                    \filldraw (0.5, 1) circle (1pt);
-                    \filldraw (0.5, 1.5) circle (1pt);
-                    \filldraw (2.5, 0.5) circle (1pt);
-                    \filldraw (2.5, 1.5) circle (1pt);
-                    \draw[->] (0.5, 0.5) -- (2.2, 0.5);
-                    \draw[->] (0.5, 1) -- (2.2, 0.6);
-                    \draw[->] (0.5, 1.5) -- (2.2, 1.5);
-                \end{tikzpicture}
-                \footnotesize Onto but not one-to-one
-            \end{center}
-            
-            \begin{center}
-                \begin{tikzpicture}
-                    \draw (0, 0) rectangle (1, 2) node[above] {\footnotesize Domain};
-                    \draw (2, 0) rectangle (3, 2) node[above] {\footnotesize Codomain};
-                    \filldraw (0.5, 0.5) circle (1pt);
-                    \filldraw (0.5, 1.5) circle (1pt);
-                    \filldraw (2.5, 0.5) circle (1pt);
-                    \filldraw (2.5, 1) circle (1pt);
-                    \filldraw (2.5, 1.5) circle (1pt);
-                    \draw[->] (0.5, 0.5) -- (2.2, 0.5);
-                    \draw[->] (0.5, 1.5) -- (2.2, 1.5);
-                \end{tikzpicture}
-                \footnotesize One-to-one but not onto
-            \end{center}
-        \end{wrapfigure}
-
-        \begin{itemize}
-            \item   \textbf{Onto:}
-                    A function is \textbf{onto} if every element of
-                    the codomain has at least one element in the
-                    domain pointing to it. (Every output is attainable
-                    via at least one input.)
-
-                    
-            \item   \textbf{One-to-one:}
-                    A function is \textbf{one-to-one} if none of the
-                    elements in the codomain is the output from two
-                    \textit{different} inputs from the domain.
-        \end{itemize}
-        ~\\~\\~\\~\\
-    \end{intro}
-
-    \newpage
-
-    \stepcounter{question}
-    \begin{questionNOGRADE}{\thequestion}
-        Identify the properties for the following graphs.
-
-        \begin{itemize}
-            \item[a.]
-                \begin{tikzpicture}
-                    \draw (0,0) rectangle (1,2);
-                    \draw (2,0) rectangle (3,2);
-
-                    \node at (0.5,-0.5) {D};
-                    \node at (2.5,-0.5) {C};
-
-                    \filldraw (0.5, 0.5) circle (1pt);
-                    \filldraw (0.5, 1) circle (1pt);
-                    \filldraw (0.5, 1.5) circle (1pt);
-                    
-                    \filldraw (2.5, 0.5) circle (1pt);
-                    \filldraw (2.5, 1) circle (1pt);
-                    \filldraw (2.5, 1.5) circle (1pt);
-
-                    \draw[->] (0.5, 0.5) -- (2.2, 1.5);
-                    \draw[->] (0.5, 1) -- (2.2, 1);
-                    \draw[->] (0.5, 1.5) -- (2.2, 0.5);
-                \end{tikzpicture}
-                
-                Is it Onto? \solution{ yes, every domain element has an input }{} \\
-                Is it One-to-one? \solution{ yes, every domain element has max 1 input }{}
-                
-                ~\\~\\
-                
-            \item[b.]
-                \begin{tikzpicture}
-                    \draw (0,0) rectangle (1,2);
-                    \draw (2,0) rectangle (3,2);
-
-                    \node at (0.5,-0.5) {D};
-                    \node at (2.5,-0.5) {C};
-
-                    \filldraw (0.5, 0.5) circle (1pt);
-                    \filldraw (0.5, 1) circle (1pt);
-                    \filldraw (0.5, 1.5) circle (1pt);
-                    
-                    \filldraw (2.5, 0.5) circle (1pt);
-                    \filldraw (2.5, 1) circle (1pt);
-                    \filldraw (2.5, 1.5) circle (1pt);
-
-                    \draw[->] (0.5, 1.5) -- (2.2, 0.5);
-                    \draw[->] (0.5, 0.5) -- (2.2, 1.5);
-                    \draw[->] (0.5, 0.5) -- (2.2, 1);
-                \end{tikzpicture}
-                
-                Is it Onto? \solution{ yes, every domain element has an input }{} \\
-                Is it One-to-one? \solution{ yes, every domain element has max 1 input }{}
-
-                ~\\~\\ 
-                
-            \item[c.]
-                \begin{tikzpicture}
-                    \draw (0,0) rectangle (1,2.58);
-                    \draw (2,0) rectangle (3,2.5);
-
-                    \node at (0.5,-0.5) {D};
-                    \node at (2.5,-0.5) {C};
-
-                    \filldraw (0.5, 0.5) circle (1pt);
-                    \filldraw (0.5, 1) circle (1pt);
-                    \filldraw (0.5, 1.5) circle (1pt);
-                    \filldraw (0.5, 2) circle (1pt);
-                    
-                    \filldraw (2.5, 0.5) circle (1pt);
-                    \filldraw (2.5, 1) circle (1pt);
-                    \filldraw (2.5, 1.5) circle (1pt);
-                    \filldraw (2.5, 2) circle (1pt);
-
-                    \draw[->] (0.5, 0.5) -- (2.2, 1);
-                    \draw[->] (0.5, 1) --   (2.2, 2);
-                    \draw[->] (0.5, 1.5) -- (2.2, 1.1);
-                    \draw[->] (0.5, 2) -- (2.2, 1.5);
-                \end{tikzpicture}
-                
-                Is it Onto? \solution{ no, the bottom domain element doesn't have an input }{} \\
-                Is it One-to-one? \solution{ no, one element has 2 inputs }{}
-                
-                ~\\~\\
-        \end{itemize}
-    \end{questionNOGRADE}
-
-    \newpage
-
-
     \subsection{Isomorphism}
-
 
     \begin{intro}{Isomorphism}
         Simple graphs $G$ and $H$ are called \textbf{isomorphic} if there
@@ -179,7 +33,9 @@
 
         ~\\
         In other words, two graphs are isomorphic if they're essentially
-        the same graph, even if the vertices are in different positions.
+        the same graph, with the vertices rearranged. Generally, you'll think
+        of this as there being some function that maps a vertex from
+        a graph $G$ to another graph $H$.
 
         \paragraph{Example:} \tab
         \begin{tabular}{c p{2cm} c}
@@ -212,9 +68,10 @@
         These are isomorphic... imagine taking $a_{2}$ and $a_{3}$ from
         graph $G$ and physically flipping them with the edges still connected. In this case,
         our mapping is...
-        $a_{1} \to b_{1}$ \tab $a_{2} \to b_{3}$ \tab $a_{3} \to b_{2}$ \tab $a_{4} \to b_{4}$.
+        $a_{1} \mapsto b_{1}$ \tab $a_{2} \mapsto b_{3}$ \tab $a_{3} \mapsto b_{2}$ \tab $a_{4} \mapsto b_{4}$.
     \end{intro}
 
+    \newpage
 
     \stepcounter{question}
     \begin{questionNOGRADE}{\thequestion}
@@ -245,6 +102,61 @@
             \end{tikzpicture}
         \end{itemize}
     \end{questionNOGRADE}
+
+    \hrulefill
+
+    
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        For the two graphs given, fill out a table of vertex mappings,
+        and of edge mappings. ~\\
+
+        \begin{tikzpicture}
+            \draw[red] (0,0) -- (2,2);
+            \draw[orange] (2,2) -- (0,2);
+            \draw[blue] (0,2) -- (2,0);
+        
+            \filldraw (0,0) circle (2pt) node[below] {a};
+            \filldraw (2,0) circle (2pt) node[below] {b};
+            \filldraw (2,2) circle (2pt) node[above] {c};
+            \filldraw (0,2) circle (2pt) node[above] {d};
+
+            \node at (1,-0.5) {G};
+            
+            \draw[blue]     (10,2) -- (10,0);
+            \draw[orange]   (10,0) -- (8,0);
+            \draw[red]      (8,0) -- (8,2);
+        
+            \filldraw   (10,2) circle (2pt) node[right] {3};
+            \filldraw   (8,2) circle (2pt) node[left]   {4};
+            \filldraw   (10,0) circle (2pt) node[right] {2};
+            \filldraw   (8,0) circle (2pt) node[left]   {1};
+
+            \node at (9, -0.5) {H};
+        \end{tikzpicture}
+    \end{questionNOGRADE}
+
+    \begin{itemize}
+        \item[a.]   Vertex Map:
+
+            \large
+            \begin{tabular}{c | c | c | c | c}
+                G & a & b & c & d
+                \\ \hline
+                H & & & &
+            \end{tabular}
+
+        \normalsize
+        \item[b.]   Edge Map:
+                    
+            \large
+            \begin{tabular}{c | c | c | c}
+                G & \{a, c\} & \{c, d\} & \{d, b\}
+                \\ \hline
+                H & & &
+            \end{tabular}
+    \end{itemize}
+
 
     \newpage
 
@@ -318,7 +230,7 @@
                          \solution{ \{ v, u \} }{}
 
             \item[b.]   For each edge from $G$, write out what edge in $H$ corresponds to it.
-                \tab Example: \{2,5\} $\to$ \{d, c\} \\
+                \tab Example: \{2,5\} $\mapsto$ \{d, c\} \\
                 
                 \solution{
                     Let's split up $G$ into two subgraphs to see it more clearly...
