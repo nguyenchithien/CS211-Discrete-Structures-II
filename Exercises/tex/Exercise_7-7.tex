@@ -1,0 +1,235 @@
+\input{BASE-HEAD}
+\newcommand{\laClass}       {CS 211}
+\newcommand{\laSemester}    {Spring 2018}
+\newcommand{\laChapter}     {7.7}
+\newcommand{\laType}        {Exercise}
+\newcommand{\laPoints}      {5}
+\newcommand{\laTitle}       {Excursion: Hamiltonian Cycles \& the TSP}
+\newcommand{\laDate}        {}
+\setcounter{chapter}{7}
+\setcounter{section}{7}
+\addtocounter{section}{-1}
+\newcounter{question}
+
+\toggletrue{answerkey}
+\togglefalse{answerkey}
+
+\input{BASE-HEADER}
+
+\input{INSTRUCTIONS-EXERCISE}
+
+    \section{\laTitle}
+
+    \subsection{Hamiltonian Cycles}
+
+        \begin{intro}{Review \& Hamiltonian cycle} ~\\
+            \textbf{Walk:} A series of alternating nodes and edges traversing between adjacent nodes.
+
+            \paragraph{Path:} A walk with no repeated vertices.
+
+            \paragraph{Circuit:} A closed trail.
+            
+            \paragraph{Trail:} A walk with no repeated edges.
+            
+            \paragraph{Cycle:} A nontrivial circuit where the only repeated node is the first/last one.
+            
+            \paragraph{Hamiltonial cycle:} A Hamiltonian cycle in $G$ is a cycle
+            that uses every node of $G$. The graph $G$ is called Hamiltonian
+            if it contains a Hamiltonian cycle.
+
+            \paragraph{Eulerian trail or circuit:} A trail or circuit where every edge is traversed
+            \footnote{Discrete Mathematics, Ensley and Crawley}
+        \end{intro}
+
+    \newpage
+
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        For the following graph, trace out a Hamiltonian cycle.
+        You can use the Hamiltonian Cycle visualization from \\
+        https://rachels-courses.github.io/Visualizations/ to practice.
+
+        \begin{center}
+            \begin{tikzpicture}
+                \filldraw[pink] (-2,0) circle (3pt);
+                \filldraw[pink] (2,0) circle (3pt);
+                \filldraw[pink] (-3.7,3.7) circle (3pt);
+                \filldraw[pink] (3.7,3.7) circle (3pt);
+                \filldraw[pink] (0,6.7) circle (3pt);
+                \draw[pink] (-2,0) -- (2,0) -- (3.7,3.7) -- (0,6.7) -- (-3.7,3.7) -- (-2,0);
+
+                \filldraw[pink] (-1,1) circle (3pt);
+                \filldraw[pink] (0,1) circle (3pt);
+                \filldraw[pink] (1,1) circle (3pt);
+                \filldraw[pink] (1.5,2) circle (3pt);
+                \filldraw[pink] (-1.5,2) circle (3pt);
+                \filldraw[pink] (-2,3) circle (3pt);
+                \filldraw[pink] (2,3) circle (3pt);
+                \filldraw[pink] (-1,4) circle (3pt);
+                \filldraw[pink] (1,4) circle (3pt);
+                \filldraw[pink] (0,5) circle (3pt);
+                \draw[pink] (-1,1) -- (0,1) -- (1,1) -- (1.5,2) -- (2,3) -- (1,4) -- (0,5) -- (-1,4) -- (-2,3) -- (-1.5,2) -- (-1,1);
+                \draw[pink] (-1,1) -- (-2,0);
+                \draw[pink] (1,1) -- (2,0);
+                \draw[pink] (-2,3) -- (-3.7,3.7);
+                \draw[pink] (2,3) -- (3.7,3.7);
+                \draw[pink] (0,5) -- (0,6.7);
+
+                \filldraw[pink] (0,1.7) circle (3pt);
+                \filldraw[pink] (-0.7,2.5) circle (3pt);
+                \filldraw[pink] (0.7,2.5) circle (3pt);
+                \filldraw[pink] (0.3,3.5) circle (3pt);
+                \filldraw[pink] (-0.3,3.5) circle (3pt);
+                \draw[pink] (0,1.7) -- (-0.7,2.5) -- (-0.3,3.5) -- (0.3,3.5) -- (0.7,2.5) -- (0,1.7);
+                \draw[pink] (0,1.7) -- (0,1);
+                \draw[pink] (-0.7, 2.5) -- (-1.5,2);
+                \draw[pink] (0.7, 2.5) -- (1.5,2);
+                \draw[pink] (0.3,3.5) -- (1,4);
+                \draw[pink] (-0.3,3.5) -- (-1,4);
+            \end{tikzpicture}
+        \end{center}
+    \end{questionNOGRADE}
+
+
+    \newpage
+
+        \begin{intro}{Hamiltonian puzzle and Hamiltonial path problem}
+            
+            The Hamiltonian puzzle involves finding a Hamiltonian cycle
+            in the edge graph of a dodecahedron.
+
+            Determining whether Hamiltonian cycles exist in graphs is
+            the Hamiltonian path problem, which is NP-complete.
+            \footnote{From https://en.wikipedia.org/wiki/Hamiltonian\_cycle}
+            ~\\
+
+            NP complete means ``nondeterministic polynomial time'', where
+            a solution to an NP-complete problem can be verified quickly,
+            but there is no known efficient way to locate a solution
+            in the first place.
+            \footnote{From https://en.wikipedia.org/wiki/NP-complete\_problem}
+        \end{intro}
+
+    \newpage
+
+    \subsection{Travelling Salesperson}
+
+        \begin{intro}{\ }
+            The ``TSP'' is another type of problem that asks the following:
+            \footnote{From https://en.wikipedia.org/wiki/Travelling\_salesperson\_problem}
+            
+            \begin{center}
+                ``Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?''
+            \end{center}
+        \end{intro}
+
+        Go to https://rachels-courses.github.io/Visualizations/ and use the
+        \textbf{Travelling Salesperson} visualization to help you work on this part.
+        
+        \begin{center}
+            \includegraphics[width=8cm]{images/7-7-salesperson.png}
+        \end{center}
+
+        Click on any node to begin the path. Click on subsequent nodes to add
+        an edge between the nodes. The program records the distance (in pixels)
+        at the bottom of the screen.
+
+        \hrulefill
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        If we have 6 total cities to visit, with the last city being visited twice,
+        how many possible ways can we visit all cities? \textit{(Hint: It's a counting problem...)}
+
+        ~\\
+        \begin{center}
+            \begin{tabular}{c c c c c c c}
+                \fitb & \fitb & \fitb & \fitb & \fitb & \fitb & \fitb
+                \\
+                1 (start) & 5 & 4 & 3 & 2 & 1 & 1 (end)
+                %\\
+                %OP & OL & LS & RT & IN & KC & OP
+            \end{tabular}
+        \end{center}
+
+        \solution{ $1 \cdot P(5,5) \cdot 1 = 120 $}
+    \end{questionNOGRADE}
+
+    \newpage
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Come up with three different \textbf{cycles}, where all nodes
+        are visited exactly once - except the starting point, which is visited
+        first and last. Record the distances found for each. The starting
+        city should be Overland Park.
+
+        ~\\
+        \begin{tabular}{ | l | p{9cm} | l |}
+            \hline
+            \# & Walk & Total distance
+            \\ \hline
+            1. & OP $\to$ Olathe $\to$ Lee's Summit $\to$ Raytown $\to$ Independence $\to$ Kansas City $\to$ OP & 1360
+            \\ \hline
+        \end{tabular}
+
+        \vspace{10cm}
+        How did you go about trying to find a shortest path?
+    \end{questionNOGRADE}
+
+    \newpage
+    
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Fill out the following table to record the distance between any two cities,
+        given by the visualization.
+        ~\\~\\
+        \Large 
+        \begin{tabular}{r | c | c | c | c | c | c}
+                    & Indep.    & K.C.      & L.S.  & Olathe    & O.P.      & Raytown
+            \\ \hline
+            Indep.  & 0         &          &     &         &         & 
+            \\ \hline
+            K.C.    &          & 0         &     &         &         & 
+            \\ \hline
+            L.S.    &         &         & 0     &         &        & 
+            \\ \hline
+            Olathe  &         &         &     & 0         &         & 
+            \\ \hline
+            O.P.    &         &         &     &        & 0         & 
+            \\ \hline
+            Raytown &          &          &      &         &         & 0
+        \end{tabular}
+        ~\\
+    \end{questionNOGRADE}
+
+    \hrulefill
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Using the table, generate another two paths as before.
+
+        ~\\
+        \begin{tabular}{ | l | p{9cm} | l |}
+            \hline
+            \# & Walk & Total distance
+            \\ \hline
+            1. & OP $\to$ Olathe $\to$ Lee's Summit $\to$ Raytown $\to$ Independence $\to$ Kansas City $\to$ Overland Park & 1360
+            \\ \hline
+        \end{tabular}
+
+        \vspace{5cm}
+        What kind of method (if any) did you use to try to find a shortest path?
+        
+        
+    \end{questionNOGRADE}
+
+
+
+
+    
+
+    
+
+\input{BASE-FOOT}
