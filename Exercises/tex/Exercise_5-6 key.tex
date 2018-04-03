@@ -1,0 +1,109 @@
+\input{BASE-HEAD}
+\newcommand{\laClass}       {CS 211}
+\newcommand{\laSemester}    {Spring 2018}
+\newcommand{\laChapter}     {5.}
+\newcommand{\laType}        {Exercise}
+\newcommand{\laPoints}      {5}
+\newcommand{\laTitle}       {Solving Recurrence Relations}
+\newcommand{\laDate}        {Jan 16, 2018}
+\setcounter{chapter}{5}
+\setcounter{section}{6}
+\addtocounter{section}{-1}
+\newcounter{question}
+
+\toggletrue{answerkey}
+
+\input{BASE-HEADER}
+
+\input{INSTRUCTIONS-EXERCISE}
+
+% KEY ------------------------------------ %
+
+    \begin{enumerate}
+        \item   Sequence: 7, 12, 17, 22, 27, ... 
+                \paragraph{Closed formula:} ~\\~\\
+                \begin{tabular}{c | c c c c c}
+                    $n$
+                        & 0 & 1 & 2 & 3 & 4
+                    \\
+                    $s_{n}$
+                        & 7 & 12 & 17 & 22 & 27
+                    \\
+                    $\triangle_{n}$
+                        & 5 & 5 & 5 & 5 & ...
+                \end{tabular} 
+                
+                $$s_{n} = s_{0} + \sum_{k=0}^{n-1} ( \triangle_{k} )$$
+                 
+                $$s_{n} = 7 + 5n$$
+
+                \paragraph{Recursive formula:} ~\\
+                $s_{1} = 7$, $s_{n} = s_{n-1} + 5$ ~\\
+
+        \item   Sequence: 3, 10, 17, 24, 31, ...
+                \paragraph{Closed formula:} ~\\~\\
+                \begin{tabular}{c | c c c c c}
+                    $n$
+                        & 0 & 1 & 2 & 3 & 4
+                    \\
+                    $s_{n}$
+                        & 3 & 10 & 17 & 24 & 31
+                    \\
+                    $\triangle_{n}$
+                        & 7 & 7 & 7 & 7 & ...
+                \end{tabular}
+                
+                $$s_{n} = 3 + 7n $$
+
+                \paragraph{Recursive formula:} ~\\
+                $s_{1} = 3$, $s_{n} = s_{n-1} + 7$ ~\\        
+
+        \newpage
+
+        \item   Sequence: 1, 3, 8, 16, 27, 41, ...
+                \paragraph{Closed formula:} ~\\~\\
+                \begin{tabular}{c | c c c c c c}
+                    $n$
+                        & 0 & 1 & 2 & 3 & 4 & 5
+                    \\
+                    $s_{n}$
+                        & 1 & 3 & 8 & 16 & 27 & 41
+                    \\
+                    $\triangle^{1}_{n}$
+                        & 2 & 5 & 8 & 11 & 14 & ...
+
+                    \\
+                    $\triangle^{2}_{n}$
+                        & 3 & 3 & 3 & 3 & ... & ...
+                \end{tabular}
+
+                \subparagraph{Finding the 1st level difference equation:} ~\\
+                
+                $ \triangle_{n}^{1} = \triangle_{0}^{1} + \sum_{k=0}^{n-1} ( \triangle_{k}^{2} ) $
+
+                $ \triangle_{n}^{1} = 2 + 3n $
+                
+                \subparagraph{Finding $s_{n}$:} ~\\
+
+                $$ s_{n} = s_{0} + \sum_{k=0}^{n-1} ( \triangle_{k}^{1} )$$
+                
+                $$ s_{n} = 1 + \sum_{k=0}^{n-1} ( 2 + 3k )$$
+                
+                $$ s_{n} = 1 + \sum_{k=0}^{n-1} ( 2 ) + 3  \sum_{k=0}^{n-1} ( k )$$
+                
+                $$ s_{n} = 1 + 2n + 3  \frac{n(n-1)}{2}$$
+                
+                $$ s_{n} = 1 + \frac{4n + 3n(n-1)}{2}$$
+                
+                $$ s_{n} = 1 + \frac{4n + 3n^{2} - 3n}{2}$$
+                
+                $$ s_{n} = \frac{3}{2} n^{2} + \frac{1}{2} n + 1 $$
+
+                
+
+                
+        
+    \end{enumerate}
+
+
+\input{BASE-FOOT}
