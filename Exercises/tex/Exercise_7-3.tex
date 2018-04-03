@@ -200,7 +200,7 @@
                 \begin{tikzpicture}
                     \filldraw (0,0)     circle (1pt) node[left] {a};
                     \filldraw (0,1)     circle (1pt) node[left] {b};
-                    \filldraw (3,0)     circle (1pt) node[right] {g};
+                    \filldraw (3,0)     circle (1pt) node[right] {e};
                     \filldraw (3,1)     circle (1pt) node[right] {f};
                     \filldraw (1,0.5)   circle (1pt) node[below] {c};
                     \filldraw (2,0.5)   circle (1pt) node[below] {d};
@@ -268,119 +268,119 @@
 
     \newpage
 
-    \subsection{Adjacency matrix}
+    %\subsection{Adjacency matrix}
 
-    \begin{intro}{\ }
-        We can also use a matrix to list out which vertices are adjacent
-        to which other vertices in order to help us figure out if two
-        graphs are isomorphic.
+    %\begin{intro}{\ }
+        %We can also use a matrix to list out which vertices are adjacent
+        %to which other vertices in order to help us figure out if two
+        %graphs are isomorphic.
 
-        \paragraph{Example:} ~\\
+        %\paragraph{Example:} ~\\
 
-        \begin{tabular}{p{6cm} p{6cm}}
+        %\begin{tabular}{p{6cm} p{6cm}}
         
-            \begin{tikzpicture}
-                \filldraw (0,0) circle (1pt) node[left] {a};
-                \filldraw (1,0) circle (1pt) node[right] {b};
-                \filldraw (1,1) circle (1pt) node[right] {c};
-                \filldraw (0,1) circle (1pt) node[left] {d};
+            %\begin{tikzpicture}
+                %\filldraw (0,0) circle (1pt) node[left] {a};
+                %\filldraw (1,0) circle (1pt) node[right] {b};
+                %\filldraw (1,1) circle (1pt) node[right] {c};
+                %\filldraw (0,1) circle (1pt) node[left] {d};
 
-                \draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0);
-            \end{tikzpicture}
+                %\draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0);
+            %\end{tikzpicture}
 
-            &
+            %&
 
-            \begin{tabular}{c | c c c c}
-                & a & b & c & d
-                \\ \hline
-                a & 0 & \textbf{1} & 0 & \textbf{1}
-                \\
-                b & \textbf{1} & 0 & \textbf{1} & 0
-                \\
-                c & 0 & \textbf{1} & 0 & \textbf{1}
-                \\
-                d & \textbf{1} & 0 & \textbf{1} & 0
-            \end{tabular}
+            %\begin{tabular}{c | c c c c}
+                %& a & b & c & d
+                %\\ \hline
+                %a & 0 & \textbf{1} & 0 & \textbf{1}
+                %\\
+                %b & \textbf{1} & 0 & \textbf{1} & 0
+                %\\
+                %c & 0 & \textbf{1} & 0 & \textbf{1}
+                %\\
+                %d & \textbf{1} & 0 & \textbf{1} & 0
+            %\end{tabular}
             
-        \end{tabular}
+        %\end{tabular}
 
-        $a$ is adjacent to $b$ and $d$, so in the $a$ row we have 1's under the $b$ and $d$ columns.
-    \end{intro}
+        %$a$ is adjacent to $b$ and $d$, so in the $a$ row we have 1's under the $b$ and $d$ columns.
+    %\end{intro}
 
-    \stepcounter{question}
-    \begin{questionNOGRADE}{\thequestion}
-        For the following graph...
+    %\stepcounter{question}
+    %\begin{questionNOGRADE}{\thequestion}
+        %For the following graph...
 
-        \begin{center}
-            \begin{tikzpicture}
-                \filldraw (0,0) circle (1pt) node[left]         {e};
-                \filldraw (2,0) circle (1pt) node[right]        {d};
-                \filldraw (2,2) circle (1pt) node[right]        {c};
-                \filldraw (0,2) circle (1pt) node[left]         {a};
-                \filldraw (1,2.5) circle (1pt) node[above]    {b};
+        %\begin{center}
+            %\begin{tikzpicture}
+                %\filldraw (0,0) circle (1pt) node[left]         {e};
+                %\filldraw (2,0) circle (1pt) node[right]        {d};
+                %\filldraw (2,2) circle (1pt) node[right]        {c};
+                %\filldraw (0,2) circle (1pt) node[left]         {a};
+                %\filldraw (1,2.5) circle (1pt) node[above]    {b};
 
-                \draw (0,0) -- (2,0) -- (2,2) -- (1,2.5) -- (0,2) -- (0,0) -- (2,2);
-            \end{tikzpicture}
-        \end{center}
+                %\draw (0,0) -- (2,0) -- (2,2) -- (1,2.5) -- (0,2) -- (0,0) -- (2,2);
+            %\end{tikzpicture}
+        %\end{center}
 
-        \begin{itemize}
-            \item[a.]   Finish the adjacency matrix: \tab
-                \begin{tabular}{c | c | c | c | c | c}
-                    & a & b & c & d & e
-                    \\ \hline
-                    a
-                        & \solution{0}{}
-                        & \solution{1}{}
-                        & \solution{0}{}
-                        & \solution{0}{}
-                        & \solution{1}{}
-                    \\ \hline
-                    b
-                        & \solution{1}{}
-                        & \solution{0}{}
-                        & \solution{1}{}
-                        & \solution{0}{}
-                        & \solution{0}{}
-                    \\ \hline
-                    c
-                        & \solution{0}{}
-                        & \solution{1}{}
-                        & \solution{0}{}
-                        & \solution{1}{}
-                        & \solution{1}{}
-                    \\ \hline
-                    d
-                        & \solution{0}{}
-                        & \solution{0}{}
-                        & \solution{1}{}
-                        & \solution{0}{}
-                        & \solution{1}{}
-                    \\ \hline
-                    e
-                        & \solution{1}{}
-                        & \solution{0}{}
-                        & \solution{1}{}
-                        & \solution{1}{}
-                        & \solution{0}{}
-                \end{tabular}
-            ~\\~\\
-            \item[b.]   Fill out the degrees of each:
-                \begin{tabular}{ p{1cm} |p{1cm} |p{1cm} |p{1cm} |p{1cm} }
-                    a & b & c & d & e
-                    \\ \hline
-                      \solution{ 2 }{} % a
-                    &   \solution{ 2 }{} % b
-                    &   \solution{ 3 }{} % c 
-                    &   \solution{ 2 }{} % d
-                    &   \solution{ 3 }{} % e
-                    \\
-                    & & & & \\
-                \end{tabular}
-        \end{itemize}
+        %\begin{itemize}
+            %\item[a.]   Finish the adjacency matrix: \tab
+                %\begin{tabular}{c | c | c | c | c | c}
+                    %& a & b & c & d & e
+                    %\\ \hline
+                    %a
+                        %& \solution{0}{}
+                        %& \solution{1}{}
+                        %& \solution{0}{}
+                        %& \solution{0}{}
+                        %& \solution{1}{}
+                    %\\ \hline
+                    %b
+                        %& \solution{1}{}
+                        %& \solution{0}{}
+                        %& \solution{1}{}
+                        %& \solution{0}{}
+                        %& \solution{0}{}
+                    %\\ \hline
+                    %c
+                        %& \solution{0}{}
+                        %& \solution{1}{}
+                        %& \solution{0}{}
+                        %& \solution{1}{}
+                        %& \solution{1}{}
+                    %\\ \hline
+                    %d
+                        %& \solution{0}{}
+                        %& \solution{0}{}
+                        %& \solution{1}{}
+                        %& \solution{0}{}
+                        %& \solution{1}{}
+                    %\\ \hline
+                    %e
+                        %& \solution{1}{}
+                        %& \solution{0}{}
+                        %& \solution{1}{}
+                        %& \solution{1}{}
+                        %& \solution{0}{}
+                %\end{tabular}
+            %~\\~\\
+            %\item[b.]   Fill out the degrees of each:
+                %\begin{tabular}{ p{1cm} |p{1cm} |p{1cm} |p{1cm} |p{1cm} }
+                    %a & b & c & d & e
+                    %\\ \hline
+                      %\solution{ 2 }{} % a
+                    %&   \solution{ 2 }{} % b
+                    %&   \solution{ 3 }{} % c 
+                    %&   \solution{ 2 }{} % d
+                    %&   \solution{ 3 }{} % e
+                    %\\
+                    %& & & & \\
+                %\end{tabular}
+        %\end{itemize}
         
-    \end{questionNOGRADE}
+    %\end{questionNOGRADE}
 
-    \newpage
+    %\newpage
 
 
     \subsection{Planarity}

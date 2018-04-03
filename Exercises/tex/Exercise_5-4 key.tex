@@ -1,0 +1,61 @@
+\input{BASE-HEAD}
+\newcommand{\laClass}       {CS 211}
+\newcommand{\laSemester}    {Spring 2018}
+\newcommand{\laChapter}     {5.4}
+\newcommand{\laType}        {Exercise}
+\newcommand{\laPoints}      {5}
+\newcommand{\laTitle}       {Binary Sequences}
+\newcommand{\laDate}        {Jan 25, 2018}
+\setcounter{chapter}{5}
+\setcounter{section}{4}
+\addtocounter{section}{-1}
+\newcounter{question}
+
+\toggletrue{answerkey}
+
+\input{BASE-HEADER}
+
+\input{INSTRUCTIONS-EXERCISE}
+
+% KEY ------------------------------------ %
+    \begin{enumerate}
+        \item
+            \begin{itemize}
+                \item[a.]	$r = 3$
+                \item[b.]	$n-r = 2$
+                \item[c.]	$n-3 = 2$ \tab $n = 2 + 3$ \tab $n = 5$
+                \item[d.]	$C(n,r) = C(5,3) = 10$
+            \end{itemize}
+            
+                    
+        
+        \item	Length 5 means 1x, 3x, or 5x ones.
+					\\ one 1, four 0:	$r = 1$, $n-r = 4$, $n-1=4, n=5$, $C(5,1) = 5$
+					\\ three 1, two 0:	$r = 3$, $n-r = 2$, $n-3=2, n=5$, $C(5,3) = 10$
+					\\ five 1, zero 0:	$r = 5$, $n-r = 0$, $n-5=0, n=5$, $C(5,5) = 1$
+					\\ $5 + 10 + 1 = 16$
+		
+        \item
+            \begin{itemize}
+                \item[a.]  0100010000
+                \item[b.]  0000100001
+                \item[c.]  0000000011
+            \end{itemize}
+            
+        \item
+            \begin{itemize}
+                \item[a.]  $n = 5$
+                \item[b.]  $r = 12$
+                \item[c.]  4 separators
+                \item[d.]  12 donuts + 4 separators = 16
+                \item[e.]  $r + n - 1 = 12 + 5 - 1 = 16$
+                \item[f.]  $C(16,12)$ or $C(16,4)$.
+                \item[g.]  $C(16,12) = 1,820$
+            \end{itemize}
+
+
+        \item  20 pieces of fruit, 2 separators: $C(22,20)$. \\
+                    $C(22,20) = 231$
+    \end{enumerate}
+
+\input{BASE-FOOT}
